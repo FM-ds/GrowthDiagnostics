@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": "BoE Bank Rate"},
+  "background": "#ffffff",
+  "view": {"fill": "#ffffff"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/FM-ds/GrowthDiagnostics/main/cached_data/finance/bank_rate.csv"
+  },
+  "mark": {"type": "line", "interpolate":"step-after"},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {"title": "", "titleColor": "#122B39"}
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "axis": {"title": "", "titleColor": "#122B39"}
+    }
+  }
+}
