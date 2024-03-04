@@ -1,8 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {"text": "16-25 Year-olds without Qualifications"},
-  "background": "#ffffff",
-  "view": {"fill": "#ffffff"},
   "data": {
     "url": "https://raw.githubusercontent.com/FM-ds/GrowthDiagnostics/main/cached_data/human_capital/no_quals_16_to_25.csv"
   },

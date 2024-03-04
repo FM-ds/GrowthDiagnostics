@@ -2,12 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
       "text": "GDP growth",
-      "subtitle": "GDP QoQ4 growth rate, % | Source: ONS through ECO API",
-      "color": "#000000",
-      "subtitleColor": "#000000"
+      "subtitle": "GDP QoQ4 growth rate, % | Source: ONS through ECO API"
     },
-    "background": "#ffffff",
-    "view": {"fill": "#ffffff"},
     "data": {
       "url": "https://api.economicsobservatory.com/gbr/grow?vega",
       "format": {"type": "json"}

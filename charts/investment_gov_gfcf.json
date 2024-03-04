@@ -2,8 +2,6 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {"text": "Central Government Investment"},
     "transform": [{"filter": "datum.value>0"}],
-    "background": "#ffffff",
-    "view": {"fill": "#ffffff"},
     "data": {
       "url": "https://raw.githubusercontent.com/FM-ds/GrowthDiagnostics/main/cached_data/investment/central_gov_gfcf.csv"
     },

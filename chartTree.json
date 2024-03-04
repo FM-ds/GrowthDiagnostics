@@ -1,6 +1,7 @@
 {
     "name": "Growth",
     "description" : "British Growth Diagnostics",
+    "accent": "rgb(139, 64, 0)",
     "chart" : {
         "spec" : "growth_gdp_qoq4.json"
     },
@@ -11,6 +12,7 @@
             "chart" : {
                 "spec" : "investment_gfcf.json"
             },
+            "accent": "rgb(20, 150,  20)",
             "children": [
                 {
                     "name" : "Government Investment",
@@ -37,6 +39,7 @@
         },
         {
             "name" : "Finance",
+            "accent": " #014D4E",
             "description": "",
             "chart" : {
                 "spec" : "bank_rate.json"
@@ -44,6 +47,7 @@
         },
         {
             "name" : "Human Capital",
+            "accent": "#F72585",
             "description" : "",
             "chart" : {
                 "spec" : "human_capital_no_quals.json"

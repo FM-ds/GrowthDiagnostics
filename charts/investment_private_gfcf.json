@@ -2,8 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {"text": "Corporate Gross Fixed Capital Formation"},
   "transform": [{"filter": "datum.value>0"}],
-  "background": "#ffffff",
-  "view": {"fill": "#ffffff"},
   "data": {
     "url": "https://raw.githubusercontent.com/FM-ds/GrowthDiagnostics/main/cached_data/investment/private_gfcf.csv"
   },
