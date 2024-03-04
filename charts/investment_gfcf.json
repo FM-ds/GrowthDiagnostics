@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": "Gross Fixed Capital Formation"},
+  "transform": [{"filter": "datum.value>0"}],
+  "background": "#ffffff",
+  "view": {"fill": "#ffffff"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/FM-ds/GrowthDiagnostics/main/cached_data/investment/gfcf.csv"
+  },
+  "mark": {"type": "line"},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {"title": "", "titleColor": "#122B39"}
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "axis": {"title": "", "titleColor": "#122B39"}
+    }
+  }
+}
