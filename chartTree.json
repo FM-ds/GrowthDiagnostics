@@ -1,56 +1,63 @@
 {
     "name": "Growth",
-    "description" : "British Growth Diagnostics",
+    "description": "British Growth Diagnostics",
     "accent": "rgb(139, 64, 0)",
-    "chart" : {
-        "spec" : "growth_gdp_qoq4.json"
+    "id" : "growth",
+    "chart": {
+        "spec": "growth_gdp_qoq4.json"
     },
-    "children" : [
+    "children": [
         {
             "name": "Investment",
-            "description" : "Investment in the UK",
-            "chart" : {
-                "spec" : "investment_gfcf.json"
+            "description": "Investment in the UK. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel urna tincidunt, bibendum justo at, tristique metus. Suspendisse in placerat massa. Nulla fringilla tellus erat. Sed imperdiet rhoncus magna sed accumsan. Vivamus vel felis ut arcu iaculis eleifend et eu lacus. Sed non vestibulum metus. Maecenas vestibulum vel augue lobortis semper. Nunc vehicula sodales finibus. Etiam quis ultrices magna. Pellentesque dignissim nibh vitae ipsum pellentesque elementum. Pellentesque rutrum consectetur tortor eu faucibus.",
+            "chart": {
+                "spec": "investment_gfcf.json"
             },
+            "id": "investment",
             "accent": "rgb(20, 150,  20)",
             "children": [
                 {
-                    "name" : "Government Investment",
-                    "description" : "Central Government Gross Fixed Capital Formation",
-                    "chart" : {
-                        "spec" : "investment_gov_gfcf.json"
+                    "name": "Government Investment",
+                    "description": "Central Government Gross Fixed Capital Formation",
+                    "id": "gov_investment",
+                    "chart": {
+                        "spec": "investment_gov_gfcf.json"
                     }
                 },
                 {
-                    "name" : "Corporate Investment",
+                    "name": "Corporate Investment",
                     "description": "Corporate Gross Fixed Capital Formation",
-                    "chart" : {
+                    "id": "corp_investment",
+                    "chart": {
                         "spec": "investment_private_gfcf.json"
                     }
                 },
                 {
-                    "name" : "Business R&D",
-                    "description" : "Research and Development Spending",
+                    "name": "Business R&D",
+                    "description": "Research and Development Spending",
+                    "id": "business_rd",
                     "chart": {
-                        "spec" : "investment_business_rd.json"
+                        "spec": "investment_business_rd.json"
                     }
-                }    
+                }
             ]
         },
         {
-            "name" : "Finance",
+            "name": "Finance",
             "accent": " #014D4E",
-            "description": "",
-            "chart" : {
-                "spec" : "bank_rate.json"
+            "id": "finance",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel urna tincidunt, bibendum justo at, tristique metus. Suspendisse in placerat massa",
+            "chart": {
+                "spec": "bank_rate.json"
             }
         },
         {
-            "name" : "Human Capital",
+            "name": "Human Capital",
             "accent": "#F72585",
-            "description" : "",
-            "chart" : {
-                "spec" : "human_capital_no_quals.json"
+            "id": "human_capital",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel urna tincidunt, bibendum justo at, tristique metus. Suspendisse in placerat massa",
+            "chart": {
+                "spec": "human_capital_no_quals.json"
             }
         }
     ]

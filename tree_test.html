@@ -1,0 +1,317 @@
+<html>
+
+<head>
+    <title> Growth Diagnostics Frame </title>
+
+    <style>
+        @font-face {
+            font-family: "CircularStd";
+            src: url("CircularStd-Bold.ttf") format('truetype');
+            font-weight: 1 1000;
+        }
+
+
+        body {
+            /* White text */
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        h1 {
+            font-family: "Circular-Std", "Helvetica", "Arial", sans-serif;
+            text-align: center;
+            font-size: 36px;
+            display: inline-block;
+        }
+
+        #main-svg {
+            width: 100%;
+            height: 400vh;
+            overflow: visible;
+        }
+
+        .topic-div {
+            padding-left: 0;
+            margin-left: -5;
+        }
+
+        .topic-div h3 {
+            font-size: 20px;
+            font-family: "CircularStd", "Helvetica", "Arial", sans-serif;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .topic-div h5 {
+            font-size: 12px;
+            font-family: "CircularStd", "Helvetica", "Arial", sans-serif;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .topic-div p {
+            font-size: 14px;
+            font-family: "Helvetica-Neue", "Helvetica", "Arial", sans-serif;
+            font-weight: lighter;
+            margin: 0;
+        }
+
+        .vega-embed {
+            position: initial !important;
+        }
+
+        figure {
+            margin: 0 !important;
+        }
+    </style>
+
+</head>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+
+
+<body>
+    <svg id="main-svg" xmlns="http://www.w3.org/2000/svg" version="1.1"
+        xmlns:xlink="http://www.w3.org/1999/xlink"></svg>
+
+    <script>
+
+        function getIds(data) {
+            // get all the ids from every level of the tree
+            let ids = [];
+            let queue = [data];
+            while (queue.length > 0) {
+                let node = queue.shift();
+                ids.push(node.id);
+                if (node.children) {
+                    queue = queue.concat(node.children);
+                }
+            }
+            console.log(ids);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('chartTree.json')
+                .then(response => response.json())
+                .then(data => {
+                    ids = getIds(data);
+                    categoryColors = d3.scaleOrdinal(d3.schemeCategory10);
+
+                    // add a 'Growth' title at top center
+                    d3.select("#main-svg")
+                        .append("text")
+                        .attr("x", "50%")
+                        .attr("y", 24)
+                        .attr("text-anchor", "middle")
+                        .text("Growth")
+                        .style("font-size", "24px")
+                        .style("font-family", "CircularStd")
+                        .style("font-weight", "bold");
+
+                    svg = d3.select("#main-svg");
+
+                    drawTree(data, false, svg, 0, 50);
+                })
+                .catch(error => console.error('Error loading chartTree.json:', error));
+        });
+
+        function drawTree(parentData, grandChildren = false, parent, x = 0, y = 0) {
+            // get the width of the svg
+            width = document.getElementById("main-svg").clientWidth;
+            console.log(`Drawing tree for ${parentData.name} with width ${width}`);
+
+            tree = d3.tree().size([width, 150]);
+            nodes = d3.hierarchy(parentData, function (d) {
+                return d.children;
+            });
+            // remove grand children from the nodes
+            if (!grandChildren) {
+                nodes.descendants().forEach(node => {
+                    if (node.children) {
+                        node.children.forEach(child => {
+                            if (child.children) {
+                                delete child.children;
+                            }
+                        });
+                    }
+
+                });
+            }
+
+            nodes = tree(nodes);
+
+
+            treeGroup = parent
+                .append("g")
+                .attr("id", d => `treeGroup-${parentData.id}`)
+                .attr("transform", `translate(${-x}, ${y})`)
+                
+            treeGroup.style("opacity", 0)
+                .transition()
+                .duration(1000)
+                .style("opacity", 1);
+                
+
+
+            diagonal = d3.linkVertical()
+                .x(function (d) {
+                    return d.x;
+                })
+                .y(function (d) {
+                    return d.y;
+                });
+
+            // draw points
+            treeGroup
+                .selectAll("circle")
+                .data(nodes.descendants())
+                .enter()
+                .append("circle")
+                .attr("cx", function (d) {
+                    return d.x;
+                })
+                .attr("cy", function (d) {
+                    return d.y;
+                })
+                .attr("r", 5)
+                .attr("fill", "black");
+
+            // draw lines
+            treeGroup
+                .selectAll("path")
+                .data(nodes.links())
+                .enter()
+                .append("path")
+                .attr("d", diagonal)
+                .attr("fill", "none")
+                .attr("stroke", "black");
+
+            // draw the topic divs for each node
+            nodes.descendants().filter(node => node.depth > 0).forEach(node => {
+                drawTopicDiv(node, treeGroup);
+            });
+
+        }
+
+        function drawTopicDiv(data, parentG) {
+            console.log(data);
+            // draw the topic divs for each node - append a foreign object
+            var topicDiv = parentG
+                .append("foreignObject")
+                .attr("x", data.x - 5)
+                .attr("y", data.y + 10)
+                .attr("width", 300)
+                .attr("height", 500)
+                .attr("class", "topic-div")
+                .append("xhtml:div");
+
+            topicDiv.append("h3")
+                .text(data.data.name)
+                .style("color", categoryColors(data.data.id));
+
+            topicDiv.append("figure")
+                .attr("id", `chart-${data.data.id}`)
+                .attr("class", "chart");
+            addChart(`chart-${data.data.id}`, data.data.chart.spec, categoryColors(data.data.id));
+
+            topicDiv.append("p")
+                .text(data.data.description);
+
+            // add an expand button if there are children
+            if (data.data.children) {
+                topicDiv.append("h5")
+                    .html(d => `Contains: ${data.data.children.map(child => `<span style='color: ${categoryColors(child.id)}'> ${child.name} </span> `).join(", ")}`);
+
+                topicDiv.append("button")
+                    .text("Expand")
+                    .on("click", function () {
+                        // draw a red circle at the current x,y of the button
+                        // get the x,y, width and height of the foreign object
+                        parentElement = this.parentElement;
+                        let x = parseInt(parentElement.parentElement.getAttribute("x"));
+                        let y = parseInt(parentElement.parentElement.getAttribute("y"));
+                        let width = parseFloat(this.parentElement.parentElement.getAttribute("width"));
+                        let height = parseFloat(this.parentElement.parentElement.getAttribute("height"));
+
+                        // draw a red circle at the center bottom of the foreign object
+                        parentG
+                            .append("circle")
+                            .attr("cx", x + width / 2)
+                            .attr("cy", y + height)
+                            .attr("r", 5)
+                            .style("opacity", 0)
+                            .attr("fill", "red");
+
+                        //drawTree(data.data, true);
+                        drawTree(data.data, true, parentG, (x + width / 2)-53, y + height);
+                    });
+            }
+
+            // resize the height of the foreign object to fit the content
+            topicDiv.attr("height", topicDiv.node().getBoundingClientRect().height);
+        }
+
+        function addChart(divId, spec, color = "black") {
+            console.log(`Adding chart to ${divId} with spec charts/${spec}`);
+            vegaEmbed(`#${divId}`, `charts/${spec}`, {
+                actions: false,
+                renderer: 'svg',
+                config: {
+                    "background": "transparent",
+                    "title": {
+                        "color": "rgb(25,25,25)",
+                        "fontWeight": "light",
+                        "subtitleColor": "rgb(25,25,25)",
+                        "anchor": "start"
+                    },
+                    "mark": {
+                        "color": color,
+                    },
+                    "axisX": {
+                        "gridOpacity": 0,
+                        "domainOpacity": 0,
+                        "grid": false,
+                    },
+                    "axisY": {
+                        "gridOpacity": 0.3
+                    },
+                    "axis": {
+                        "ticks": false,
+                        "domainColor": "rgb(25,25,25)",
+                        "tickColor": "rgb(25,25,25)",
+                        "labelColor": "rgb(25,25,25)",
+                        "titleColor": "rgb(25,25,25)"
+                    },
+                    "view": {
+                        "stroke": "transparent", // Removes the border around the chart
+                        "width": 300,
+                        "height": 100
+
+                    }
+
+                },
+                theme: 'dark'
+            })
+                .catch(console.error);
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+
+</html>
