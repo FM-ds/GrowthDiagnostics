@@ -290,7 +290,7 @@
             d3.selectAll(`[depth="${depth + 1}"]`).remove();
 
             topicCell.select(".expand-toggle")
-                .text("⌃")
+                .text("⌃")            
 
             drawTopicRow(data, d3.select(`body`), depth + 1);
         }
