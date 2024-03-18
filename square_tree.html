@@ -200,6 +200,8 @@
         function drawTopicDiv(data, parentRow, depth = 0) {
             let topicContents = parentRow.append("div")
                 .attr("class", "topic-cell")
+                .attr("id", `cell-${data.id}`)
+                .attr("expanded", false)
                 .append("div")
 
             topicContents.append("h2")
@@ -217,8 +219,9 @@
             // if it has children, let's make the cursor a pointer
             if (data.children && data.children.length > 0) {
                 // append a ⌄ to the bottom center indicate it has children
-                topicContents.append("p")
+                let expandToggle = topicContents.append("p")
                     .text("⌄")
+                    .attr("class", "expand-toggle")
                     .style("font-size", "24px")
                     .style("text-align", "center")
                     .style("font-weight", "lighter")
@@ -228,18 +231,68 @@
 
                 topicContents.style("cursor", "pointer")
                     .on("click", () => {
-                        console.log(`Clicked on ${data.name}`);
-
-                        // remove everything of the same depth or deeper
-                        d3.selectAll(`[depth="${depth + 1}"]`).remove();
-
-
-                        drawTopicRow(data, d3.select(`body`), depth + 1);
+                        toggleChildren(data, depth);
                     });
 
             }
 
             return topicContents;
+        }
+
+        function toggleChildren(data, depth) {
+
+            topicCell = d3.select(`#cell-${data.id}`);
+
+            if (topicCell.attr("expanded") === "true") {
+                console.log(`Collapsing ${data.name}`);
+                topicCell.attr("expanded", "false");
+                collapseChildren(data, topicCell, depth);
+            } else {
+                console.log(`Expanding ${data.name}`);
+                topicCell.attr("expanded", "true");
+                expandChildren(data, topicCell, depth);
+            }
+
+            console.log(`Clicked on ${data.name}`);
+
+        }
+
+        function collapseChildren(data, topicCell, depth) {
+            d3.select(`[depth="${depth}"]`)
+                .selectAll(".topic-cell")
+                .transition()
+                .duration(500)
+                .style("opacity", 1)
+
+            d3.selectAll(`[depth="${depth + 1}"]`).transition()
+                .duration(500)
+                .style("opacity", 0)
+                .remove();
+
+            topicCell.select(".expand-toggle")
+                .text("⌄")
+        }
+
+        function expandChildren(data, topicCell, depth) {
+            d3.select(`[depth="${depth}"]`)
+                .selectAll(".topic-cell")
+                .filter(function (d, i) {
+                    // compare the nodes id to the data id
+                    console.log(`Comparing ${this.id} to cell-${data.id}`);
+                    return this.id !== `cell-${data.id}`;
+                })
+                .transition()
+                .duration(500)
+                .style("opacity", 0.3)
+
+
+            // remove everything of the same depth or deeper
+            d3.selectAll(`[depth="${depth + 1}"]`).remove();
+
+            topicCell.select(".expand-toggle")
+                .text("⌃")
+
+            drawTopicRow(data, d3.select(`body`), depth + 1);
         }
 
         function drawTopicRow(data, parentRow, depth = 0) {
@@ -250,7 +303,7 @@
 
             data.children.forEach((child, i) => {
                 console.log(`Drawing ${child.name} in row-${data.id}`);
-                topicCell = drawTopicDiv(child, topicRow, depth + 1);
+                topicCell = drawTopicDiv(child, topicRow, depth);
                 topicCell.transition()
                     .duration(500)
                     .delay(i * 100)
@@ -265,7 +318,7 @@
                 .then(data => {
                     categoryColors = d3.scaleOrdinal(d3.schemeCategory10);
 
-                    drawTopicRow(data, d3.select("body"));
+                    drawTopicRow(data, d3.select("body"), 1);
                 })
                 .catch(error => console.error('Error loading chartTree.json:', error));
         });
