@@ -1,0 +1,282 @@
+<html>
+
+<head>
+    <title> Growth Diagnostics Frame </title>
+
+    <style>
+        /* Our vars for tree styling */
+
+        :root {
+            --item-padding: 20px;
+        }
+
+
+        @font-face {
+            font-family: "CircularStd";
+            src: url("CircularStd-Bold.ttf") format('truetype');
+            font-weight: 1 1000;
+        }
+
+        html {
+            background-color: white;
+        }
+
+        body {
+            /* White text */
+            padding: 20px;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        h1 {
+            font-family: "Circular-Std", "Helvetica", "Arial", sans-serif;
+            text-align: center;
+            font-size: 36px;
+            display: inline-block;
+        }
+
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .topic-cell {
+            position: relative;
+            border-top: 1px solid #000;
+            min-height: 300px;
+            max-width: 300px;
+            min-width: 100px;
+            margin: 0px;
+            flex: 1 2 200px;
+            padding: 10px;
+        }
+
+        .flex-container .topic-cell:first-child {
+            border-top: 0px !important;
+        }
+
+        .flex-container .topic-cell:last-child {
+            border-top: 0px !important;
+        }
+
+        .topic-cell div {
+            margin: var(--item-padding);
+            border-radius: 10px;
+            background-color: #f3f3f3;
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+            padding: 10px;
+            opacity: 0;
+        }
+
+        .flex-container .topic-cell:first-child::before {
+            /* Our last-50% horizontal connectors */
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 50%;
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+            height: var(--item-padding);
+        }
+
+        .flex-container .topic-cell::after {
+            /* Our first-50% horizontal connectors */
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 50%;
+            border-left: 1px solid black;
+            height: var(--item-padding);
+        }
+
+        .flex-container .topic-cell:last-child::before {
+            /* Our top-vertical connectors */
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            border-top: 1px solid black;
+            height: 0;
+        }
+
+
+        #row2 {
+            margin-top: 20px;
+            justify-content: center;
+
+        }
+
+
+        .vega-embed {
+            position: initial !important;
+        }
+
+        figure {
+            margin: 0 !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "CircularStd", "Helvetica", "Arial", sans-serif;
+            padding-top: 0px;
+            margin-top: 5px;
+        }
+
+        p {
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-weight: 200;
+        }
+    </style>
+
+</head>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+
+
+<body>
+
+
+    <script>
+
+        function addChart(divId, spec, color = "black") {
+            console.log(`Adding chart to ${divId} with spec charts/${spec}`);
+            vegaEmbed(`#${divId}`, `charts/${spec}`, {
+                actions: false,
+                renderer: 'svg',
+                config: {
+                    "background": "transparent",
+                    "title": {
+                        "color": "rgb(25,25,25)",
+                        "fontWeight": "light",
+                        "subtitleColor": "rgb(25,25,25)",
+                        "anchor": "start"
+                    },
+                    "mark": {
+                        "color": color,
+                    },
+                    "axisX": {
+                        "gridOpacity": 0,
+                        "domainOpacity": 0,
+                        "grid": false,
+                    },
+                    "axisY": {
+                        "gridOpacity": 0.3
+                    },
+                    "axis": {
+                        "ticks": false,
+                        "domainColor": "rgb(25,25,25)",
+                        "tickColor": "rgb(25,25,25)",
+                        "labelColor": "rgb(25,25,25)",
+                        "titleColor": "rgb(25,25,25)"
+                    },
+                    "view": {
+                        "stroke": "transparent", // Removes the border around the chart
+                        "width": 200,
+                        "height": 100
+
+                    }
+
+                },
+                theme: 'dark'
+            })
+                .catch(console.error);
+        }
+
+
+        function drawTopicDiv(data, parentRow, depth = 0) {
+            let topicContents = parentRow.append("div")
+                .attr("class", "topic-cell")
+                .append("div")
+
+            topicContents.append("h2")
+                .text(data.name)
+                .style("color", categoryColors(data.id));
+
+            topicContents.append("figure")
+                .attr("id", `chart-${data.id}`)
+                .attr("class", "chart");
+            addChart(`chart-${data.id}`, data.chart.spec, categoryColors(data.id));
+
+            topicContents.append("p")
+                .text(data.description);
+
+            // if it has children, let's make the cursor a pointer
+            if (data.children && data.children.length > 0) {
+                // append a ⌄ to the bottom center indicate it has children
+                topicContents.append("p")
+                    .text("⌄")
+                    .style("font-size", "24px")
+                    .style("text-align", "center")
+                    .style("font-weight", "lighter")
+                    .style("margin", "5px")
+                    .style("transform", "scaleX(3)")
+                    .style("color", "black")
+
+                topicContents.style("cursor", "pointer")
+                    .on("click", () => {
+                        console.log(`Clicked on ${data.name}`);
+
+                        // remove everything of the same depth or deeper
+                        d3.selectAll(`[depth="${depth + 1}"]`).remove();
+
+
+                        drawTopicRow(data, d3.select(`body`), depth + 1);
+                    });
+
+            }
+
+            return topicContents;
+        }
+
+        function drawTopicRow(data, parentRow, depth = 0) {
+            let topicRow = parentRow.append("div")
+                .attr("class", "flex-container")
+                .attr("depth", depth)
+                .attr("id", `row-${data.id}`)
+
+            data.children.forEach((child, i) => {
+                console.log(`Drawing ${child.name} in row-${data.id}`);
+                topicCell = drawTopicDiv(child, topicRow, depth + 1);
+                topicCell.transition()
+                    .duration(500)
+                    .delay(i * 100)
+                    .style("opacity", 1);
+            });
+        }
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('chartTree.json')
+                .then(response => response.json())
+                .then(data => {
+                    categoryColors = d3.scaleOrdinal(d3.schemeCategory10);
+
+                    drawTopicRow(data, d3.select("body"));
+                })
+                .catch(error => console.error('Error loading chartTree.json:', error));
+        });
+
+
+
+
+
+    </script>
+
+</body>
+
+
+</html>

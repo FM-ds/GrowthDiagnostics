@@ -9,7 +9,7 @@
     "children": [
         {
             "name": "Investment",
-            "description": "Investment in the UK. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel urna tincidunt, bibendum justo at, tristique metus. Suspendisse in placerat massa. Nulla fringilla tellus erat. Sed imperdiet rhoncus magna sed accumsan. Vivamus vel felis ut arcu iaculis eleifend et eu lacus. Sed non vestibulum metus. Maecenas vestibulum vel augue lobortis semper. Nunc vehicula sodales finibus. Etiam quis ultrices magna. Pellentesque dignissim nibh vitae ipsum pellentesque elementum. Pellentesque rutrum consectetur tortor eu faucibus.",
+            "description": "Investment in the UK. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel urna tincidunt, bibendum justo at, tristique metus. Suspendisse in placerat massa.",
             "chart": {
                 "spec": "investment_gfcf.json"
             },
