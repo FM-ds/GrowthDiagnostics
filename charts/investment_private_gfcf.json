@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Corporate Gross Fixed Capital Formation"},
+  "title": {"text": "Business GFCF CVM SA (£m)"},
   "transform": [{"filter": "datum.value>0"}],
   "data": {
     "url": "https://raw.githubusercontent.com/FM-ds/GrowthDiagnostics/main/cached_data/investment/private_gfcf.csv"

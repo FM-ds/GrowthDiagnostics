@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "16-64 Inactivity Rate"},
+  "title": {"text": "Economically Inactive, 16-64 (%)"},
   "data": {
-    "url": "https://raw.githubusercontent.com/FM-ds/GrowthDiagnostics/main/cached_data/human_capital/economic_inactivity.csv"
+    "url": "https://raw.githubusercontent.com/FM-ds/GrowthDiagnostics/main/cached_data/human_capital/economic_inactivity_16_64.csv"
   },
   "mark": {"type": "line"},
   "transform": [
