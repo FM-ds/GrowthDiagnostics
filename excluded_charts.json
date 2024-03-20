@@ -1,0 +1,12 @@
+            "children":[
+                {
+                    "name": "Qualifications",
+                    "accent": "#F72585",
+                    "id": "no_quals",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel urna tincidunt, bibendum justo at, tristique metus. Suspendisse in placerat massa",
+                    "chart": {
+                        "spec": "human_capital_no_quals.json"
+                    }
+                }
+        
+            ]

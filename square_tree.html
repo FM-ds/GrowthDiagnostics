@@ -152,6 +152,33 @@
 
     <script>
 
+        function createColorVariationScale(baseColor) {
+            // Convert the base color to HSL
+            const baseHSL = d3.hsl(baseColor);
+
+            // Function to adjust and generate new colors
+            const generateShades = (adjustmentFactor) => {
+                // Adjust hue, saturation, and lightness based on the factor
+                const hue = (baseHSL.h + adjustmentFactor * 10) % 360; // Adjust hue within 360 degrees
+                const saturation = baseHSL.s;
+                //const saturation = Math.max(0, Math.min(1, baseHSL.s * (1 + adjustmentFactor))); // Ensure saturation stays within [0, 1]
+                //const lightness = Math.max(0, Math.min(1, baseHSL.l * (1 + adjustmentFactor))); // Ensure lightness stays within [0, 1]
+                const lightness = baseHSL.l;
+                return d3.hsl(hue, saturation, lightness).toString();
+            };
+
+            // Generate a range of adjustment factors to create varied shades
+            // This can be customized based on the desired diversity of colors
+            const adjustmentFactors = d3.range(-2, 2, 1); // Example range from -0.5 to 0.5
+
+            // Map adjustment factors to shades
+            const shades = adjustmentFactors.map(generateShades);
+
+            // Create an ordinal scale mapping nominal inputs to these shades
+            return d3.scaleOrdinal(shades);
+        }
+
+
         function addChart(divId, spec, color = "black") {
             console.log(`Adding chart to ${divId} with spec charts/${spec}`);
             vegaEmbed(`#${divId}`, `charts/${spec}`, {
@@ -197,7 +224,10 @@
         }
 
 
-        function drawTopicDiv(data, parentRow, depth = 0) {
+        function drawTopicDiv(data, parentRow, depth = 0, colorScale = categoryColors) {
+
+            let topicColor = colorScale(data.id);
+
             let topicContents = parentRow.append("div")
                 .attr("class", "topic-cell")
                 .attr("id", `cell-${data.id}`)
@@ -206,12 +236,12 @@
 
             topicContents.append("h2")
                 .text(data.name)
-                .style("color", categoryColors(data.id));
+                .style("color", topicColor);
 
             topicContents.append("figure")
                 .attr("id", `chart-${data.id}`)
                 .attr("class", "chart");
-            addChart(`chart-${data.id}`, data.chart.spec, categoryColors(data.id));
+            addChart(`chart-${data.id}`, data.chart.spec, topicColor);
 
             topicContents.append("p")
                 .text(data.description);
@@ -231,7 +261,7 @@
 
                 topicContents.style("cursor", "pointer")
                     .on("click", () => {
-                        toggleChildren(data, depth);
+                        toggleChildren(data, depth, createColorVariationScale(topicColor));
                     });
 
             }
@@ -239,7 +269,7 @@
             return topicContents;
         }
 
-        function toggleChildren(data, depth) {
+        function toggleChildren(data, depth, colorScale = categoryColors) {
 
             topicCell = d3.select(`#cell-${data.id}`);
 
@@ -250,7 +280,7 @@
             } else {
                 console.log(`Expanding ${data.name}`);
                 topicCell.attr("expanded", "true");
-                expandChildren(data, topicCell, depth);
+                expandChildren(data, topicCell, depth, colorScale);
             }
 
             console.log(`Clicked on ${data.name}`);
@@ -273,7 +303,7 @@
                 .text("⌄")
         }
 
-        function expandChildren(data, topicCell, depth) {
+        function expandChildren(data, topicCell, depth, colorScale = categoryColors) {
             d3.select(`[depth="${depth}"]`)
                 .selectAll(".topic-cell")
                 .filter(function (d, i) {
@@ -290,12 +320,12 @@
             d3.selectAll(`[depth="${depth + 1}"]`).remove();
 
             topicCell.select(".expand-toggle")
-                .text("⌃")            
+                .text("⌃")
 
-            drawTopicRow(data, d3.select(`body`), depth + 1);
+            drawTopicRow(data, d3.select(`body`), depth + 1, colorScale);
         }
 
-        function drawTopicRow(data, parentRow, depth = 0) {
+        function drawTopicRow(data, parentRow, depth = 0, colorScale = categoryColors) {
             let topicRow = parentRow.append("div")
                 .attr("class", "flex-container")
                 .attr("depth", depth)
@@ -303,7 +333,7 @@
 
             data.children.forEach((child, i) => {
                 console.log(`Drawing ${child.name} in row-${data.id}`);
-                topicCell = drawTopicDiv(child, topicRow, depth);
+                topicCell = drawTopicDiv(child, topicRow, depth, colorScale);
                 topicCell.transition()
                     .duration(500)
                     .delay(i * 100)

@@ -1,11 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Total GFCF, CVM, SA £m"},
-  "transform": [{"filter": "datum.value>0"}],
+  "title": {"text": "16-64 Inactivity Rate"},
   "data": {
-    "url": "https://raw.githubusercontent.com/FM-ds/GrowthDiagnostics/main/cached_data/investment/gfcf.csv"
+    "url": "https://raw.githubusercontent.com/FM-ds/GrowthDiagnostics/main/cached_data/human_capital/economic_inactivity.csv"
   },
   "mark": {"type": "line"},
+  "transform": [
+    {"filter": "year(datum.date)>2009"}
+  ],
   "encoding": {
     "x": {
       "field": "date",

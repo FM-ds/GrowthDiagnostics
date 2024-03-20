@@ -9,7 +9,7 @@
     "children": [
         {
             "name": "Investment",
-            "description": "Investment in the UK. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel urna tincidunt, bibendum justo at, tristique metus. Suspendisse in placerat massa.",
+            "description": " In 2022, Gross Fixed Capital Formation was 18.3% of GDP, up from 17.7% a year earlier and 18.2% 5 years ago. This is lower than France (25%) and Germany (22%).",
             "chart": {
                 "spec": "investment_gfcf.json"
             },
@@ -17,7 +17,7 @@
             "accent": "rgb(20, 150,  20)",
             "children": [
                 {
-                    "name": "Government Investment",
+                    "name": "Government",
                     "description": "Central Government Gross Fixed Capital Formation",
                     "id": "gov_investment",
                     "chart": {
@@ -25,7 +25,7 @@
                     }
                 },
                 {
-                    "name": "Corporate Investment",
+                    "name": "Corporate",
                     "description": "Corporate Gross Fixed Capital Formation",
                     "id": "corp_investment",
                     "chart": {
@@ -46,7 +46,7 @@
             "name": "Finance",
             "accent": " #014D4E",
             "id": "finance",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel urna tincidunt, bibendum justo at, tristique metus. Suspendisse in placerat massa",
+            "description": "The Bank of England base rate is 5.25, up 1.25pp in the last year and at its highest level since May 2008.",
             "chart": {
                 "spec": "bank_rate.json"
             }
@@ -55,9 +55,9 @@
             "name": "Human Capital",
             "accent": "#F72585",
             "id": "human_capital",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel urna tincidunt, bibendum justo at, tristique metus. Suspendisse in placerat massa",
+            "description": "In Q4 2023, 21.9% of 16-64 year olds were economically innactive, up slightly on one year prior (21.7%). The UK has a higher rate of economic inactivity than Germany (20.2%) but lower than France (26.1%).",
             "chart": {
-                "spec": "human_capital_no_quals.json"
+                "spec": "human_capital_inactivity.json"
             }
         }
     ]
