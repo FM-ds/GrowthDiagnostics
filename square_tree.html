@@ -159,17 +159,18 @@
             // Function to adjust and generate new colors
             const generateShades = (adjustmentFactor) => {
                 // Adjust hue, saturation, and lightness based on the factor
-                const hue = (baseHSL.h + adjustmentFactor * 10) % 360; // Adjust hue within 360 degrees
-                const saturation = baseHSL.s;
+                const hue = (baseHSL.h + adjustmentFactor * 20) % 360; // Adjust hue within 360 degrees
+                //const saturation = baseHSL.s;
+                const saturation = (baseHSL.s + adjustmentFactor * 0.2); // Adjust saturation within [0, 1]
                 //const saturation = Math.max(0, Math.min(1, baseHSL.s * (1 + adjustmentFactor))); // Ensure saturation stays within [0, 1]
-                //const lightness = Math.max(0, Math.min(1, baseHSL.l * (1 + adjustmentFactor))); // Ensure lightness stays within [0, 1]
+                //const lightness = Math.max(0, Math.min(1, baseHSL.l *  0.5 * (1 + adjustmentFactor))); // Ensure lightness stays within [0, 1]
                 const lightness = baseHSL.l;
                 return d3.hsl(hue, saturation, lightness).toString();
             };
 
             // Generate a range of adjustment factors to create varied shades
             // This can be customized based on the desired diversity of colors
-            const adjustmentFactors = d3.range(-2, 2, 1); // Example range from -0.5 to 0.5
+            const adjustmentFactors = d3.range(-1, 1.01, 1); // Example range from -0.5 to 0.5
 
             // Map adjustment factors to shades
             const shades = adjustmentFactors.map(generateShades);
