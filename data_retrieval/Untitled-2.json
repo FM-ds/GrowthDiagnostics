@@ -1,0 +1,46 @@
+{
+    "name": "Growth",
+    "description": "British Growth Diagnostics",
+    "accent": "rgb(139, 64, 0)",
+    "id" : "growth",
+    "chart": {
+        "spec": "growth_gdp_qoq4.json"
+    },
+    "children": [
+        {
+            "name": "Investment",
+            "description_url": "investment_gfcf_gdp.txt",
+            "chart": {
+                "spec": "investment_gfcf_gdp.json"
+            },
+            "id": "investment",
+            "accent": "rgb(20, 150,  20)",
+            "children": [
+                {
+                    "name": "Government",
+                    "description_url": "investment_gov_gfcf_gdp.txt",
+                    "id": "gov_investment",
+                    "chart": {
+                        "spec": "investment_gov_gfcf_gdp.json"
+                    }
+                },
+                {
+                    "name": "Corporate",
+                    "id": "corp_investment",
+                    "description_url": "investment_bus_gfcf_gdp.txt",
+                    "chart": {
+                        "spec": "investment_bus_gfcf_gdp.json"
+                    }
+                },
+                {
+                    "name": "Research and Development",
+                    "id": "rd",
+                    "description_url": "investment_rd_gdp.txt",
+                    "chart": {
+                        "spec": "investment_rd_gdp.json"
+                    }
+                }
+            ]
+        }
+    ]
+}

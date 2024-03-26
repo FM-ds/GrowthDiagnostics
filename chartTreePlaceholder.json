@@ -1,0 +1,64 @@
+{
+    "name": "Growth",
+    "description": "British Growth Diagnostics",
+    "accent": "rgb(139, 64, 0)",
+    "id" : "growth",
+    "chart": {
+        "spec": "growth_gdp_qoq4.json"
+    },
+    "children": [
+        {
+            "name": "Investment",
+            "description": " In 2022, Gross Fixed Capital Formation was 18.3% of GDP, up from 17.7% a year earlier and 18.2% 5 years ago. This is lower than France (25%) and Germany (22%).",
+            "chart": {
+                "spec": "investment_gfcf.json"
+            },
+            "id": "investment",
+            "accent": "rgb(20, 150,  20)",
+            "children": [
+                {
+                    "name": "Government",
+                    "description": "In Q3 2023, central government investment was £16.5B. The UK government invests a lower proportion of GDP (17.7%) than France (24.4%) or Germany (21.3%).",
+                    "id": "gov_investment",
+                    "chart": {
+                        "spec": "investment_gov_gfcf.json"
+                    }
+                },
+                {
+                    "name": "Corporate",
+                    "description": "British business investment equals around 10% of GDP, lower than France (14%) and Germany (12%).",
+                    "id": "corp_investment",
+                    "chart": {
+                        "spec": "investment_private_gfcf.json"
+                    }
+                },
+                {
+                    "name": "Research and Development",
+                    "description": "R&D spending in the UK in 2021 was 2.9% of GDP, higher than the OECD average of 2.7%. NB: Investigate ONS-OECD difference",
+                    "id": "rd",
+                    "chart": {
+                        "spec": "investment_r_d_gdp.json"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Finance",
+            "accent": " #014D4E",
+            "id": "finance",
+            "description": "The Bank of England base rate is 5.25, up 1.25pp in the last year and at its highest level since May 2008.",
+            "chart": {
+                "spec": "bank_rate.json"
+            }
+        },
+        {
+            "name": "Human Capital",
+            "accent": "#F72585",
+            "id": "human_capital",
+            "description": "In Q4 2023, 21.9% of 16-64 year olds were economically innactive, up slightly on one year prior (21.7%). The UK has a higher rate of economic inactivity than Germany (20.2%) but lower than France (26.1%).",
+            "chart": {
+                "spec": "human_capital_inactivity.json"
+            }
+        }
+    ]
+}

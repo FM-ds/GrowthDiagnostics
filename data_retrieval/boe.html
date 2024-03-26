@@ -1,0 +1,4314 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<title>Bank of England | Database</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="assets/css/layout.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/print.css" media="print">
+	<script>
+		// akam-sw.js install script version 1.3.6
+		"serviceWorker" in navigator && "find" in [] && function () { var e = new Promise(function (e) { "complete" === document.readyState || !1 ? e() : (window.addEventListener("load", function () { e() }), setTimeout(function () { "complete" !== document.readyState && e() }, 1e4)) }), n = window.akamServiceWorkerInvoked, r = "1.3.6"; if (n) aka3pmLog("akam-setup already invoked"); else { window.akamServiceWorkerInvoked = !0, window.aka3pmLog = function () { window.akamServiceWorkerDebug && console.log.apply(console, arguments) }; function o(e) { (window.BOOMR_mq = window.BOOMR_mq || []).push(["addVar", { "sm.sw.s": e, "sm.sw.v": r }]) } var i = "/akam-sw.js", a = new Map; navigator.serviceWorker.addEventListener("message", function (e) { var n, r, o = e.data; if (o.isAka3pm) if (o.command) { var i = (n = o.command, (r = a.get(n)) && r.length > 0 ? r.shift() : null); i && i(e.data.response) } else if (o.commandToClient) switch (o.commandToClient) { case "enableDebug": window.akamServiceWorkerDebug || (window.akamServiceWorkerDebug = !0, aka3pmLog("Setup script debug enabled via service worker message"), v()); break; case "boomerangMQ": o.payload && (window.BOOMR_mq = window.BOOMR_mq || []).push(o.payload) }aka3pmLog("akam-sw message: " + JSON.stringify(e.data)) }); var t = function (e) { return new Promise(function (n) { var r, o; r = e.command, o = n, a.has(r) || a.set(r, []), a.get(r).push(o), navigator.serviceWorker.controller && (e.isAka3pm = !0, navigator.serviceWorker.controller.postMessage(e)) }) }, c = function (e) { return t({ command: "navTiming", navTiming: e }) }, s = null, m = {}, d = function () { var e = i; return s && (e += "?othersw=" + encodeURIComponent(s)), function (e, n) { return new Promise(function (r, i) { aka3pmLog("Registering service worker with URL: " + e), navigator.serviceWorker.register(e, n).then(function (e) { aka3pmLog("ServiceWorker registration successful with scope: ", e.scope), r(e), o(1) }).catch(function (e) { aka3pmLog("ServiceWorker registration failed: ", e), o(0), i(e) }) }) }(e, m) }, g = navigator.serviceWorker.__proto__.register; if (navigator.serviceWorker.__proto__.register = function (n, r) { return n.includes(i) ? g.call(this, n, r) : (aka3pmLog("Overriding registration of service worker for: " + n), s = new URL(n, window.location.href), m = r, navigator.serviceWorker.controller ? new Promise(function (n, r) { var o = navigator.serviceWorker.controller.scriptURL; if (o.includes(i)) { var a = encodeURIComponent(s); o.includes(a) ? (aka3pmLog("Cancelling registration as we already integrate other SW: " + s), navigator.serviceWorker.getRegistration().then(function (e) { n(e) })) : e.then(function () { aka3pmLog("Unregistering existing 3pm service worker"), navigator.serviceWorker.getRegistration().then(function (e) { e.unregister().then(function () { return d() }).then(function (e) { n(e) }).catch(function (e) { r(e) }) }) }) } else aka3pmLog("Cancelling registration as we already have akam-sw.js installed"), navigator.serviceWorker.getRegistration().then(function (e) { n(e) }) }) : g.call(this, n, r)) }, navigator.serviceWorker.controller) { var u = navigator.serviceWorker.controller.scriptURL; u.includes("/akam-sw.js") || u.includes("/akam-sw-preprod.js") || u.includes("/threepm-sw.js") || (aka3pmLog("Detected existing service worker. Removing and re-adding inside akam-sw.js"), s = new URL(u, window.location.href), e.then(function () { navigator.serviceWorker.getRegistration().then(function (e) { m = { scope: e.scope }, e.unregister(), d() }) })) } else e.then(function () { window.akamServiceWorkerPreprod && (i = "/akam-sw-preprod.js"), d() }); if (window.performance) { var w = window.performance.timing, l = w.responseEnd - w.responseStart; c(l) } e.then(function () { t({ command: "pageLoad" }) }); var k = !1; function v() { window.akamServiceWorkerDebug && !k && (k = !0, aka3pmLog("Initializing debug functions at window scope"), window.aka3pmInjectSwPolicy = function (e) { return t({ command: "updatePolicy", policy: e }) }, window.aka3pmDisableInjectedPolicy = function () { return t({ command: "disableInjectedPolicy" }) }, window.aka3pmDeleteInjectedPolicy = function () { return t({ command: "deleteInjectedPolicy" }) }, window.aka3pmGetStateAsync = function () { return t({ command: "getState" }) }, window.aka3pmDumpState = function () { aka3pmGetStateAsync().then(function (e) { aka3pmLog(JSON.stringify(e, null, "\t")) }) }, window.aka3pmInjectTiming = function (e) { return c(e) }, window.aka3pmUpdatePolicyFromNetwork = function () { return t({ command: "pullPolicyFromNetwork" }) }) } v() } }();</script>
+	<script>
+		var el = document.getElementsByTagName('html')[0];
+		if (el.classList) { el.classList.remove('no-js') } else { el.className = el.className.replace('no-js', '') }
+	</script>
+	<script src="assets/js/jquery-2.2.4.min.js"></script>
+	<script>
+		$(window).load(function () {
+			// Animate loader off screen
+			$(".se-pre-con").fadeOut("slow");;
+		});
+	</script>
+	<style>
+		/* This only works with JavaScript, 
+if it's not present, don't show loader */
+		.no-js #loader {
+			display: none;
+		}
+
+		.js #loader {
+			display: block;
+			position: absolute;
+			left: 100px;
+			top: 0;
+		}
+
+		.se-pre-con {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 9999;
+			background: url(assets/img/preloader.gif) center no-repeat #fff;
+		}
+	</style>
+
+
+	<!--[if lte IE 9]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+<![endif]-->
+	<!--[if (lt IE 9) & (!IEMobile)]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+<![endif]-->
+
+	<!-- Google Tag Manager -->
+	<script>
+
+		var CheckCookies = {
+			getCookie: function (cname) {
+				var name = cname + "=";
+				var decodedCookie = decodeURIComponent(document.cookie);
+				var ca = decodedCookie.split(';');
+				for (var i = 0; i < ca.length; i++) {
+					var c = ca[i];
+					while (c.charAt(0) === ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) === 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+		};
+		var SetAnalytics = {
+			setTagManager: function () {
+
+				var hasConsentAnalytics = CheckCookies.getCookie('boeconsent');
+
+				if (hasConsentAnalytics === "analytics") {
+					(function (w, d, s, l, i) {
+						w[l] = w[l] || []; w[l].push({
+							'gtm.start':
+								new Date().getTime(), event: 'gtm.js'
+						}); var f = d.getElementsByTagName(s)[0],
+							j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+								'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+					})(window, document, 'script', 'dataLayer', 'GTM-TH2H9ZC');
+				}
+			},
+		}
+		SetAnalytics.setTagManager();
+	</script>
+	<!-- End Google Tag Manager -->
+
+
+	<script>(window.BOOMR_mq = window.BOOMR_mq || []).push(["addVar", { "rua.upush": "true", "rua.cpush": "true", "rua.upre": "true", "rua.cpre": "false", "rua.uprl": "false", "rua.cprl": "false", "rua.cprf": "false", "rua.trans": "SJ-71d25509-9da3-4fd3-b016-c7bfc35eb5aa", "rua.cook": "false", "rua.ims": "false", "rua.ufprl": "true", "rua.cfprl": "true", "rua.isuxp": "false", "rua.texp": "norulematch" }]);</script>
+	<script>!function (a) { var e = "https://s.go-mpulse.net/boomerang/", t = "addEventListener"; if ("False" == "True") a.BOOMR_config = a.BOOMR_config || {}, a.BOOMR_config.PageParams = a.BOOMR_config.PageParams || {}, a.BOOMR_config.PageParams.pci = !0, e = "https://s2.go-mpulse.net/boomerang/"; if (window.BOOMR_API_key = "9R3WH-S6EDC-8JGQW-55286-CGTTF", function () { function n(e) { a.BOOMR_onload = e && e.timeStamp || (new Date).getTime() } if (!a.BOOMR || !a.BOOMR.version && !a.BOOMR.snippetExecuted) { a.BOOMR = a.BOOMR || {}, a.BOOMR.snippetExecuted = !0; var i, _, o, r = document.createElement("iframe"); if (a[t]) a[t]("load", n, !1); else if (a.attachEvent) a.attachEvent("onload", n); r.src = "javascript:void(0)", r.title = "", r.role = "presentation", (r.frameElement || r).style.cssText = "width:0;height:0;border:0;display:none;", o = document.getElementsByTagName("script")[0], o.parentNode.insertBefore(r, o); try { _ = r.contentWindow.document } catch (O) { i = document.domain, r.src = "javascript:var d=document.open();d.domain='" + i + "';void(0);", _ = r.contentWindow.document } _.open()._l = function () { var a = this.createElement("script"); if (i) this.domain = i; a.id = "boomr-if-as", a.src = e + "9R3WH-S6EDC-8JGQW-55286-CGTTF", BOOMR_lstart = (new Date).getTime(), this.body.appendChild(a) }, _.write("<bo" + 'dy onload="document._l();">'), _.close() } }(), "".length > 0) if (a && "performance" in a && a.performance && "function" == typeof a.performance.setResourceTimingBufferSize) a.performance.setResourceTimingBufferSize(); !function () { if (BOOMR = a.BOOMR || {}, BOOMR.plugins = BOOMR.plugins || {}, !BOOMR.plugins.AK) { var e = "true" == "true" ? 1 : 0, t = "", n = "rldr5h3ikrnbazqc5m7a-f-826eebc4c-clientnsv4-s.akamaihd.net", i = "false" == "true" ? 2 : 1, _ = { "ak.v": "37", "ak.cp": "1078495", "ak.ai": parseInt("286733", 10), "ak.ol": "0", "ak.cr": 3, "ak.ipv": 4, "ak.proto": "http/1.1", "ak.rid": "33b028d7", "ak.r": 43868, "ak.a2": e, "ak.m": "a", "ak.n": "essl", "ak.bpcip": "138.199.30.0", "ak.cport": 51526, "ak.gh": "88.221.135.189", "ak.quicv": "", "ak.tlsv": "tls1.2", "ak.0rtt": "", "ak.csrc": "-", "ak.acc": "reno", "ak.t": "1711467326", "ak.ak": "hOBiQwZUYzCg5VSAfCLimQ==leeDdPODUgjG56GuxbBiU3kXgY5L64UEJQ2uvtmlo8Z5Dz3Wp49hRekTaKJdd4EAvWB788/wzMtMyJ5TcbR4aAezNiXjjKc2jHYsxcj8N37Tkpdd9uS4Zc/5teAavWPUHXFOcezjdC4CG9mdrIFQYkGouDhcCLKIvzkI4Hf58Jw6UFc5AHcmR56yTwNliz4oDa7ebl5sSAYm/hFBx257+avYDFW6ep11scTqCCrdM6yJpkvHNcnwvLZfbAvcCUZtB6HbY6Q3KsUasKS925bw0+zsQ+9rusEWkDE+VkAamoGyMraVaowqqOjpf9YptgYeXSScPAx7qozvd7svZbCQmgYIAfzsgHy/NGehEO68KT7LO6VPs2b+WoAjUhPQF6/W0Ghbrs2C+OVzuL5weGyIdhW3BjdlvG4a+nlGKiVDCxA=", "ak.pv": "276", "ak.dpoabenc": "", "ak.tf": i }; if ("" !== t) _["ak.ruds"] = t; var o = { i: !1, av: function (e) { var t = "http.initiator"; if (e && (!e[t] || "spa_hard" === e[t])) _["ak.feo"] = void 0 !== a.aFeoApplied ? 1 : 0, BOOMR.addVar(_) }, rv: function () { var a = ["ak.bpcip", "ak.cport", "ak.cr", "ak.csrc", "ak.gh", "ak.ipv", "ak.m", "ak.n", "ak.ol", "ak.proto", "ak.quicv", "ak.tlsv", "ak.0rtt", "ak.r", "ak.acc", "ak.t", "ak.tf"]; BOOMR.removeVar(a) } }; BOOMR.plugins.AK = { akVars: _, akDNSPreFetchDomain: n, init: function () { if (!o.i) { var a = BOOMR.subscribe; a("before_beacon", o.av, null, null), a("onbeacon", o.rv, null, null), o.i = !0 } return this }, is_complete: function () { return !0 } } } }() }(window);</script>
+</head>
+
+<body>
+	<div class="se-pre-con"></div>
+
+	<div class="wrap" itemscope itemtype="http://schema.org/WebPage">
+		<div class="nav-bypass">
+			<a href="#content-start" class="nav-bypass__link">Skip to main content</a>
+		</div>
+		<header class="global-header" itemscope itemtype="http://schema.org/WPHeader">
+			<div class="header-brand" itemscope itemtype="http://schema.org/Organisation"> <a href="default.asp"
+					class="header-logo" itemscope itemtype="http://schema.org/Brand"> <img src="assets/img/logo.svg"
+						alt="Bank of England | Database" width="330"> Bank of England | Database </a> </div>
+			<a href="#menu" class="btn-menu"><i class="icon-menu"></i> <i class="icon-cancel"></i></a> <a href="#search"
+				class="btn-search"><i class="icon-cancel"></i></a>
+			<div class="header-nav" id="#menu">
+				<nav class="nav-main" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<ul class="nav-main-menu">
+						<li class="nav-main-item nav-browse-menu-item"> <a
+								href="CategoryIndex.asp?Travel=NIxAZx&CategId=allcats&CategName=Combined A to Z"
+								class="nav-main-link nav-browse-menu-link"><span style="text-transform:none">Browse
+									data<i class="icon-up-dir"></i><i class="icon-down-dir"></i></span></a>
+							<ul class="nav-browse-menu">
+								<li class="nav-browse-item"><a href="BankStats.asp?Travel=NIx"
+										class="nav-browse-link">Topics</a></li>
+								<li class="nav-browse-item"><a href="/statistics/Tables"
+										title="Table references (main website)" target="_blank"
+										class="nav-browse-link">Tables</a></li>
+								<li class="nav-browse-item"><a
+										href="CategoryIndex.asp?Travel=NIxAZx&CategId=9&CategName=COUNTRY"
+										class="nav-browse-link">Countries</a></li>
+								<li class="nav-browse-item"><a
+										href="CategoryIndex.asp?Travel=NIxAZx&CategId=6&CategName=INSTRUMENTS"
+										class="nav-browse-link">Financial categories</a></li>
+								<li class="nav-browse-item"><a
+										href="CategoryIndex.asp?Travel=NIxAZx&CategId=sectorcats&CategName=SECTOR"
+										class="nav-browse-link">Economic/industrial sectors</a></li>
+								<li class="nav-browse-item"><a
+										href="CategoryIndex.asp?Travel=NIxAZx&CategId=allcats&CategName=Combined A to Z"
+										class="nav-browse-link">A-Z</a></li>
+
+
+							</ul>
+						</li>
+						<li class="nav-main-item nav-has-children"> <a
+								href="index.asp?Travel=NIxIRx&levels=3&XNotes=Y&A3951XNode3951.x=10&A3951XNode3951.y=12&Nodes=&SectionRequired=I&HideNums=-1&ExtraInfo=true#BM"
+								class="nav-main-link"><span>Exchange rates<i class="icon-up-dir"></i><i
+										class="icon-down-dir"></i></span></a>
+							<ul class="nav-sub-menu">
+								<li class="nav-sub-item"><a href="Rates.asp?Travel=NIxAZx&into=GBP"
+										class="nav-sub-link"><abbr title="British pound sterling">GBP</abbr> daily
+										rates</a></li>
+								<li class="nav-sub-item"><a href="Rates.asp?Travel=NIxAZx&into=EUR"
+										class="nav-sub-link"><abbr title="Euro">EUR</abbr> daily rates</a></li>
+
+								<li class="nav-sub-item"><a href="Rates.asp?Travel=NIxAZx&into=USD"
+										class="nav-sub-link"><abbr title="US Dollars">USD</abbr> daily rates</a></li>
+								<li class="nav-sub-item"><a
+										href="index.asp?first=yes&SectionRequired=I&HideNums=-1&ExtraInfo=true&Travel=NIx"
+										class="nav-sub-link">View all</a></li>
+							</ul>
+						</li>
+						<li class="nav-main-item"><a href="Help.asp?Travel=NIxASx&Back=AdvSearch.asp"
+								class="nav-main-link"><span>Help</span></a></li>
+						<li class="nav-main-item item-mainsite-link"><a href="https://www.bankofengland.co.uk"
+								class="nav-main-link"><span>Bank of England website</span></a></li>
+					</ul>
+				</nav>
+				<div class="search-widget" id="search">
+					<form method="get" action="FromShowColumns.asp">
+						<fieldset class="search-widget-fields">
+							<legend class="visually-hidden">Search the database</legend>
+							<label for="gsc-i-id1" class="visually-hidden">Search</label>
+							<input type="hidden" name="Travel" value="" />
+							<input name="searchText" type="search" id="gsc-i-id1" placeholder="Search our data..."
+								title="search" autoComplete="off" size=10 class="search-widget-field" />
+							<button type="submit" class="search-widget-btn">Search</button>
+
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</header>
+		<span id="content-start"></span>
+		<link rel="stylesheet" href="assets/DataTables/dataTables.min.css">
+		<script src="assets/DataTables/dataTables.min.js"> </script>
+		<script src="assets/DataTables/moment.min.js"></script>
+		<script src="assets/DataTables/datetime-moment.js"></script>
+		<script type="text/javascript" src="assets/DataTables/JSZip-2.5.0/jszip.min.js"></script>
+		<script type="text/javascript" src="assets/DataTables/DataTables-1.10.16/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="assets/DataTables/Buttons-1.4.2/js/dataTables.buttons.min.js"></script>
+		<script type="text/javascript" src="assets/DataTables/Buttons-1.4.2/js/buttons.html5.min.js"></script>
+		<script type="text/javascript" src="assets/DataTables/Buttons-1.4.2/js/buttons.print.min.js"></script>
+
+
+		<script>
+			$(document).ready(function () {
+				$.fn.dataTable.moment('DD MMM YY');
+
+				$('#stats-table').DataTable({
+					paging: false,
+					"info": false,
+					"order": [0, 'desc'],
+					fixedHeader: {
+						header: true
+					},
+					dom: 'Bfrtip',
+					buttons: [
+						'copy', 'csv', 'excel', 'print'
+					]
+				});
+
+			});
+		</script>
+
+		<!-- /Datatables -->
+
+
+		<style>
+			.dataset {
+				min-width: 90% !important
+			}
+
+			table.dataTable thead th,
+			table.dataTable thead td {
+				padding: 10px;
+				border-bottom: 1px solid #111;
+				text-align: left;
+				font-size: 90%;
+				border: solid 1px #e5e5e5;
+				min-width: 200px !important
+			}
+
+			table.dataTable tbody th,
+			table.dataTable tbody td {
+				padding: 8px 10px;
+				border: solid 1px #e5e5e5;
+			}
+
+			.sorting,
+			table.dataTable thead .sorting_asc,
+			table.dataTable thead .sorting_desc,
+			table.dataTable thead .sorting_asc_disabled,
+			table.dataTable thead .sorting_desc_disabled,
+			.sorting,
+			table.dataTable thead .sorting_asc,
+			table.dataTable thead .sorting_desc,
+			table.dataTable thead .sorting_asc_disabled,
+			table.dataTable thead .sorting_desc_disabled {
+				background-position: bottom right !important;
+			}
+
+			thead {
+				vertical-align: bottom !important
+			}
+		</style>
+
+
+
+
+		<section class="page-banner">
+			<div class="container">
+				<div class="col9 m-3_4">
+					<h1 itemprop="name">Data viewer</h1>
+					<div class="page-description" itemprop="description">
+						<p class="hero">Browse and export data</p>
+						<script>
+							function urlchange(paramname, paramvalue) {
+								var paramFrom = paramvalue;
+								var paramFr = paramname;
+
+								var newParamFr = paramFr + '=' + paramFrom;
+
+								if (window.location.search) {
+									var regexFr = new RegExp(paramFr + '=[^&$]*', 'i');
+									var regexFM = new RegExp('FM' + '=[^&$]*', 'i');
+									var regexFD = new RegExp('FD' + '=[^&$]*', 'i');
+									var regexTM = new RegExp('TM' + '=[^&$]*', 'i');
+									var regexTD = new RegExp('TD' + '=[^&$]*', 'i');
+
+									var myurl = window.location.search.replace(regexFr, newParamFr);
+									if (paramname = 'FY') {
+										var myurl = myurl.replace(regexFM, 'FM=Jan');
+										var myurl = myurl.replace(regexFD, 'FD=1');
+									};
+									if (paramname = 'TY') {
+										var myurl = myurl.replace(regexTM, 'TM=Dec');
+										var myurl = myurl.replace(regexTD, 'TD=31');
+									};
+									window.location.search = myurl
+								} else {
+									window.location.search = newParam;
+								}
+							}
+						</script>
+						<form>
+							Change date range from:
+							<select name="FY" id="FY" title="Data from year" onChange="urlchange('FY',this.value)">
+
+								<option value="1963" SELECTED>1963</option>
+
+								<option value="1964">1964</option>
+
+								<option value="1965">1965</option>
+
+								<option value="1966">1966</option>
+
+								<option value="1967">1967</option>
+
+								<option value="1968">1968</option>
+
+								<option value="1969">1969</option>
+
+								<option value="1970">1970</option>
+
+								<option value="1971">1971</option>
+
+								<option value="1972">1972</option>
+
+								<option value="1973">1973</option>
+
+								<option value="1974">1974</option>
+
+								<option value="1975">1975</option>
+
+								<option value="1976">1976</option>
+
+								<option value="1977">1977</option>
+
+								<option value="1978">1978</option>
+
+								<option value="1979">1979</option>
+
+								<option value="1980">1980</option>
+
+								<option value="1981">1981</option>
+
+								<option value="1982">1982</option>
+
+								<option value="1983">1983</option>
+
+								<option value="1984">1984</option>
+
+								<option value="1985">1985</option>
+
+								<option value="1986">1986</option>
+
+								<option value="1987">1987</option>
+
+								<option value="1988">1988</option>
+
+								<option value="1989">1989</option>
+
+								<option value="1990">1990</option>
+
+								<option value="1991">1991</option>
+
+								<option value="1992">1992</option>
+
+								<option value="1993">1993</option>
+
+								<option value="1994">1994</option>
+
+								<option value="1995">1995</option>
+
+								<option value="1996">1996</option>
+
+								<option value="1997">1997</option>
+
+								<option value="1998">1998</option>
+
+								<option value="1999">1999</option>
+
+								<option value="2000">2000</option>
+
+								<option value="2001">2001</option>
+
+								<option value="2002">2002</option>
+
+								<option value="2003">2003</option>
+
+								<option value="2004">2004</option>
+
+								<option value="2005">2005</option>
+
+								<option value="2006">2006</option>
+
+								<option value="2007">2007</option>
+
+								<option value="2008">2008</option>
+
+								<option value="2009">2009</option>
+
+								<option value="2010">2010</option>
+
+								<option value="2011">2011</option>
+
+								<option value="2012">2012</option>
+
+								<option value="2013">2013</option>
+
+								<option value="2014">2014</option>
+
+								<option value="2015">2015</option>
+
+								<option value="2016">2016</option>
+
+								<option value="2017">2017</option>
+
+								<option value="2018">2018</option>
+
+								<option value="2019">2019</option>
+
+								<option value="2020">2020</option>
+
+								<option value="2021">2021</option>
+
+								<option value="2022">2022</option>
+
+								<option value="2023">2023</option>
+
+								<option value="2024">2024</option>
+
+
+							</select>
+
+							to: <select name="TY" id="TY" title="Data to year" onChange="urlchange('TY',this.value)">
+
+								<option value="1963">1963</option>
+
+								<option value="1964">1964</option>
+
+								<option value="1965">1965</option>
+
+								<option value="1966">1966</option>
+
+								<option value="1967">1967</option>
+
+								<option value="1968">1968</option>
+
+								<option value="1969">1969</option>
+
+								<option value="1970">1970</option>
+
+								<option value="1971">1971</option>
+
+								<option value="1972">1972</option>
+
+								<option value="1973">1973</option>
+
+								<option value="1974">1974</option>
+
+								<option value="1975">1975</option>
+
+								<option value="1976">1976</option>
+
+								<option value="1977">1977</option>
+
+								<option value="1978">1978</option>
+
+								<option value="1979">1979</option>
+
+								<option value="1980">1980</option>
+
+								<option value="1981">1981</option>
+
+								<option value="1982">1982</option>
+
+								<option value="1983">1983</option>
+
+								<option value="1984">1984</option>
+
+								<option value="1985">1985</option>
+
+								<option value="1986">1986</option>
+
+								<option value="1987">1987</option>
+
+								<option value="1988">1988</option>
+
+								<option value="1989">1989</option>
+
+								<option value="1990">1990</option>
+
+								<option value="1991">1991</option>
+
+								<option value="1992">1992</option>
+
+								<option value="1993">1993</option>
+
+								<option value="1994">1994</option>
+
+								<option value="1995">1995</option>
+
+								<option value="1996">1996</option>
+
+								<option value="1997">1997</option>
+
+								<option value="1998">1998</option>
+
+								<option value="1999">1999</option>
+
+								<option value="2000">2000</option>
+
+								<option value="2001">2001</option>
+
+								<option value="2002">2002</option>
+
+								<option value="2003">2003</option>
+
+								<option value="2004">2004</option>
+
+								<option value="2005">2005</option>
+
+								<option value="2006">2006</option>
+
+								<option value="2007">2007</option>
+
+								<option value="2008">2008</option>
+
+								<option value="2009">2009</option>
+
+								<option value="2010">2010</option>
+
+								<option value="2011">2011</option>
+
+								<option value="2012">2012</option>
+
+								<option value="2013">2013</option>
+
+								<option value="2014">2014</option>
+
+								<option value="2015">2015</option>
+
+								<option value="2016">2016</option>
+
+								<option value="2017">2017</option>
+
+								<option value="2018">2018</option>
+
+								<option value="2019">2019</option>
+
+								<option value="2020">2020</option>
+
+								<option value="2021">2021</option>
+
+								<option value="2022">2022</option>
+
+								<option value="2023">2023</option>
+
+								<option value="2024" SELECTED SELECTED>2024</option>
+
+
+							</select>
+						</form>
+					</div>
+				</div>
+				<div class="col3 m-1_4">
+					<div class="related-links-wrap">
+						<h3>Related links <i class="links-toggle"></i></h3>
+						<ul class="related-links">
+							<li><a href="https://www.bankofengland.co.uk/statistics/details" target="_blank">Notes about
+									our data</a></li>
+
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+
+
+		<div class="page-content">
+			<section class="page-section" style="padding:0">
+				<div class="container">
+					<div class="col12">
+
+
+
+						<!-- amCharts javascript sources -->
+						<script type="text/javascript" src="assets/amcharts/amcharts.js"></script>
+						<script type="text/javascript" src="assets/amcharts/serial.js"></script>
+						<script type="text/javascript" src="assets/amcharts/themes/light.js"></script>
+
+						<!-- amCharts plugins -->
+						<script type="text/javascript" src="assets/amcharts/plugins/export/export.min.js"></script>
+						<link rel="stylesheet" href="assets/amcharts/plugins/export/export.css">
+
+						<!-- amCharts javascript code -->
+						<script type="text/javascript">
+							AmCharts.makeChart("chartdiv",
+								{
+									"type": "serial",
+									"balloonDateFormat": "DD MM YYYY",
+									"categoryField": "Date",
+									"columnSpacing3D": -2,
+									"dataDateFormat": "DD-MM-YYYY",
+									"autoMarginOffset": 15,
+									"marginRight": 45,
+									"marginTop": 50,
+									"zoomOutButtonAlpha": 0.49,
+									"zoomOutButtonColor": "#C4C9CF",
+									"zoomOutButtonImageSize": 15,
+									"zoomOutButtonPadding": 7,
+									"zoomOutButtonRollOverAlpha": 0.16,
+									"zoomOutButtonTabIndex": 3,
+									"zoomOutText": "Reset zoom",
+									"colors": [
+										"#3CD7D9",
+										"#FF7300",
+										"#9E71FE",
+										"#0D8ECF",
+										"#2A0CD0",
+										"#CD0D74",
+										"#CC0000",
+										"#00CC00",
+										"#0000CC",
+										"#DDDDDD",
+										"#999999",
+										"#333333",
+										"#990000"
+									],
+									"startDuration": 0.2,
+									"accessibleTitle": "Interactive chart",
+									"backgroundAlpha": 1,
+									"backgroundColor": "#12273F",
+									"borderColor": "",
+									"color": "#C4C9CF",
+									"fontFamily": "Arial",
+									"fontSize": 16,
+									"touchClickDuration": 200,
+									"responsive": {
+										"enabled": true
+									},
+									"export": {
+										"enabled": true
+									},
+									"categoryAxis": {
+										"parseDates": true,
+										"gridPosition": "start",
+										"axisColor": "#FFFFFF",
+										"axisThickness": 2,
+										"boldPeriodBeginning": false,
+										"gridAlpha": 0,
+										"gridColor": "#C4C9CF",
+										"minorGridAlpha": 0,
+										"titleBold": false
+									},
+									"chartScrollbar": {
+										"enabled": true,
+										"backgroundColor": "#0D1B2C",
+										"dragIcon": "dragIconRectSmall",
+										"dragIconHeight": 12,
+										"dragIconWidth": 20,
+										"graphFillColor": "",
+										"graphLineColor": "",
+										"gridAlpha": 0.99,
+										"gridColor": "#C4C9CF",
+										"maximum": 0,
+										"minimum": 0,
+										"offset": 21,
+										"scrollbarHeight": 5,
+										"selectedBackgroundAlpha": 0.64,
+										"selectedBackgroundColor": "#C4C9CF",
+										"selectedGraphFillAlpha": 0,
+										"selectedGraphFillColor": "",
+										"selectedGraphLineColor": "",
+										"tabIndex": -2
+									},
+									"chartCursor": {
+										"enabled": true,
+										"categoryBalloonDateFormat": "DD MMM YYYY",
+										"bulletSize": 10,
+										"color": "#000000",
+										"cursorColor": "#C4C9CF",
+										"cursorPosition": "mouse",
+										"graphBulletAlpha": 0,
+										"graphBulletSize": 0,
+										"selectionAlpha": 0,
+										"tabIndex": 4,
+										"fontSize": 16,
+										"valueLineAlpha": 0,
+										"selectionAlpha": 0.4
+									},
+									"chartScrollbar": {
+										"enabled": true,
+										"backgroundAlpha": 0,
+										"backgroundColor": "#0D1B2C",
+										"dragIcon": "dragIconRectSmall",
+										"dragIconHeight": 12,
+										"dragIconWidth": 20,
+										"graphFillColor": "",
+										"graphLineColor": "",
+										"gridAlpha": 0.99,
+										"gridColor": "#C4C9CF",
+										"maximum": 0,
+										"minimum": -3,
+										"offset": 12,
+										"scrollbarHeight": 5,
+										"selectedBackgroundAlpha": 0.22,
+										"selectedBackgroundColor": "#C4C9CF",
+										"selectedGraphFillAlpha": 0.17,
+										"tabIndex": -2
+									},
+									"trendLines": [],
+									"graphs": [
+										{
+											"alphaField": "Date",
+											"animationPlayed": true,
+											"balloonColor": "#2D3B42",
+											"bullet": "square",
+											"bulletBorderThickness": 3,
+											"bulletField": "Value",
+											"bulletSizeField": "Value",
+											"color": "#3CD7D9",
+											"dateFormat": "DD MMM YYYY",
+											"fillColors": "",
+											"fixedColumnWidth": 1,
+											"id": "Graph1",
+											"lineColor": "#3CD7D9",
+											"lineThickness": 4,
+											"maxBulletSize": 49,
+											"negativeBase": -3,
+											"title": "Series ID",
+											"useLineColorForBulletBorder": true,
+											"valueAxis": "ValueAxis-1",
+											"valueField": "Value",
+											"visibleInLegend": false
+										}
+									],
+									"guides": [{ "color": "C4C9CF" }],
+									"valueAxes": [{
+										"axisColor": "#C4C9CF",
+										"axisThickness": 0,
+										"fillColor": "#C4C9CF",
+										"gridAlpha": 0.34,
+										"gridColor": "#C4C9CF",
+										"minorGridAlpha": 1,
+										"tickLength": 0,
+										"titleBold": false,
+										"titleFontSize": 16
+									}],
+									"allLabels": [],
+									"balloon": {
+										"animationDuration": 0.44,
+										"borderColor": "#C4C9CF",
+										"borderThickness": 0,
+										"fadeOutDuration": 0.22,
+										"fillAlpha": 1,
+										"fillColor": "#C4C9CF",
+										"fontSize": 14,
+										"horizontalPadding": 4,
+										"pointerOrientation": "right",
+										"shadowAlpha": 0.47,
+										"shadowColor": "#12273F",
+										"showBullet": true
+									},
+									"titles": [],
+									"legend": {
+										"enabled": true,
+										"align": "center",
+										"color": "#C4C9CF",
+										"equalWidths": false,
+										"fontSize": 16,
+										"markerBorderAlpha": 0,
+										"markerBorderThickness": 0,
+										"markerDisabledColor": "#C4C9CF",
+										"markerSize": 10,
+										"markerType": "line",
+										"rollOverColor": "#3CD7D9",
+										"spacing": 5,
+										"tabIndex": 1,
+										"useGraphSettings": true,
+										"useMarkerColorForValues": true
+									},
+									"dataProvider": [
+										{
+											"Date": "31-01-1999",
+											"Value": "7.41"
+										},
+										{
+											"Date": "28-02-1999",
+											"Value": "7.21"
+										},
+										{
+											"Date": "31-03-1999",
+											"Value": "6.89"
+										},
+										{
+											"Date": "30-04-1999",
+											"Value": "6.87"
+										},
+										{
+											"Date": "31-05-1999",
+											"Value": "6.72"
+										},
+										{
+											"Date": "30-06-1999",
+											"Value": "6.63"
+										},
+										{
+											"Date": "31-07-1999",
+											"Value": "6.64"
+										},
+										{
+											"Date": "31-08-1999",
+											"Value": "6.61"
+										},
+										{
+											"Date": "30-09-1999",
+											"Value": "6.6"
+										},
+										{
+											"Date": "31-10-1999",
+											"Value": "6.66"
+										},
+										{
+											"Date": "30-11-1999",
+											"Value": "6.72"
+										},
+										{
+											"Date": "31-12-1999",
+											"Value": "6.89"
+										},
+										{
+											"Date": "31-01-2000",
+											"Value": "6.99"
+										},
+										{
+											"Date": "29-02-2000",
+											"Value": "7.06"
+										},
+										{
+											"Date": "31-03-2000",
+											"Value": "7.12"
+										},
+										{
+											"Date": "30-04-2000",
+											"Value": "7.16"
+										},
+										{
+											"Date": "31-05-2000",
+											"Value": "7.13"
+										},
+										{
+											"Date": "30-06-2000",
+											"Value": "7.14"
+										},
+										{
+											"Date": "31-07-2000",
+											"Value": "7.12"
+										},
+										{
+											"Date": "31-08-2000",
+											"Value": "7.11"
+										},
+										{
+											"Date": "30-09-2000",
+											"Value": "7.11"
+										},
+										{
+											"Date": "31-10-2000",
+											"Value": "7.07"
+										},
+										{
+											"Date": "30-11-2000",
+											"Value": "7.07"
+										},
+										{
+											"Date": "31-12-2000",
+											"Value": "7.03"
+										},
+										{
+											"Date": "31-01-2001",
+											"Value": "7.01"
+										},
+										{
+											"Date": "28-02-2001",
+											"Value": "6.98"
+										},
+										{
+											"Date": "31-03-2001",
+											"Value": "6.82"
+										},
+										{
+											"Date": "30-04-2001",
+											"Value": "6.79"
+										},
+										{
+											"Date": "31-05-2001",
+											"Value": "6.61"
+										},
+										{
+											"Date": "30-06-2001",
+											"Value": "6.44"
+										},
+										{
+											"Date": "31-07-2001",
+											"Value": "6.42"
+										},
+										{
+											"Date": "31-08-2001",
+											"Value": "6.4"
+										},
+										{
+											"Date": "30-09-2001",
+											"Value": "6.23"
+										},
+										{
+											"Date": "31-10-2001",
+											"Value": "6.08"
+										},
+										{
+											"Date": "30-11-2001",
+											"Value": "5.87"
+										},
+										{
+											"Date": "31-12-2001",
+											"Value": "5.59"
+										},
+										{
+											"Date": "31-01-2002",
+											"Value": "5.54"
+										},
+										{
+											"Date": "28-02-2002",
+											"Value": "5.54"
+										},
+										{
+											"Date": "31-03-2002",
+											"Value": "5.46"
+										},
+										{
+											"Date": "30-04-2002",
+											"Value": "5.42"
+										},
+										{
+											"Date": "31-05-2002",
+											"Value": "5.44"
+										},
+										{
+											"Date": "30-06-2002",
+											"Value": "5.45"
+										},
+										{
+											"Date": "31-07-2002",
+											"Value": "5.32"
+										},
+										{
+											"Date": "31-08-2002",
+											"Value": "5.32"
+										},
+										{
+											"Date": "30-09-2002",
+											"Value": "5.3"
+										},
+										{
+											"Date": "31-10-2002",
+											"Value": "5.31"
+										},
+										{
+											"Date": "30-11-2002",
+											"Value": "5.3"
+										},
+										{
+											"Date": "31-12-2002",
+											"Value": "5.28"
+										},
+										{
+											"Date": "31-01-2003",
+											"Value": "5.23"
+										},
+										{
+											"Date": "28-02-2003",
+											"Value": "5.21"
+										},
+										{
+											"Date": "31-03-2003",
+											"Value": "5.08"
+										},
+										{
+											"Date": "30-04-2003",
+											"Value": "5.03"
+										},
+										{
+											"Date": "31-05-2003",
+											"Value": "5"
+										},
+										{
+											"Date": "30-06-2003",
+											"Value": "5"
+										},
+										{
+											"Date": "31-07-2003",
+											"Value": "4.94"
+										},
+										{
+											"Date": "31-08-2003",
+											"Value": "4.82"
+										},
+										{
+											"Date": "30-09-2003",
+											"Value": "4.79"
+										},
+										{
+											"Date": "31-10-2003",
+											"Value": "4.78"
+										},
+										{
+											"Date": "30-11-2003",
+											"Value": "4.77"
+										},
+										{
+											"Date": "31-12-2003",
+											"Value": "4.87"
+										},
+										{
+											"Date": "31-01-2004",
+											"Value": "4.9"
+										},
+										{
+											"Date": "29-02-2004",
+											"Value": "4.99"
+										},
+										{
+											"Date": "31-03-2004",
+											"Value": "5.06"
+										},
+										{
+											"Date": "30-04-2004",
+											"Value": "5.03"
+										},
+										{
+											"Date": "31-05-2004",
+											"Value": "5.06"
+										},
+										{
+											"Date": "30-06-2004",
+											"Value": "5.22"
+										},
+										{
+											"Date": "31-07-2004",
+											"Value": "5.39"
+										},
+										{
+											"Date": "31-08-2004",
+											"Value": "5.43"
+										},
+										{
+											"Date": "30-09-2004",
+											"Value": "5.57"
+										},
+										{
+											"Date": "31-10-2004",
+											"Value": "5.57"
+										},
+										{
+											"Date": "30-11-2004",
+											"Value": "5.58"
+										},
+										{
+											"Date": "31-12-2004",
+											"Value": "5.57"
+										},
+										{
+											"Date": "31-01-2005",
+											"Value": "5.54"
+										},
+										{
+											"Date": "28-02-2005",
+											"Value": "5.53"
+										},
+										{
+											"Date": "31-03-2005",
+											"Value": "5.52"
+										},
+										{
+											"Date": "30-04-2005",
+											"Value": "5.5"
+										},
+										{
+											"Date": "31-05-2005",
+											"Value": "5.49"
+										},
+										{
+											"Date": "30-06-2005",
+											"Value": "5.52"
+										},
+										{
+											"Date": "31-07-2005",
+											"Value": "5.53"
+										},
+										{
+											"Date": "31-08-2005",
+											"Value": "5.52"
+										},
+										{
+											"Date": "30-09-2005",
+											"Value": "5.38"
+										},
+										{
+											"Date": "31-10-2005",
+											"Value": "5.36"
+										},
+										{
+											"Date": "30-11-2005",
+											"Value": "5.36"
+										},
+										{
+											"Date": "31-12-2005",
+											"Value": "5.33"
+										},
+										{
+											"Date": "31-01-2006",
+											"Value": "5.33"
+										},
+										{
+											"Date": "28-02-2006",
+											"Value": "5.34"
+										},
+										{
+											"Date": "31-03-2006",
+											"Value": "5.31"
+										},
+										{
+											"Date": "30-04-2006",
+											"Value": "5.32"
+										},
+										{
+											"Date": "31-05-2006",
+											"Value": "5.31"
+										},
+										{
+											"Date": "30-06-2006",
+											"Value": "5.3"
+										},
+										{
+											"Date": "31-07-2006",
+											"Value": "5.29"
+										},
+										{
+											"Date": "31-08-2006",
+											"Value": "5.29"
+										},
+										{
+											"Date": "30-09-2006",
+											"Value": "5.41"
+										},
+										{
+											"Date": "31-10-2006",
+											"Value": "5.4"
+										},
+										{
+											"Date": "30-11-2006",
+											"Value": "5.42"
+										},
+										{
+											"Date": "31-12-2006",
+											"Value": "5.53"
+										},
+										{
+											"Date": "31-01-2007",
+											"Value": "5.54"
+										},
+										{
+											"Date": "28-02-2007",
+											"Value": "5.66"
+										},
+										{
+											"Date": "31-03-2007",
+											"Value": "5.67"
+										},
+										{
+											"Date": "30-04-2007",
+											"Value": "5.65"
+										},
+										{
+											"Date": "31-05-2007",
+											"Value": "5.66"
+										},
+										{
+											"Date": "30-06-2007",
+											"Value": "5.8"
+										},
+										{
+											"Date": "31-07-2007",
+											"Value": "5.82"
+										},
+										{
+											"Date": "31-08-2007",
+											"Value": "5.91"
+										},
+										{
+											"Date": "30-09-2007",
+											"Value": "5.92"
+										},
+										{
+											"Date": "31-10-2007",
+											"Value": "5.94"
+										},
+										{
+											"Date": "30-11-2007",
+											"Value": "5.94"
+										},
+										{
+											"Date": "31-12-2007",
+											"Value": "5.97"
+										},
+										{
+											"Date": "31-01-2008",
+											"Value": "5.88"
+										},
+										{
+											"Date": "29-02-2008",
+											"Value": "5.89"
+										},
+										{
+											"Date": "31-03-2008",
+											"Value": "5.8"
+										},
+										{
+											"Date": "30-04-2008",
+											"Value": "5.8"
+										},
+										{
+											"Date": "31-05-2008",
+											"Value": "5.73"
+										},
+										{
+											"Date": "30-06-2008",
+											"Value": "5.76"
+										},
+										{
+											"Date": "31-07-2008",
+											"Value": "5.79"
+										},
+										{
+											"Date": "31-08-2008",
+											"Value": "5.79"
+										},
+										{
+											"Date": "30-09-2008",
+											"Value": "5.81"
+										},
+										{
+											"Date": "31-10-2008",
+											"Value": "5.82"
+										},
+										{
+											"Date": "30-11-2008",
+											"Value": "5.54"
+										},
+										{
+											"Date": "31-12-2008",
+											"Value": "4.8"
+										},
+										{
+											"Date": "31-01-2009",
+											"Value": "4.32"
+										},
+										{
+											"Date": "28-02-2009",
+											"Value": "4.1"
+										},
+										{
+											"Date": "31-03-2009",
+											"Value": "3.83"
+										},
+										{
+											"Date": "30-04-2009",
+											"Value": "3.62"
+										},
+										{
+											"Date": "31-05-2009",
+											"Value": "3.59"
+										},
+										{
+											"Date": "30-06-2009",
+											"Value": "3.59"
+										},
+										{
+											"Date": "31-07-2009",
+											"Value": "3.57"
+										},
+										{
+											"Date": "31-08-2009",
+											"Value": "3.58"
+										},
+										{
+											"Date": "30-09-2009",
+											"Value": "3.58"
+										},
+										{
+											"Date": "31-10-2009",
+											"Value": "3.56"
+										},
+										{
+											"Date": "30-11-2009",
+											"Value": "3.57"
+										},
+										{
+											"Date": "31-12-2009",
+											"Value": "3.59"
+										},
+										{
+											"Date": "31-01-2010",
+											"Value": "3.67"
+										},
+										{
+											"Date": "28-02-2010",
+											"Value": "3.67"
+										},
+										{
+											"Date": "31-03-2010",
+											"Value": "3.66"
+										},
+										{
+											"Date": "30-04-2010",
+											"Value": "3.67"
+										},
+										{
+											"Date": "31-05-2010",
+											"Value": "3.66"
+										},
+										{
+											"Date": "30-06-2010",
+											"Value": "3.65"
+										},
+										{
+											"Date": "31-07-2010",
+											"Value": "3.63"
+										},
+										{
+											"Date": "31-08-2010",
+											"Value": "3.55"
+										},
+										{
+											"Date": "30-09-2010",
+											"Value": "3.53"
+										},
+										{
+											"Date": "31-10-2010",
+											"Value": "3.51"
+										},
+										{
+											"Date": "30-11-2010",
+											"Value": "3.51"
+										},
+										{
+											"Date": "31-12-2010",
+											"Value": "3.5"
+										},
+										{
+											"Date": "31-01-2011",
+											"Value": "3.5"
+										},
+										{
+											"Date": "28-02-2011",
+											"Value": "3.5"
+										},
+										{
+											"Date": "31-03-2011",
+											"Value": "3.49"
+										},
+										{
+											"Date": "30-04-2011",
+											"Value": "3.49"
+										},
+										{
+											"Date": "31-05-2011",
+											"Value": "3.47"
+										},
+										{
+											"Date": "30-06-2011",
+											"Value": "3.45"
+										},
+										{
+											"Date": "31-07-2011",
+											"Value": "3.43"
+										},
+										{
+											"Date": "31-08-2011",
+											"Value": "3.41"
+										},
+										{
+											"Date": "30-09-2011",
+											"Value": "3.36"
+										},
+										{
+											"Date": "31-10-2011",
+											"Value": "3.38"
+										},
+										{
+											"Date": "30-11-2011",
+											"Value": "3.36"
+										},
+										{
+											"Date": "31-12-2011",
+											"Value": "3.36"
+										},
+										{
+											"Date": "31-01-2012",
+											"Value": "3.38"
+										},
+										{
+											"Date": "29-02-2012",
+											"Value": "3.36"
+										},
+										{
+											"Date": "31-03-2012",
+											"Value": "3.36"
+										},
+										{
+											"Date": "30-04-2012",
+											"Value": "3.37"
+										},
+										{
+											"Date": "31-05-2012",
+											"Value": "3.39"
+										},
+										{
+											"Date": "30-06-2012",
+											"Value": "3.38"
+										},
+										{
+											"Date": "31-07-2012",
+											"Value": "3.38"
+										},
+										{
+											"Date": "31-08-2012",
+											"Value": "3.37"
+										},
+										{
+											"Date": "30-09-2012",
+											"Value": "3.37"
+										},
+										{
+											"Date": "31-10-2012",
+											"Value": "3.38"
+										},
+										{
+											"Date": "30-11-2012",
+											"Value": "3.38"
+										},
+										{
+											"Date": "31-12-2012",
+											"Value": "3.38"
+										},
+										{
+											"Date": "31-01-2013",
+											"Value": "3.37"
+										},
+										{
+											"Date": "28-02-2013",
+											"Value": "3.37"
+										},
+										{
+											"Date": "31-03-2013",
+											"Value": "3.36"
+										},
+										{
+											"Date": "30-04-2013",
+											"Value": "3.35"
+										},
+										{
+											"Date": "31-05-2013",
+											"Value": "3.35"
+										},
+										{
+											"Date": "30-06-2013",
+											"Value": "3.33"
+										},
+										{
+											"Date": "31-07-2013",
+											"Value": "3.33"
+										},
+										{
+											"Date": "31-08-2013",
+											"Value": "3.32"
+										},
+										{
+											"Date": "30-09-2013",
+											"Value": "3.3"
+										},
+										{
+											"Date": "31-10-2013",
+											"Value": "3.28"
+										},
+										{
+											"Date": "30-11-2013",
+											"Value": "3.29"
+										},
+										{
+											"Date": "31-12-2013",
+											"Value": "3.27"
+										},
+										{
+											"Date": "31-01-2014",
+											"Value": "3.26"
+										},
+										{
+											"Date": "28-02-2014",
+											"Value": "3.25"
+										},
+										{
+											"Date": "31-03-2014",
+											"Value": "3.24"
+										},
+										{
+											"Date": "30-04-2014",
+											"Value": "3.23"
+										},
+										{
+											"Date": "31-05-2014",
+											"Value": "3.24"
+										},
+										{
+											"Date": "30-06-2014",
+											"Value": "3.23"
+										},
+										{
+											"Date": "31-07-2014",
+											"Value": "3.22"
+										},
+										{
+											"Date": "31-08-2014",
+											"Value": "3.22"
+										},
+										{
+											"Date": "30-09-2014",
+											"Value": "3.2"
+										},
+										{
+											"Date": "31-10-2014",
+											"Value": "3.19"
+										},
+										{
+											"Date": "30-11-2014",
+											"Value": "3.19"
+										},
+										{
+											"Date": "31-12-2014",
+											"Value": "3.18"
+										},
+										{
+											"Date": "31-01-2015",
+											"Value": "3.17"
+										},
+										{
+											"Date": "28-02-2015",
+											"Value": "3.15"
+										},
+										{
+											"Date": "31-03-2015",
+											"Value": "3.14"
+										},
+										{
+											"Date": "30-04-2015",
+											"Value": "3.12"
+										},
+										{
+											"Date": "31-05-2015",
+											"Value": "3.11"
+										},
+										{
+											"Date": "30-06-2015",
+											"Value": "3.09"
+										},
+										{
+											"Date": "31-07-2015",
+											"Value": "3.07"
+										},
+										{
+											"Date": "31-08-2015",
+											"Value": "3.06"
+										},
+										{
+											"Date": "30-09-2015",
+											"Value": "3.04"
+										},
+										{
+											"Date": "31-10-2015",
+											"Value": "3.03"
+										},
+										{
+											"Date": "30-11-2015",
+											"Value": "3.01"
+										},
+										{
+											"Date": "31-12-2015",
+											"Value": "2.99"
+										},
+										{
+											"Date": "31-01-2016",
+											"Value": "2.96"
+										},
+										{
+											"Date": "29-02-2016",
+											"Value": "2.95"
+										},
+										{
+											"Date": "31-03-2016",
+											"Value": "2.94"
+										},
+										{
+											"Date": "30-04-2016",
+											"Value": "2.92"
+										},
+										{
+											"Date": "31-05-2016",
+											"Value": "2.9"
+										},
+										{
+											"Date": "30-06-2016",
+											"Value": "2.89"
+										},
+										{
+											"Date": "31-07-2016",
+											"Value": "2.88"
+										},
+										{
+											"Date": "31-08-2016",
+											"Value": "2.84"
+										},
+										{
+											"Date": "30-09-2016",
+											"Value": "2.74"
+										},
+										{
+											"Date": "31-10-2016",
+											"Value": "2.71"
+										},
+										{
+											"Date": "30-11-2016",
+											"Value": "2.68"
+										},
+										{
+											"Date": "31-12-2016",
+											"Value": "2.67"
+										},
+										{
+											"Date": "31-01-2017",
+											"Value": "2.64"
+										},
+										{
+											"Date": "28-02-2017",
+											"Value": "2.63"
+										},
+										{
+											"Date": "31-03-2017",
+											"Value": "2.61"
+										},
+										{
+											"Date": "30-04-2017",
+											"Value": "2.61"
+										},
+										{
+											"Date": "31-05-2017",
+											"Value": "2.58"
+										},
+										{
+											"Date": "30-06-2017",
+											"Value": "2.57"
+										},
+										{
+											"Date": "31-07-2017",
+											"Value": "2.55"
+										},
+										{
+											"Date": "31-08-2017",
+											"Value": "2.53"
+										},
+										{
+											"Date": "30-09-2017",
+											"Value": "2.52"
+										},
+										{
+											"Date": "31-10-2017",
+											"Value": "2.5"
+										},
+										{
+											"Date": "30-11-2017",
+											"Value": "2.5"
+										},
+										{
+											"Date": "31-12-2017",
+											"Value": "2.55"
+										},
+										{
+											"Date": "31-01-2018",
+											"Value": "2.53"
+										},
+										{
+											"Date": "28-02-2018",
+											"Value": "2.52"
+										},
+										{
+											"Date": "31-03-2018",
+											"Value": "2.51"
+										},
+										{
+											"Date": "30-04-2018",
+											"Value": "2.49"
+										},
+										{
+											"Date": "31-05-2018",
+											"Value": "2.48"
+										},
+										{
+											"Date": "30-06-2018",
+											"Value": "2.48"
+										},
+										{
+											"Date": "31-07-2018",
+											"Value": "2.46"
+										},
+										{
+											"Date": "31-08-2018",
+											"Value": "2.45"
+										},
+										{
+											"Date": "30-09-2018",
+											"Value": "2.53"
+										},
+										{
+											"Date": "31-10-2018",
+											"Value": "2.5"
+										},
+										{
+											"Date": "30-11-2018",
+											"Value": "2.5"
+										},
+										{
+											"Date": "31-12-2018",
+											"Value": "2.48"
+										},
+										{
+											"Date": "31-01-2019",
+											"Value": "2.48"
+										},
+										{
+											"Date": "28-02-2019",
+											"Value": "2.46"
+										},
+										{
+											"Date": "31-03-2019",
+											"Value": "2.45"
+										},
+										{
+											"Date": "30-04-2019",
+											"Value": "2.45"
+										},
+										{
+											"Date": "31-05-2019",
+											"Value": "2.43"
+										},
+										{
+											"Date": "30-06-2019",
+											"Value": "2.43"
+										},
+										{
+											"Date": "31-07-2019",
+											"Value": "2.42"
+										},
+										{
+											"Date": "31-08-2019",
+											"Value": "2.42"
+										},
+										{
+											"Date": "30-09-2019",
+											"Value": "2.4"
+										},
+										{
+											"Date": "31-10-2019",
+											"Value": "2.39"
+										},
+										{
+											"Date": "30-11-2019",
+											"Value": "2.4"
+										},
+										{
+											"Date": "31-12-2019",
+											"Value": "2.37"
+										},
+										{
+											"Date": "31-01-2020",
+											"Value": "2.37"
+										},
+										{
+											"Date": "29-02-2020",
+											"Value": "2.37"
+										},
+										{
+											"Date": "31-03-2020",
+											"Value": "2.33"
+										},
+										{
+											"Date": "30-04-2020",
+											"Value": "2.21"
+										},
+										{
+											"Date": "31-05-2020",
+											"Value": "2.17"
+										},
+										{
+											"Date": "30-06-2020",
+											"Value": "2.17"
+										},
+										{
+											"Date": "31-07-2020",
+											"Value": "2.16"
+										},
+										{
+											"Date": "31-08-2020",
+											"Value": "2.14"
+										},
+										{
+											"Date": "30-09-2020",
+											"Value": "2.13"
+										},
+										{
+											"Date": "31-10-2020",
+											"Value": "2.12"
+										},
+										{
+											"Date": "30-11-2020",
+											"Value": "2.12"
+										},
+										{
+											"Date": "31-12-2020",
+											"Value": "2.12"
+										},
+										{
+											"Date": "31-01-2021",
+											"Value": "2.09"
+										},
+										{
+											"Date": "28-02-2021",
+											"Value": "2.09"
+										},
+										{
+											"Date": "31-03-2021",
+											"Value": "2.09"
+										},
+										{
+											"Date": "30-04-2021",
+											"Value": "2.07"
+										},
+										{
+											"Date": "31-05-2021",
+											"Value": "2.07"
+										},
+										{
+											"Date": "30-06-2021",
+											"Value": "2.08"
+										},
+										{
+											"Date": "31-07-2021",
+											"Value": "2.05"
+										},
+										{
+											"Date": "31-08-2021",
+											"Value": "2.06"
+										},
+										{
+											"Date": "30-09-2021",
+											"Value": "2.05"
+										},
+										{
+											"Date": "31-10-2021",
+											"Value": "2.03"
+										},
+										{
+											"Date": "30-11-2021",
+											"Value": "2.02"
+										},
+										{
+											"Date": "31-12-2021",
+											"Value": "2.01"
+										},
+										{
+											"Date": "31-01-2022",
+											"Value": "2.01"
+										},
+										{
+											"Date": "28-02-2022",
+											"Value": "2.02"
+										},
+										{
+											"Date": "31-03-2022",
+											"Value": "2.05"
+										},
+										{
+											"Date": "30-04-2022",
+											"Value": "2.05"
+										},
+										{
+											"Date": "31-05-2022",
+											"Value": "2.08"
+										},
+										{
+											"Date": "30-06-2022",
+											"Value": "2.12"
+										},
+										{
+											"Date": "31-07-2022",
+											"Value": "2.13"
+										},
+										{
+											"Date": "31-08-2022",
+											"Value": "2.18"
+										},
+										{
+											"Date": "30-09-2022",
+											"Value": "2.25"
+										},
+										{
+											"Date": "31-10-2022",
+											"Value": "2.29"
+										},
+										{
+											"Date": "30-11-2022",
+											"Value": "2.39"
+										},
+										{
+											"Date": "31-12-2022",
+											"Value": "2.51"
+										},
+										{
+											"Date": "31-01-2023",
+											"Value": "2.55"
+										},
+										{
+											"Date": "28-02-2023",
+											"Value": "2.65"
+										},
+										{
+											"Date": "31-03-2023",
+											"Value": "2.75"
+										},
+										{
+											"Date": "30-04-2023",
+											"Value": "2.76"
+										},
+										{
+											"Date": "31-05-2023",
+											"Value": "2.83"
+										},
+										{
+											"Date": "30-06-2023",
+											"Value": "2.93"
+										},
+										{
+											"Date": "31-07-2023",
+											"Value": "2.98"
+										},
+										{
+											"Date": "31-08-2023",
+											"Value": "3.07"
+										},
+										{
+											"Date": "30-09-2023",
+											"Value": "3.16"
+										},
+										{
+											"Date": "31-10-2023",
+											"Value": "3.22"
+										},
+										{
+											"Date": "30-11-2023",
+											"Value": "3.28"
+										},
+										{
+											"Date": "31-12-2023",
+											"Value": "3.37"
+										},
+										{
+											"Date": "31-01-2024",
+											"Value": "3.42"
+										},
+									]
+								}
+							);
+						</script>
+						<div id="chartdiv" style="width: 100%; height: 400px; background-color: #FFFFFF;"></div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="page-section">
+				<div class="container  ">
+
+
+					<h3>Export source data</h3>
+
+
+
+
+
+					<table id="stats-table" class="display" style="display:table;width:50%; ">
+						<thead>
+							<tr>
+								<th width="150" style="min-width:150px; text-align:right !important" align="right"
+									valign="bottom">Date</th>
+								<th style="font-weight:normal; text-align:right !important"><span
+										style='font-size:14px'>Monthly average of UK resident monetary financial
+										institutions&#39; (excl. Central Bank) sterling weighted average interest rate,
+										loans secured on dwellings to households (in percent) not seasonally
+										adjusted</span><br>
+									<span style='font-size:11px'><a href='#notes'>[a] [b]</a></span>
+									<br><strong class='highlight'>CFMHSDE</strong>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+
+							<tr>
+								<td align="right">31 Jan 99</td>
+								<td align="right">
+									7.41
+								</td>
+							</tr>
+							<tr>
+								<td align="right">28 Feb 99</td>
+								<td align="right">
+									7.21
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 99</td>
+								<td align="right">
+									6.89
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 99</td>
+								<td align="right">
+									6.87
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 99</td>
+								<td align="right">
+									6.72
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 99</td>
+								<td align="right">
+									6.63
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 99</td>
+								<td align="right">
+									6.64
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 99</td>
+								<td align="right">
+									6.61
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 99</td>
+								<td align="right">
+									6.6
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 99</td>
+								<td align="right">
+									6.66
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 99</td>
+								<td align="right">
+									6.72
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 99</td>
+								<td align="right">
+									6.89
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 00</td>
+								<td align="right">
+									6.99
+								</td>
+							</tr>
+							<tr>
+								<td align="right">29 Feb 00</td>
+								<td align="right">
+									7.06
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 00</td>
+								<td align="right">
+									7.12
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 00</td>
+								<td align="right">
+									7.16
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 00</td>
+								<td align="right">
+									7.13
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 00</td>
+								<td align="right">
+									7.14
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 00</td>
+								<td align="right">
+									7.12
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 00</td>
+								<td align="right">
+									7.11
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 00</td>
+								<td align="right">
+									7.11
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 00</td>
+								<td align="right">
+									7.07
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 00</td>
+								<td align="right">
+									7.07
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 00</td>
+								<td align="right">
+									7.03
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 01</td>
+								<td align="right">
+									7.01
+								</td>
+							</tr>
+							<tr>
+								<td align="right">28 Feb 01</td>
+								<td align="right">
+									6.98
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 01</td>
+								<td align="right">
+									6.82
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 01</td>
+								<td align="right">
+									6.79
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 01</td>
+								<td align="right">
+									6.61
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 01</td>
+								<td align="right">
+									6.44
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 01</td>
+								<td align="right">
+									6.42
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 01</td>
+								<td align="right">
+									6.4
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 01</td>
+								<td align="right">
+									6.23
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 01</td>
+								<td align="right">
+									6.08
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 01</td>
+								<td align="right">
+									5.87
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 01</td>
+								<td align="right">
+									5.59
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 02</td>
+								<td align="right">
+									5.54
+								</td>
+							</tr>
+							<tr>
+								<td align="right">28 Feb 02</td>
+								<td align="right">
+									5.54
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 02</td>
+								<td align="right">
+									5.46
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 02</td>
+								<td align="right">
+									5.42
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 02</td>
+								<td align="right">
+									5.44
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 02</td>
+								<td align="right">
+									5.45
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 02</td>
+								<td align="right">
+									5.32
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 02</td>
+								<td align="right">
+									5.32
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 02</td>
+								<td align="right">
+									5.3
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 02</td>
+								<td align="right">
+									5.31
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 02</td>
+								<td align="right">
+									5.3
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 02</td>
+								<td align="right">
+									5.28
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 03</td>
+								<td align="right">
+									5.23
+								</td>
+							</tr>
+							<tr>
+								<td align="right">28 Feb 03</td>
+								<td align="right">
+									5.21
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 03</td>
+								<td align="right">
+									5.08
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 03</td>
+								<td align="right">
+									5.03
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 03</td>
+								<td align="right">
+									5
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 03</td>
+								<td align="right">
+									5
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 03</td>
+								<td align="right">
+									4.94
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 03</td>
+								<td align="right">
+									4.82
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 03</td>
+								<td align="right">
+									4.79
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 03</td>
+								<td align="right">
+									4.78
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 03</td>
+								<td align="right">
+									4.77
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 03</td>
+								<td align="right">
+									4.87
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 04</td>
+								<td align="right">
+									4.9
+								</td>
+							</tr>
+							<tr>
+								<td align="right">29 Feb 04</td>
+								<td align="right">
+									4.99
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 04</td>
+								<td align="right">
+									5.06
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 04</td>
+								<td align="right">
+									5.03
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 04</td>
+								<td align="right">
+									5.06
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 04</td>
+								<td align="right">
+									5.22
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 04</td>
+								<td align="right">
+									5.39
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 04</td>
+								<td align="right">
+									5.43
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 04</td>
+								<td align="right">
+									5.57
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 04</td>
+								<td align="right">
+									5.57
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 04</td>
+								<td align="right">
+									5.58
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 04</td>
+								<td align="right">
+									5.57
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 05</td>
+								<td align="right">
+									5.54
+								</td>
+							</tr>
+							<tr>
+								<td align="right">28 Feb 05</td>
+								<td align="right">
+									5.53
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 05</td>
+								<td align="right">
+									5.52
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 05</td>
+								<td align="right">
+									5.5
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 05</td>
+								<td align="right">
+									5.49
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 05</td>
+								<td align="right">
+									5.52
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 05</td>
+								<td align="right">
+									5.53
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 05</td>
+								<td align="right">
+									5.52
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 05</td>
+								<td align="right">
+									5.38
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 05</td>
+								<td align="right">
+									5.36
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 05</td>
+								<td align="right">
+									5.36
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 05</td>
+								<td align="right">
+									5.33
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 06</td>
+								<td align="right">
+									5.33
+								</td>
+							</tr>
+							<tr>
+								<td align="right">28 Feb 06</td>
+								<td align="right">
+									5.34
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 06</td>
+								<td align="right">
+									5.31
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 06</td>
+								<td align="right">
+									5.32
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 06</td>
+								<td align="right">
+									5.31
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 06</td>
+								<td align="right">
+									5.3
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 06</td>
+								<td align="right">
+									5.29
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 06</td>
+								<td align="right">
+									5.29
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 06</td>
+								<td align="right">
+									5.41
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 06</td>
+								<td align="right">
+									5.4
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 06</td>
+								<td align="right">
+									5.42
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 06</td>
+								<td align="right">
+									5.53
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 07</td>
+								<td align="right">
+									5.54
+								</td>
+							</tr>
+							<tr>
+								<td align="right">28 Feb 07</td>
+								<td align="right">
+									5.66
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 07</td>
+								<td align="right">
+									5.67
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 07</td>
+								<td align="right">
+									5.65
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 07</td>
+								<td align="right">
+									5.66
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 07</td>
+								<td align="right">
+									5.8
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 07</td>
+								<td align="right">
+									5.82
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 07</td>
+								<td align="right">
+									5.91
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 07</td>
+								<td align="right">
+									5.92
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 07</td>
+								<td align="right">
+									5.94
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 07</td>
+								<td align="right">
+									5.94
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 07</td>
+								<td align="right">
+									5.97
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 08</td>
+								<td align="right">
+									5.88
+								</td>
+							</tr>
+							<tr>
+								<td align="right">29 Feb 08</td>
+								<td align="right">
+									5.89
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 08</td>
+								<td align="right">
+									5.8
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 08</td>
+								<td align="right">
+									5.8
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 08</td>
+								<td align="right">
+									5.73
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 08</td>
+								<td align="right">
+									5.76
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 08</td>
+								<td align="right">
+									5.79
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 08</td>
+								<td align="right">
+									5.79
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 08</td>
+								<td align="right">
+									5.81
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 08</td>
+								<td align="right">
+									5.82
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 08</td>
+								<td align="right">
+									5.54
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 08</td>
+								<td align="right">
+									4.8
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 09</td>
+								<td align="right">
+									4.32
+								</td>
+							</tr>
+							<tr>
+								<td align="right">28 Feb 09</td>
+								<td align="right">
+									4.1
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 09</td>
+								<td align="right">
+									3.83
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 09</td>
+								<td align="right">
+									3.62
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 09</td>
+								<td align="right">
+									3.59
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 09</td>
+								<td align="right">
+									3.59
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 09</td>
+								<td align="right">
+									3.57
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 09</td>
+								<td align="right">
+									3.58
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 09</td>
+								<td align="right">
+									3.58
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 09</td>
+								<td align="right">
+									3.56
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 09</td>
+								<td align="right">
+									3.57
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 09</td>
+								<td align="right">
+									3.59
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 10</td>
+								<td align="right">
+									3.67
+								</td>
+							</tr>
+							<tr>
+								<td align="right">28 Feb 10</td>
+								<td align="right">
+									3.67
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 10</td>
+								<td align="right">
+									3.66
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 10</td>
+								<td align="right">
+									3.67
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 10</td>
+								<td align="right">
+									3.66
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 10</td>
+								<td align="right">
+									3.65
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 10</td>
+								<td align="right">
+									3.63
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 10</td>
+								<td align="right">
+									3.55
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 10</td>
+								<td align="right">
+									3.53
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 10</td>
+								<td align="right">
+									3.51
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 10</td>
+								<td align="right">
+									3.51
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 10</td>
+								<td align="right">
+									3.5
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 11</td>
+								<td align="right">
+									3.5
+								</td>
+							</tr>
+							<tr>
+								<td align="right">28 Feb 11</td>
+								<td align="right">
+									3.5
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 11</td>
+								<td align="right">
+									3.49
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 11</td>
+								<td align="right">
+									3.49
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 11</td>
+								<td align="right">
+									3.47
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 11</td>
+								<td align="right">
+									3.45
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 11</td>
+								<td align="right">
+									3.43
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 11</td>
+								<td align="right">
+									3.41
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 11</td>
+								<td align="right">
+									3.36
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 11</td>
+								<td align="right">
+									3.38
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 11</td>
+								<td align="right">
+									3.36
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 11</td>
+								<td align="right">
+									3.36
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 12</td>
+								<td align="right">
+									3.38
+								</td>
+							</tr>
+							<tr>
+								<td align="right">29 Feb 12</td>
+								<td align="right">
+									3.36
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 12</td>
+								<td align="right">
+									3.36
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 12</td>
+								<td align="right">
+									3.37
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 12</td>
+								<td align="right">
+									3.39
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 12</td>
+								<td align="right">
+									3.38
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 12</td>
+								<td align="right">
+									3.38
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 12</td>
+								<td align="right">
+									3.37
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 12</td>
+								<td align="right">
+									3.37
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 12</td>
+								<td align="right">
+									3.38
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 12</td>
+								<td align="right">
+									3.38
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 12</td>
+								<td align="right">
+									3.38
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 13</td>
+								<td align="right">
+									3.37
+								</td>
+							</tr>
+							<tr>
+								<td align="right">28 Feb 13</td>
+								<td align="right">
+									3.37
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 13</td>
+								<td align="right">
+									3.36
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 13</td>
+								<td align="right">
+									3.35
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 13</td>
+								<td align="right">
+									3.35
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 13</td>
+								<td align="right">
+									3.33
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 13</td>
+								<td align="right">
+									3.33
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 13</td>
+								<td align="right">
+									3.32
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 13</td>
+								<td align="right">
+									3.3
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 13</td>
+								<td align="right">
+									3.28
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 13</td>
+								<td align="right">
+									3.29
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 13</td>
+								<td align="right">
+									3.27
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 14</td>
+								<td align="right">
+									3.26
+								</td>
+							</tr>
+							<tr>
+								<td align="right">28 Feb 14</td>
+								<td align="right">
+									3.25
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 14</td>
+								<td align="right">
+									3.24
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 14</td>
+								<td align="right">
+									3.23
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 14</td>
+								<td align="right">
+									3.24
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 14</td>
+								<td align="right">
+									3.23
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 14</td>
+								<td align="right">
+									3.22
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 14</td>
+								<td align="right">
+									3.22
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 14</td>
+								<td align="right">
+									3.2
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 14</td>
+								<td align="right">
+									3.19
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 14</td>
+								<td align="right">
+									3.19
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 14</td>
+								<td align="right">
+									3.18
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 15</td>
+								<td align="right">
+									3.17
+								</td>
+							</tr>
+							<tr>
+								<td align="right">28 Feb 15</td>
+								<td align="right">
+									3.15
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 15</td>
+								<td align="right">
+									3.14
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 15</td>
+								<td align="right">
+									3.12
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 15</td>
+								<td align="right">
+									3.11
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 15</td>
+								<td align="right">
+									3.09
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 15</td>
+								<td align="right">
+									3.07
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 15</td>
+								<td align="right">
+									3.06
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 15</td>
+								<td align="right">
+									3.04
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 15</td>
+								<td align="right">
+									3.03
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 15</td>
+								<td align="right">
+									3.01
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 15</td>
+								<td align="right">
+									2.99
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 16</td>
+								<td align="right">
+									2.96
+								</td>
+							</tr>
+							<tr>
+								<td align="right">29 Feb 16</td>
+								<td align="right">
+									2.95
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 16</td>
+								<td align="right">
+									2.94
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 16</td>
+								<td align="right">
+									2.92
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 16</td>
+								<td align="right">
+									2.9
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 16</td>
+								<td align="right">
+									2.89
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 16</td>
+								<td align="right">
+									2.88
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 16</td>
+								<td align="right">
+									2.84
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 16</td>
+								<td align="right">
+									2.74
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 16</td>
+								<td align="right">
+									2.71
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 16</td>
+								<td align="right">
+									2.68
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 16</td>
+								<td align="right">
+									2.67
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 17</td>
+								<td align="right">
+									2.64
+								</td>
+							</tr>
+							<tr>
+								<td align="right">28 Feb 17</td>
+								<td align="right">
+									2.63
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 17</td>
+								<td align="right">
+									2.61
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 17</td>
+								<td align="right">
+									2.61
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 17</td>
+								<td align="right">
+									2.58
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 17</td>
+								<td align="right">
+									2.57
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 17</td>
+								<td align="right">
+									2.55
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 17</td>
+								<td align="right">
+									2.53
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 17</td>
+								<td align="right">
+									2.52
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 17</td>
+								<td align="right">
+									2.5
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 17</td>
+								<td align="right">
+									2.5
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 17</td>
+								<td align="right">
+									2.55
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 18</td>
+								<td align="right">
+									2.53
+								</td>
+							</tr>
+							<tr>
+								<td align="right">28 Feb 18</td>
+								<td align="right">
+									2.52
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 18</td>
+								<td align="right">
+									2.51
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 18</td>
+								<td align="right">
+									2.49
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 18</td>
+								<td align="right">
+									2.48
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 18</td>
+								<td align="right">
+									2.48
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 18</td>
+								<td align="right">
+									2.46
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 18</td>
+								<td align="right">
+									2.45
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 18</td>
+								<td align="right">
+									2.53
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 18</td>
+								<td align="right">
+									2.5
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 18</td>
+								<td align="right">
+									2.5
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 18</td>
+								<td align="right">
+									2.48
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 19</td>
+								<td align="right">
+									2.48
+								</td>
+							</tr>
+							<tr>
+								<td align="right">28 Feb 19</td>
+								<td align="right">
+									2.46
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 19</td>
+								<td align="right">
+									2.45
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 19</td>
+								<td align="right">
+									2.45
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 19</td>
+								<td align="right">
+									2.43
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 19</td>
+								<td align="right">
+									2.43
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 19</td>
+								<td align="right">
+									2.42
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 19</td>
+								<td align="right">
+									2.42
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 19</td>
+								<td align="right">
+									2.4
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 19</td>
+								<td align="right">
+									2.39
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 19</td>
+								<td align="right">
+									2.4
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 19</td>
+								<td align="right">
+									2.37
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 20</td>
+								<td align="right">
+									2.37
+								</td>
+							</tr>
+							<tr>
+								<td align="right">29 Feb 20</td>
+								<td align="right">
+									2.37
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 20</td>
+								<td align="right">
+									2.33
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 20</td>
+								<td align="right">
+									2.21
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 20</td>
+								<td align="right">
+									2.17
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 20</td>
+								<td align="right">
+									2.17
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 20</td>
+								<td align="right">
+									2.16
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 20</td>
+								<td align="right">
+									2.14
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 20</td>
+								<td align="right">
+									2.13
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 20</td>
+								<td align="right">
+									2.12
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 20</td>
+								<td align="right">
+									2.12
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 20</td>
+								<td align="right">
+									2.12
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 21</td>
+								<td align="right">
+									2.09
+								</td>
+							</tr>
+							<tr>
+								<td align="right">28 Feb 21</td>
+								<td align="right">
+									2.09
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 21</td>
+								<td align="right">
+									2.09
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 21</td>
+								<td align="right">
+									2.07
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 21</td>
+								<td align="right">
+									2.07
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 21</td>
+								<td align="right">
+									2.08
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 21</td>
+								<td align="right">
+									2.05
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 21</td>
+								<td align="right">
+									2.06
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 21</td>
+								<td align="right">
+									2.05
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 21</td>
+								<td align="right">
+									2.03
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 21</td>
+								<td align="right">
+									2.02
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 21</td>
+								<td align="right">
+									2.01
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 22</td>
+								<td align="right">
+									2.01
+								</td>
+							</tr>
+							<tr>
+								<td align="right">28 Feb 22</td>
+								<td align="right">
+									2.02
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 22</td>
+								<td align="right">
+									2.05
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 22</td>
+								<td align="right">
+									2.05
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 22</td>
+								<td align="right">
+									2.08
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 22</td>
+								<td align="right">
+									2.12
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 22</td>
+								<td align="right">
+									2.13
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 22</td>
+								<td align="right">
+									2.18
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 22</td>
+								<td align="right">
+									2.25
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 22</td>
+								<td align="right">
+									2.29
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 22</td>
+								<td align="right">
+									2.39
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 22</td>
+								<td align="right">
+									2.51
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 23</td>
+								<td align="right">
+									2.55
+								</td>
+							</tr>
+							<tr>
+								<td align="right">28 Feb 23</td>
+								<td align="right">
+									2.65
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Mar 23</td>
+								<td align="right">
+									2.75
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Apr 23</td>
+								<td align="right">
+									2.76
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 May 23</td>
+								<td align="right">
+									2.83
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Jun 23</td>
+								<td align="right">
+									2.93
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jul 23</td>
+								<td align="right">
+									2.98
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Aug 23</td>
+								<td align="right">
+									3.07
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Sep 23</td>
+								<td align="right">
+									3.16
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Oct 23</td>
+								<td align="right">
+									3.22
+								</td>
+							</tr>
+							<tr>
+								<td align="right">30 Nov 23</td>
+								<td align="right">
+									3.28
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Dec 23</td>
+								<td align="right">
+									3.37
+								</td>
+							</tr>
+							<tr>
+								<td align="right">31 Jan 24</td>
+								<td align="right">
+									3.42
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div style="padding:20px; text-align:center; width:100%">
+						<form>
+							<h3>Change date range from:
+								<select name="FY" id="FY" title="Data from year" onChange="urlchange('FY',this.value)">
+
+									<option value="1963" SELECTED>1963</option>
+
+									<option value="1964">1964</option>
+
+									<option value="1965">1965</option>
+
+									<option value="1966">1966</option>
+
+									<option value="1967">1967</option>
+
+									<option value="1968">1968</option>
+
+									<option value="1969">1969</option>
+
+									<option value="1970">1970</option>
+
+									<option value="1971">1971</option>
+
+									<option value="1972">1972</option>
+
+									<option value="1973">1973</option>
+
+									<option value="1974">1974</option>
+
+									<option value="1975">1975</option>
+
+									<option value="1976">1976</option>
+
+									<option value="1977">1977</option>
+
+									<option value="1978">1978</option>
+
+									<option value="1979">1979</option>
+
+									<option value="1980">1980</option>
+
+									<option value="1981">1981</option>
+
+									<option value="1982">1982</option>
+
+									<option value="1983">1983</option>
+
+									<option value="1984">1984</option>
+
+									<option value="1985">1985</option>
+
+									<option value="1986">1986</option>
+
+									<option value="1987">1987</option>
+
+									<option value="1988">1988</option>
+
+									<option value="1989">1989</option>
+
+									<option value="1990">1990</option>
+
+									<option value="1991">1991</option>
+
+									<option value="1992">1992</option>
+
+									<option value="1993">1993</option>
+
+									<option value="1994">1994</option>
+
+									<option value="1995">1995</option>
+
+									<option value="1996">1996</option>
+
+									<option value="1997">1997</option>
+
+									<option value="1998">1998</option>
+
+									<option value="1999">1999</option>
+
+									<option value="2000">2000</option>
+
+									<option value="2001">2001</option>
+
+									<option value="2002">2002</option>
+
+									<option value="2003">2003</option>
+
+									<option value="2004">2004</option>
+
+									<option value="2005">2005</option>
+
+									<option value="2006">2006</option>
+
+									<option value="2007">2007</option>
+
+									<option value="2008">2008</option>
+
+									<option value="2009">2009</option>
+
+									<option value="2010">2010</option>
+
+									<option value="2011">2011</option>
+
+									<option value="2012">2012</option>
+
+									<option value="2013">2013</option>
+
+									<option value="2014">2014</option>
+
+									<option value="2015">2015</option>
+
+									<option value="2016">2016</option>
+
+									<option value="2017">2017</option>
+
+									<option value="2018">2018</option>
+
+									<option value="2019">2019</option>
+
+									<option value="2020">2020</option>
+
+									<option value="2021">2021</option>
+
+									<option value="2022">2022</option>
+
+									<option value="2023">2023</option>
+
+									<option value="2024">2024</option>
+
+
+								</select>
+
+								to:
+								<select name="TY" id="TY" title="Data to year" onChange="urlchange('TY',this.value)">
+
+									<option value="1963">1963</option>
+
+									<option value="1964">1964</option>
+
+									<option value="1965">1965</option>
+
+									<option value="1966">1966</option>
+
+									<option value="1967">1967</option>
+
+									<option value="1968">1968</option>
+
+									<option value="1969">1969</option>
+
+									<option value="1970">1970</option>
+
+									<option value="1971">1971</option>
+
+									<option value="1972">1972</option>
+
+									<option value="1973">1973</option>
+
+									<option value="1974">1974</option>
+
+									<option value="1975">1975</option>
+
+									<option value="1976">1976</option>
+
+									<option value="1977">1977</option>
+
+									<option value="1978">1978</option>
+
+									<option value="1979">1979</option>
+
+									<option value="1980">1980</option>
+
+									<option value="1981">1981</option>
+
+									<option value="1982">1982</option>
+
+									<option value="1983">1983</option>
+
+									<option value="1984">1984</option>
+
+									<option value="1985">1985</option>
+
+									<option value="1986">1986</option>
+
+									<option value="1987">1987</option>
+
+									<option value="1988">1988</option>
+
+									<option value="1989">1989</option>
+
+									<option value="1990">1990</option>
+
+									<option value="1991">1991</option>
+
+									<option value="1992">1992</option>
+
+									<option value="1993">1993</option>
+
+									<option value="1994">1994</option>
+
+									<option value="1995">1995</option>
+
+									<option value="1996">1996</option>
+
+									<option value="1997">1997</option>
+
+									<option value="1998">1998</option>
+
+									<option value="1999">1999</option>
+
+									<option value="2000">2000</option>
+
+									<option value="2001">2001</option>
+
+									<option value="2002">2002</option>
+
+									<option value="2003">2003</option>
+
+									<option value="2004">2004</option>
+
+									<option value="2005">2005</option>
+
+									<option value="2006">2006</option>
+
+									<option value="2007">2007</option>
+
+									<option value="2008">2008</option>
+
+									<option value="2009">2009</option>
+
+									<option value="2010">2010</option>
+
+									<option value="2011">2011</option>
+
+									<option value="2012">2012</option>
+
+									<option value="2013">2013</option>
+
+									<option value="2014">2014</option>
+
+									<option value="2015">2015</option>
+
+									<option value="2016">2016</option>
+
+									<option value="2017">2017</option>
+
+									<option value="2018">2018</option>
+
+									<option value="2019">2019</option>
+
+									<option value="2020">2020</option>
+
+									<option value="2021">2021</option>
+
+									<option value="2022">2022</option>
+
+									<option value="2023">2023</option>
+
+									<option value="2024" SELECTED SELECTED>2024</option>
+
+
+								</select>
+							</h3>
+						</form>
+					</div>
+
+
+				</div>
+			</section>
+			<section>
+
+				<div class="container">
+
+
+					<h3 id="notes">Notes:</h3>
+					<p>[a] The rate from January 2010 is affected by a methodological change whereby banks and building
+						societies' rates are now combined. Please see the explanatory notes for full details. (31 Jan
+						2010)</p>
+					<p>[b] Rates from June 2018 are affected by an increase in the population sample. (30 Jun 2018)</p>
+				</div>
+			</section>
+		</div>
+
+
+
+
+		<section class="page-section">
+			<div class="container">
+				<div class="col12">
+					<p class="txtr"><a class="scroll-to-top" href="#">Back to top</a></p>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<footer class="global-footer" itemscope itemtype="http://schema.org/WPFooter">
+		<div class="container">
+			<div class="col3 s-full">
+				<div class="footer-brand">
+					<p><a href="https://www.bankofengland.co.uk/" target="_blank" class="footer-logo"><img
+								src="assets/img/BOE_Logo_white.svg" alt="Bank of England" height="50"> Bank of
+							England</a></p>
+				</div>
+				<div class="footer-social-bank">
+					<h3>Follow us</h3>
+					<ul class=social-links>
+						<li class="social-item"><a class="social-link" href="https://twitter.com/bankofengland"
+								target="_blank"><i class="icon-twitter-bird"></i> <span class="si-text">Follow us on
+									Twitter</span></a></li>
+						<li class="social-item"><a class="social-link"
+								href="https://www.linkedin.com/company/bank-of-england/" target="_blank"><i
+									class="icon-linkedin"></i> <span class="si-text">Connect with us on
+									LinkedIn</span></a></li>
+						<li class="social-item"><a class="social-link"
+								href="https://www.youtube.com/user/bankofenglanduk" target="_blank"><i
+									class="icon-youtube-play"></i> <span class="si-text">Watch us on Youtube</span></a>
+						</li>
+						<li class="social-item"><a class="social-link"
+								href="https://www.flickr.com/photos/bankofengland/albums" target="_blank"><i
+									class="icon-flickr"></i> <span class="si-text">Find us on Flickr</span></a></li>
+						<li class="social-item"><a class="social-link"
+								href="https://www.facebook.com/bankofengland.co.uk" target="_blank"><i
+									class="icon-facebook"></i> <span class="si-text">Add us on Facebook</span></a></li>
+					</ul>
+				</div>
+				<div class="footer-social-museum">
+					<h3>Museum</h3>
+					<ul class="social-links">
+						<li class="social-item"><a class="social-link" href="https://twitter.com/boemuseum"
+								target="_blank"><i class="icon-twitter-bird">Follow us on Twitter</i></a></li>
+						<li class="social-item"><a class="social-link" href="https://www.facebook.com/boemuseum"
+								target="_blank"><i class="icon-facebook">Add us on Facebook</i></a></li>
+						<li class="social-item"><a class="social-link" href="https://www.instagram.com/boemuseum/"
+								target="_blank"><i class="icon-instagram">Follow us on Instagram</i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col3 s-half">
+				<div class="footer-topics">
+					<h3>Useful links</h3>
+					<ul class="footer-links">
+						<li class="footer-item"><a class="footer-link" href="advsearch.asp?Travel=NIx">Advanced
+								search</a></li>
+						<li class="footer-item"><a
+								href="index.asp?SectionRequired=I&first=yes&HideNums=-1&ExtraInfo=true&Travel=NIxIRx&levels=3"
+								class="footer-link">Interest and exchange rates data</a></li>
+						<li class="footer-item"><a class="footer-link"
+								href="help.asp?Back=Y&Highlight=Subscribe#Subscribe">Subscribe to XML download
+								changes</a></li>
+						<li class="footer-item"><a class="footer-link" href="Bank-Rate.asp">Official Bank Rate
+								history</a></li>
+						<li class="footer-item"><a class="footer-link"
+								href="https://www.bankofengland.co.uk/-/media/BoE/Files/statistics/discontinued-series"
+								target="_blank">Discontinued series</a></li>
+						<li class="footer-item"><a class="footer-link"
+								href="https://www.bankofengland.co.uk/statistics/details" target="_blank">Notes about
+								our data</a></li>
+						<li class="footer-item"><a class="footer-link"
+								href="https://www.bankofengland.co.uk/statistics/tables" target="_blank">Bankstats
+								tables</a></li>
+						<li class="footer-item"><a class="footer-link" href="https://www.bankofengland.co.uk/statistics"
+								target="_blank">Bank of England Statistics</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="m-clear"></div>
+
+			<div class="col3 s-full">
+				<div class="footer-contact">
+					<h3>Visiting the bank</h3>
+					<ul class="footer-contact-info">
+						<li class="footer-address">Threadneedle Street, London, EC2R 8AH</li>
+						<li class="footer-tel">Switchboard: <a class="footer-tel-link" href="tel:+442034614444">+44(0)20
+								3461 4444</a></li>
+						<li class="footer-tel">Enquiries: <a class="footer-tel-link" href="tel:+442034614878">+44(0)20
+								3461 4878</a></li>
+					</ul>
+					<h3>Visiting the museum</h3>
+					<ul class="footer-contact-info">
+						<li class="footer-address">Bartholomew Lane, London, EC2R 8AH</li>
+					</ul>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				<div class="col12">
+					<p class="text-copyright">&copy; 2024 Bank of England </p>
+					<ul class="list-inline">
+						<li class="list-inline__item"><a href="https://www.bankofengland.co.uk/accessibility"
+								target="_blank">Accessibility statement</a></li>
+						<li class="list-inline__item"><a
+								href="https://www.bankofengland.co.uk/legal/privacy-and-cookie-policy"
+								target="_blank">Cookies</a></li>
+						<li class="list-inline__item"><a href="https://www.bankofengland.co.uk/legal"
+								target="_blank">Legal</a></li>
+						<li class="list-inline__item"><a href="https://www.bankofengland.co.uk/legal/privacy"
+								target="_blank">Privacy</a></li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="cookie-notice">
+		<div class="cookie-notice__panel">
+			<div class="cookie-content content-block">
+				<h2 class="cookie-title exclude-navigation">Our use of cookies</h2>
+
+				<p>We use necessary cookies to make our site work (for example, to manage your session). We&rsquo;d also
+					like to use some non-essential cookies (including third-party cookies) to help us improve the site.
+					By clicking &lsquo;Accept recommended settings&rsquo; on this banner, you accept our use of optional
+					cookies.</p>
+
+				<style>
+					.cookie__button {
+						max-width: 225px;
+					}
+				</style>
+
+				<table class="cookie-notice__table">
+					<tr>
+						<th>Necessary cookies</th>
+						<th>Analytics cookies</th>
+						<td class="table-header">&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>
+							<button class="cookie__button btn btn-default" data-cookie="analytics">Accept recommended
+								cookies</button>
+						</td>
+					</tr>
+					<tr>
+						<td>Yes</td>
+						<td>No</td>
+						<td><button class="cookie__button btn btn-default btn-neutral" data-cookie="necessary">Proceed
+								with necessary cookies only</button></td>
+					</tr>
+				</table>
+
+				<h3>Necessary cookies</h3>
+				<p>Necessary cookies enable core functionality on our website such as security, network management, and
+					accessibility. You may disable these by changing your browser settings, but this may affect how the
+					website functions. </p>
+				<h3>Analytics cookies</h3>
+				<p>We use analytics cookies so we can keep track of the number of visitors to various parts of the site
+					and understand how our website is used. For more information on how these cookies work please see
+					our <a href="https://www.bankofengland.co.uk/legal/privacy-and-cookie-policy" target="_blank">Cookie
+						policy</a>.</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/js/min/slick.min.js"></script>
+	<script src="assets/js/min/scripts.js"></script>
+	<script type="application/ld+json">
+        {
+            "@context" : "http://schema.org",
+            "@type" : "Organization",
+            "name" : "Bank of England",
+            "url" : "https://www.bankofengland.co.uk",
+            "logo" : "https://www.bankofengland.co.uk/img/bankofengland-logo.png",
+            "sameAs" : [
+            ],
+            "contactPoint" : [
+            {
+                "@type" : "ContactPoint",
+                "telephone" : "+44(0)0000000",
+                "contactType" : "customer service"
+            }
+            ]
+        }
+        </script>
+
+
+	</div>
+</body>
+
+</html>

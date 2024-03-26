@@ -76,7 +76,7 @@
             transition: background-color 0.15s ease;
             border: 2px solid rgba(149, 149, 149, 0.25);
             transition: border 0.15s ease;
-            
+
         }
 
         .flex-container .topic-cell:first-child::before {
@@ -143,6 +143,7 @@
         p {
             font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
             font-weight: 200;
+            font-size: 14px;
         }
     </style>
 
@@ -189,7 +190,6 @@
 
 
         function addChart(divId, spec, color = "black") {
-            console.log(`Adding chart to ${divId} with spec charts/${spec}`);
             vegaEmbed(`#${divId}`, `charts/${spec}`, {
                 actions: false,
                 renderer: 'svg',
@@ -218,6 +218,15 @@
                         "tickColor": "rgb(25,25,25)",
                         "labelColor": "rgb(25,25,25)",
                         "titleColor": "rgb(25,25,25)"
+                    },
+                    "legend": {
+                        "labelColor": "rgb(25,25,25)",
+                        "titleColor": "rgb(25,25,25)",
+                        "orient": "none",
+                        "direction": "horizontal",
+                        "legendX": -15,
+                        "legendY": -15,
+                        "title": null
                     },
                     "view": {
                         "stroke": "transparent", // Removes the border around the chart
@@ -252,8 +261,12 @@
                 .attr("class", "chart");
             addChart(`chart-${data.id}`, data.chart.spec, topicColor);
 
-            topicContents.append("p")
-                .text(data.description);
+            if (data.description) {
+                // strip " from the description
+                description = data.description.replace(/"/g, "");
+                topicContents.append("p")
+                    .text(description)
+            }
 
             // if it has children, let's make the cursor a pointer
             if (data.children && data.children.length > 0) {
@@ -283,16 +296,13 @@
             topicCell = d3.select(`#cell-${data.id}`);
 
             if (topicCell.attr("expanded") === "true") {
-                console.log(`Collapsing ${data.name}`);
                 topicCell.attr("expanded", "false");
                 collapseChildren(data, topicCell, depth);
             } else {
-                console.log(`Expanding ${data.name}`);
                 topicCell.attr("expanded", "true");
                 expandChildren(data, topicCell, depth, colorScale);
             }
 
-            console.log(`Clicked on ${data.name}`);
 
         }
 
@@ -317,7 +327,6 @@
                 .selectAll(".topic-cell")
                 .filter(function (d, i) {
                     // compare the nodes id to the data id
-                    console.log(`Comparing ${this.id} to cell-${data.id}`);
                     return this.id !== `cell-${data.id}`;
                 })
                 .transition()
@@ -341,7 +350,6 @@
                 .attr("id", `row-${data.id}`)
 
             data.children.forEach((child, i) => {
-                console.log(`Drawing ${child.name} in row-${data.id}`);
                 topicCell = drawTopicDiv(child, topicRow, depth, colorScale);
                 topicCell.transition()
                     .duration(500)
@@ -351,15 +359,50 @@
         }
 
 
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('chartTree.json')
-                .then(response => response.json())
-                .then(data => {
-                    categoryColors = d3.scaleOrdinal(d3.schemeCategory10);
+        // Recursive function to enrich each node with 'description' from 'description_url'
+        async function enrichWithData(node) {
+            // Base case: if there's a 'description_url', fetch and add the 'description'
+            if (node.description_url) {
+                node.description = await fetchText("https://eco-temp-cache.s3.eu-west-2.amazonaws.com/gd/descriptions/" + node.description_url);
+            }
 
-                    drawTopicRow(data, d3.select("body"), 1);
-                })
-                .catch(error => console.error('Error loading chartTree.json:', error));
+            // Recursive case: if there are children, iterate and enrich them as well
+            if (node.children && node.children.length > 0) {
+                for (let child of node.children) {
+                    await enrichWithData(child);
+                }
+            }
+        }
+
+        // Helper function to fetch text content from a URL
+        async function fetchText(url) {
+            const response = await fetch(url);
+            return await response.text();
+        }
+
+        async function fetchDataAndDraw() {
+            try {
+                // Fetch the initial JSON data
+                const response = await fetch('chartTree.json');
+                const data = await response.json();
+
+                // Enrich the data with descriptions
+                await enrichWithData(data);
+
+                categoryColors = d3.scaleOrdinal(d3.schemeCategory10);
+
+                // After all descriptions have been fetched and added, draw the topic row
+                foo = data
+                drawTopicRow(data, d3.select("body"), 1);
+            } catch (error) {
+                console.error("An error occurred:", error);
+            }
+        }
+
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchDataAndDraw();
         });
 
 

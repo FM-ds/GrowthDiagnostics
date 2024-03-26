@@ -1,0 +1,2534 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <title>Time series explorer - Office for National Statistics</title>
+        <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1.0,user-scalable=1" name="viewport">
+        <meta name="theme-color" content="#58595B">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#58595B">
+
+        
+
+        
+        <link rel="stylesheet" type="text/css" href="//cdn.ons.gov.uk/sixteens/749a88b/css/main.css">
+		
+
+        <script>
+
+    // getUsuageCookieValue reads the cookies_policy cookie and returns the value a user has set for usage, 
+    // or defaults to true to opt_out of usage cookie if no cookie is set, or theres an error getting the value
+    function getUsageCookieValue() {
+        var cookiesPolicyCookie = document.cookie.match('(^|;) ?cookies_policy=([^;]*)(;|$)');
+        if (cookiesPolicyCookie) {
+            var decodedCookie = decodeURIComponent(cookiesPolicyCookie[2])
+            var cookieValue = JSON.parse(decodedCookie)
+            return !cookieValue.usage
+        }
+        return true
+    }
+
+    // unescape html entities
+    function htmlUnescape(str){
+        return str
+                .replace(/&#x3D;/g, "=");
+    }
+
+    
+    var dataLayer = [{
+        contentTitle: htmlUnescape("Time series explorer"),
+        analyticsOptOut: getUsageCookieValue(),
+        "gtm.whitelist": ["google","hjtc","lcl"],
+        "gtm.blacklist": ["customScripts","sp","adm","awct","k","d","j"]
+    }];
+
+    
+
+    
+    dataLayer[0]["numberOfResults"] = 55937;
+    
+
+    
+    
+
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+</script>
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MBCBVQS');</script>
+        <!-- End Google Tag Manager -->
+
+        
+
+		
+		
+
+	</head>
+	<body class="list">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js' : 'js');</script>
+    <form action="/cookies/accept-all" method="GET" id="global-cookie-message"
+      class="cookies-banner cookies-banner--hidden js-cookies-banner-form clearfix"
+      aria-label="cookie banner">
+    <div class="cookies-banner__wrapper wrapper js-cookies-banner-inform">
+        <div>
+            <div class="cookies-banner__message adjust-font-size--18">
+                <h3 class="cookies-banner__heading">Tell us whether you accept cookies</h3>
+                <p class="cookies-banner__body">We would like to <a href="/cookies">use cookies to collect information</a> about how you use <strong>ons.gov.uk</strong>.</p>
+                <p class="cookies-banner__body">We use this information to make the website work as well as possible and improve our services.</p>
+            </div>
+            <div class="cookies-banner__buttons">
+                <div class="nojs--hide cookies-banner__button cookies-banner__button--accept">
+                    <button class="btn btn--full-width btn--primary btn--focus margin-right--2 font-weight-700 font-size--17 text-wrap js-accept-cookies"
+                    data-gtm-accept-cookies="true" type="submit">Accept all cookies</button>
+                </div>
+                <div class="cookies-banner__button">
+                    <a role="button" href="/cookies"
+                       class="btn btn--full-width btn--primary btn--focus margin-right--2 font-weight-700 font-size--17 text-wrap">Set cookie preferences</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hidden js-cookies-banner-confirmation" tabindex="-1">
+        <div class="cookies-banner__wrapper wrapper">
+            <div class="col">
+                <div class="cookies-banner__message adjust-font-size--18">
+                    <p class="cookies-banner__confirmation-message">
+                        You’ve accepted all cookies. You can <a href="/cookies">change your cookie settings</a> at any time.
+                        <button type="button"
+                                class="cookies-banner__button--hide js-hide-cookies-banner">Hide</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBCBVQS"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+        
+        
+		
+
+		
+
+		
+		
+			 			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<header >
+	
+    <a class="skiplink" href="#main" tabindex="0">
+        Skip to main content
+    </a>
+	
+  
+  
+
+	
+	
+	<div id="pagePath" class="hide">/timeseriestool</div>
+	
+		<div class="wrapper">
+			<div class="header col-wrap">
+				<div class="col col--lg-one-third col--md-one-third">
+					<a href="/">
+						<!--[if lte IE 8]>
+							<img class="logo" src="https://cdn.ons.gov.uk/assets/images/ons-logo/v2/ons-logo.png" alt="Office for National Statistics logo - Homepage">
+						<![endif]-->
+						<img class="logo" src="https://cdn.ons.gov.uk/assets/images/ons-logo/v2/ons-logo.svg" alt="Office for National Statistics logo - Homepage">
+					</a>
+				</div>
+				
+                <div class="col col--lg-two-thirds col--md-two-thirds hide--sm print--hide language--js__container">
+                    
+                    <div class="language">
+                        
+                            <span>English (EN) | </span>
+                            <a href="
+
+
+
+    //cy.ons.gov.uk/timeseriestool?fromDateDay=&fromDateMonth=&fromDateYear=&page=2&query=&size=50&toDateDay=&toDateMonth=&toDateYear=&topic=&updated=
+" class="language__link" lang="cy">Cymraeg (CY)</a>
+                        
+                    </div>
+                </div>
+				<div class="secondary-nav col col--lg-two-thirds col--md-two-thirds print--hide">
+					<ul class="secondary-nav__list js-nav-clone__list">
+                        <li class="secondary-nav__item">
+                            <a class="secondary-nav__link  js-nav-clone__link" href="/releasecalendar">Release calendar</a>
+                        </li>
+                        <li class="secondary-nav__item">
+                            <a class="secondary-nav__link  js-nav-clone__link" href="/methodology">Methodology</a>
+                        </li>
+                        <li class="secondary-nav__item">
+                            <a class="secondary-nav__link  js-nav-clone__link" href="/news">Media</a>
+                        </li>
+						<li class="secondary-nav__item">
+							<a class="secondary-nav__link  js-nav-clone__link" href="/aboutus">About</a>
+						</li>
+						<li class="secondary-nav__item">
+							<a class="secondary-nav__link js-nav-clone__link" rel="noopener noreferrer" href="https://blog.ons.gov.uk/">Blog</a>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+	
+
+	
+	
+	<div class="primary-nav print--hide">
+		<nav aria-label="Header links">
+			
+			<ul class="nav--controls">
+				<li class="nav--controls__item">
+					<a href="#nav-primary" id="menu-toggle" aria-controls="nav-primary" aria-expanded="false" class="nav--controls__menu">
+						<span class="nav--controls__text">Menu</span>
+					</a>
+				</li>
+				<li class="nav--controls__item ">
+					<a href="#nav-search" id="search-toggle" aria-controls="nav-search" aria-expanded="false" class="nav--controls__search">
+						<span class="nav--controls__text">Search</span>
+					</a>
+				</li>
+			</ul>
+			
+			<ul class="wrapper nav-main--hidden primary-nav__list" id="nav-primary" aria-expanded="false">
+				<li class="primary-nav__item  js-nav hide--sm old-ie--display-block"><a class="primary-nav__link col col--md-7 col--lg-9" href="/">Home</a></li>
+				
+				
+				
+				
+				
+				<li class="primary-nav__item js-nav js-expandable ">
+					<a class="primary-nav__link col col--md-8 col--lg-10" href="/businessindustryandtrade" aria-expanded="false" aria-label="Business, industry and trade sub menu">
+						<span aria-hidden="true" class="expansion-indicator"></span>
+						<span class="submenu-title">
+							Business, industry and trade
+						</span>
+					</a>
+					<ul class="primary-nav__child-list col col--md-16 col--lg-20 js-expandable__content js-nav-hidden jsEnhance" aria-expanded="false" aria-label="submenu">
+						
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/businessindustryandtrade/business" >Business</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/businessindustryandtrade/changestobusiness" >Changes to business</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/businessindustryandtrade/constructionindustry" >Construction industry</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/businessindustryandtrade/itandinternetindustry" >IT and internet industry</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/businessindustryandtrade/internationaltrade" >International trade</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/businessindustryandtrade/manufacturingandproductionindustry" >Manufacturing and production industry</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/businessindustryandtrade/retailindustry" >Retail industry</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/businessindustryandtrade/tourismindustry" >Tourism industry</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+				
+				
+				
+				
+				<li class="primary-nav__item js-nav js-expandable ">
+					<a class="primary-nav__link col col--md-8 col--lg-10" href="/economy" aria-expanded="false" aria-label="Economy sub menu">
+						<span aria-hidden="true" class="expansion-indicator"></span>
+						<span class="submenu-title">
+							Economy
+						</span>
+					</a>
+					<ul class="primary-nav__child-list col col--md-16 col--lg-20 js-expandable__content js-nav-hidden jsEnhance" aria-expanded="false" aria-label="submenu">
+						
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/economy/economicoutputandproductivity" >Economic output and productivity</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/economy/environmentalaccounts" >Environmental accounts</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/economy/governmentpublicsectorandtaxes" >Government, public sector and taxes</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/economy/grossdomesticproductgdp" >Gross Domestic Product (GDP)</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/economy/grossvalueaddedgva" >Gross Value Added (GVA)</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/economy/inflationandpriceindices" >Inflation and price indices</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/economy/investmentspensionsandtrusts" >Investments, pensions and trusts</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/economy/nationalaccounts" >National accounts</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/economy/regionalaccounts" >Regional accounts</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+				
+				
+				
+				
+				<li class="primary-nav__item js-nav js-expandable ">
+					<a class="primary-nav__link col col--md-8 col--lg-10" href="/employmentandlabourmarket" aria-expanded="false" aria-label="Employment and labour market sub menu">
+						<span aria-hidden="true" class="expansion-indicator"></span>
+						<span class="submenu-title">
+							Employment and labour market
+						</span>
+					</a>
+					<ul class="primary-nav__child-list col col--md-16 col--lg-20 js-expandable__content js-nav-hidden jsEnhance" aria-expanded="false" aria-label="submenu">
+						
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/employmentandlabourmarket/peopleinwork" >People in work</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/employmentandlabourmarket/peoplenotinwork" >People not in work</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<li class="primary-nav__item js-nav js-expandable ">
+					<a class="primary-nav__link col col--md-8 col--lg-10" href="/peoplepopulationandcommunity" aria-expanded="false" aria-label="People, population and community sub menu">
+						<span aria-hidden="true" class="expansion-indicator"></span>
+						<span class="submenu-title">
+							People, population and community
+						</span>
+					</a>
+					<ul class="primary-nav__child-list col col--md-16 col--lg-20 js-expandable__content js-nav-hidden jsEnhance" aria-expanded="false" aria-label="submenu">
+						
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/peoplepopulationandcommunity/armedforcescommunity" >Armed forces community</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/peoplepopulationandcommunity/birthsdeathsandmarriages" >Births, deaths and marriages</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/peoplepopulationandcommunity/crimeandjustice" >Crime and justice</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/peoplepopulationandcommunity/culturalidentity" >Cultural identity</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/peoplepopulationandcommunity/educationandchildcare" >Education and childcare</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/peoplepopulationandcommunity/elections" >Elections</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/peoplepopulationandcommunity/healthandsocialcare" >Health and social care</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/peoplepopulationandcommunity/householdcharacteristics" >Household characteristics</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/peoplepopulationandcommunity/housing" >Housing</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/peoplepopulationandcommunity/leisureandtourism" >Leisure and tourism</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/peoplepopulationandcommunity/personalandhouseholdfinances" >Personal and household finances</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/peoplepopulationandcommunity/populationandmigration" >Population and migration</a>
+						</li>
+						
+						<li class="primary-nav__child-item  js-expandable__child">
+							<a class="primary-nav__child-link" tabindex="-1" href="/peoplepopulationandcommunity/wellbeing" >Well-being</a>
+						</li>
+						
+					</ul>
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				<li class="primary-nav__item  js-nav">
+					<a class="primary-nav__link  col col--md-8 col--lg-10" href="/surveys">
+						Taking part in a survey?
+					</a>
+				</li>
+				<li class="hide--md primary-nav__language">
+					
+						<span>English (EN) | </span>
+						<a href="
+
+
+
+    //cy.ons.gov.uk/timeseriestool?fromDateDay=&fromDateMonth=&fromDateYear=&page=2&query=&size=50&toDateDay=&toDateMonth=&toDateYear=&topic=&updated=
+" class="language__link">Cymraeg (CY)</a>
+					
+				</li>
+			</ul>
+		</nav>
+	</div>
+	
+	
+		<div class="search nav-search--hidden print--hide" id="searchBar">
+			<div class="wrapper" role="search">
+				<form class="col-wrap search__form" action="/search">
+					<label class="search__label col col--md-23 col--lg-24" for="nav-search">Search for a keyword(s) or time series ID</label>
+					<input type="search" autocomplete="off" class="search__input col col--md-21 col--lg-32" id="nav-search" name="q" value="">
+					<button type="submit" class="search__button col--md-3 col--lg-3" id="nav-search-submit">
+					<span class="visuallyhidden">Search</span>
+					<span class="icon icon-search--light"></span>
+					</button>
+				</form>
+			</div>
+		</div>
+	
+	<div class="promo__background--plum-gradient">
+    <div class="wrapper">
+        <div class="banner--half-padding">
+            <p class="margin-top--0 margin-bottom--0 padding-bottom--0 padding-top--0 flex flex-wrap-wrap banner--vertical-center">
+                <a class="flex" href="/census"><img src="https://cdn.ons.gov.uk/assets/images/census-logo/logo-census-2021-white-landscape.svg" title="Census 2021" alt="" class="header__svg-logo margin-right--1" xmlns="http://www.w3.org/2000/svg" focusable="false" width="167" height="32" viewBox="0 0 242 44" aria-labelledby="census-logo-banner" />
+                <a class="margin-top--0 text--white font-size--18 underline-link" href="/census">Data and analysis from Census 2021</a>
+            </p>
+        </div>
+    </div>
+</div>
+	
+</header>
+
+
+
+
+	
+    
+
+
+
+		
+<main id="main" role="main" tabindex="-1">
+
+	
+    <noscript>
+        <div class="background--aluminium padding-top-sm--1 padding-top-md--1 padding-bottom-md--1 padding-bottom-sm--1">
+            <div class="wrapper">
+                <div class="col-wrap">
+                    <div class="col">
+                        <p class="alert__content--large flush-bottom">We notice you have JavaScript disabled. Please enable it if you would like to be able to use all the functionality of the time series explorer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </noscript>
+
+
+	
+		<div class="">
+			<div class="wrapper">
+				<div class="col-wrap">
+					<div class="col">
+						<h1 class="search-page__title">Time series explorer</h1>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	
+
+	<div class="page-content border">
+		<div class="wrapper">
+			<div class="col-wrap print-hidden">
+				<div class="col">
+					
+	<div class="col col--md-28 col--lg-38">
+		<h2 aria-live="polite" class="search-page__results-text search-page__results-text--timeseries">
+	
+	
+
+	
+		<span class="stand-out-text">55,937</span> time series data
+	
+	
+	
+	
+
+    
+	
+
+    
+	
+		
+	
+</h2>
+	</div>
+	<div class="col col--md-19 col--lg-21 js--show">
+		<button class="timeseries__basket" aria-live="polite">Selection (<span class="timeseries__count">0</span>)</button>
+		<div class="timeseries__list-container">
+			<div class="timeseries__remember">
+				<input id="remember-selection" type="checkbox" name="" data-uri="/timeseriestool" value=""
+					   aria-label="remember selection">
+				<label for="remember-selection">Remember selection</label>
+			</div>
+			<div class="timeseries__list--exit" aria-label="close time series selection modal" tabindex="0">&#x2715;</div>
+			<ul class="timeseries__list list--neutral margin-top-md--0 margin-left-md--0">
+			</ul>
+			<div class="timeseries__download">
+				<p class="flush" id="timeseries__download-label">Download selected time
+					series</p>
+
+				
+				<form id="xls-form" method="post" action="/export" class="inline print--hide">
+					<button type="submit" title="Download XLS" aria-labelledby="timeseries__download-label"
+							class="btn btn--primary download-analytics">
+						Download .xls
+					</button>
+					<input type="hidden" name="format" value="xls"/>
+				</form>
+
+				
+				<form id="csv-form" method="post" action="/export" class="inline print--hide">
+					<button type="submit" title="Download CSV" aria-labelledby="timeseries__download-label"
+							class="btn btn--primary download-analytics">
+						Download .csv
+					</button>
+					<input type="hidden" name="format" value="csv"/>
+				</form>
+			</div>
+			<div class="timeseries__empty">
+				<h2>You have no timeseries selected</h2>
+				<p>Check the time series that you'd like to download</p>
+			</div>
+		</div>
+	</div>
+
+					
+						
+							
+						
+					
+				</div>
+			</div>
+			<form id="form" class="js-auto-submit__form">
+				
+				<div class="col col--md-12 col--lg-18 margin-bottom">
+					<div class="margin-bottom-md--2 flush-col js-mobile-filters">
+						<div class="background--gallery padding-top-md--2 padding-right-md--1 padding-bottom-md--4 padding-left-sm--1 padding-left-md--1 flush js-mobile-filters__title">
+							<h3 class="inline-block flush">Refine results</h3>
+							<a href="/timeseriestool" id="clear-search" class="btn btn--primary btn--thin btn--narrow btn--small float-right">Clear all</a>
+						</div>
+						<div class="background--mercury border-top--iron-md padding-top-sm--2 padding-top-md--1 padding-right-sm--1 padding-right-md--1 padding-bottom-sm--2 padding-bottom-md--2 padding-left-sm--1 padding-left-md--1 js-mobile-filters__contents">
+							<div class="filters js-filters">
+								
+	<label class="filters__title margin-top--0" for="input-keywords">Search keywords</label>
+<div class="filters__field">
+    <input type="search" autocomplete="off" id="input-keywords" name="query" value="" placeholder="Keywords" class="input js-auto-submit__input">
+</div>
+    
+    
+
+<label class="filters__title" for="select-topic">Topics</label>
+<div class="filters__field">
+    <select class="input select inline js-auto-submit__input" id="select-topic" name="topic">
+        <option value="" >Select topic</option>
+        <option value="/economy/nationalaccounts/balanceofpayments"
+                >
+            Balance of payments
+        </option>
+        <option value="/employmentandlabourmarket/peopleinwork/earningsandworkinghours"
+                >
+            Earnings and working hours
+        </option>
+        <option value="/employmentandlabourmarket/peoplenotinwork/economicinactivity"
+                >
+            Economic inactivity
+        </option>
+        <option value="/employmentandlabourmarket/peopleinwork/employmentandemployeetypes"
+                >
+            Employment and employee types
+        </option>
+        <option value="/economy/grossdomesticproductgdp"
+                >
+            Gross domestic product (GDP)
+        </option>
+        <option value="/economy/grossvalueaddedgva"
+                >
+            Gross value added (GVA)
+        </option>
+        <option value="/economy/inflationandpriceindices"
+                >
+            Inflation and price indices
+        </option>
+        <option value="/businessindustryandtrade/internationaltrade"
+                >
+            International trade
+        </option>
+        <option value="/economy/investmentspensionsandtrusts"
+                >
+            Investments, pensions and trusts
+        </option>
+        <option value="/employmentandlabourmarket/peopleinwork/labourproductivity"
+                >
+            Labour productivity
+        </option>
+        <option value="/peoplepopulationandcommunity/leisureandtourism"
+                >
+            Leisure and tourism
+        </option>
+        <option value="/businessindustryandtrade/manufacturingandproductionindustry"
+                >
+            Manufacturing and production industry
+        </option>
+        <option value="/businessindustryandtrade/changestobusiness/mergersandacquisitions"
+                >
+            Mergers and acquisitions
+        </option>
+        <option value="/employmentandlabourmarket/peoplenotinwork/outofworkbenefits"
+                >
+            Out of work benefits
+        </option>
+        <option value="/economy/economicoutputandproductivity/output"
+                >
+            Output
+        </option>
+        <option value="/economy/governmentpublicsectorandtaxes/publicsectorfinance"
+                >
+            Public sector finance
+        </option>
+        <option value="/employmentandlabourmarket/peopleinwork/publicsectorpersonnel"
+                >
+            Public sector personnel
+        </option>
+        <option value="/economy/governmentpublicsectorandtaxes/publicspending"
+                >
+            Public spending
+        </option>
+        <option value="/employmentandlabourmarket/peoplenotinwork/redundancies"
+                >
+            Redundancies
+        </option>
+        <option value="/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure"
+                >
+            Research and development expenditure
+        </option>
+        <option value="/businessindustryandtrade/retailindustry"
+                >
+            Retail Industry
+        </option>
+        <option value="/economy/nationalaccounts/satelliteaccounts"
+                >
+            Satellite accounts
+        </option>
+        <option value="/businessindustryandtrade/tourismindustry"
+                >
+            Tourism industry
+        </option>
+        <option value="/economy/nationalaccounts/uksectoraccounts"
+                >
+            UK sector accounts
+        </option>
+        <option value="/employmentandlabourmarket/peoplenotinwork/unemployment"
+                >
+            Unemployment
+        </option>
+    </select>
+</div> 
+	<div class="margin-top--2">
+    <label class="filters__title" for="select-updated">Updated</label>
+    <select class="input select inline js-auto-submit__input" id="select-updated" name="updated">
+        <option value="">Select last updated</option>
+        <option value="today" >Today</option>
+        <option value="week" >Last 7 days</option>
+        <option value="month" >Last month</option>
+        <option class="js--show" value="custom" >Custom
+        </option>
+    </select>
+</div>
+
+<div class="js-from-to-filters margin-top--2" style="display:none">
+	<fieldset class="filters__fieldset">
+    <legend class="filters__title">
+        Published after
+        <span class="visuallyhidden">For example, 29 4 2016</span>
+    </legend>
+    <div class="js-auto-submit__error filters__error" id="from-date-error">
+        
+    </div>
+    <div id="inputs-start-date">
+        <div class="filters__date filters__date--day">
+            <label for="fromDateDay">Day</label>
+            <input type="number" autocomplete="off" name="fromDateDay" id="fromDateDay"
+                   value=""
+                   class="js-auto-submit__input js-auto-submit__input--date"
+                   min="0" max="31" pattern="[0-9]*">
+        </div>
+        <div class="filters__date filters__date--month">
+            <label for="fromDateMonth">Month</label>
+            <input type="number" autocomplete="off" name="fromDateMonth" id="fromDateMonth"
+                   value=""
+                   class="js-auto-submit__input js-auto-submit__input--date"
+                   min="1" max="12" maxlength="2" pattern="[0-9]*">
+        </div>
+        <div class="filters__date filters__date--year">
+            <label for="fromDateYear">Year</label>
+            <input type="number" autocomplete="off" name="fromDateYear" id="fromDateYear"
+                   value=""
+                   class="js-auto-submit__input js-auto-submit__input--date"
+                   min="1900" max="2050" maxlength="4" pattern="[0-9]*">
+        </div>
+    </div>
+
+    <button class="btn btn--narrow btn--small datepicker__icon nojs--hide" aria-hidden="true" tabindex="-1" id=js-start-date type="button"><span class="icon icon-calendar--dark-small"></span></button>
+<div id=dp1 class="datepicker" aria-hidden="true">
+    <button class="datepicker__btn datepicker__btn--prev js-datepicker__prev" aria-labelledby="dp1-bn_prev-label"
+            tabindex="0"><span class="icon icon-arrow-left--light"></span></button>
+    <div class="datepicker__month js-datepicker__month" role="heading" id="dp1-month-year" aria-live="assertive"
+         aria-atomic="true">February 2011
+    </div>
+    <button class="datepicker__btn datepicker__btn--next js-datepicker__next" aria-labelledby="dp1-bn_next-label"
+            tabindex="0"><span class="icon icon-arrow-right--light"></span></button>
+    <table class="datepicker__grid js-datepicker__grid" role="grid" aria-labelledby="dp1-month-year" tabindex="0">
+        <thead>
+        <tr>
+            <th class="datepicker__grid-header"><abbr title="Sunday">Sun</abbr></th>
+            <th class="datepicker__grid-header"><abbr title="Monday">Mon</abbr></th>
+            <th class="datepicker__grid-header"><abbr title="Tuesday">Tue</abbr></th>
+            <th class="datepicker__grid-header"><abbr title="Wednesday">Wed</abbr></th>
+            <th class="datepicker__grid-header"><abbr title="Thursday">Thu</abbr></th>
+            <th class="datepicker__grid-header"><abbr title="Friday">Fri</abbr></th>
+            <th class="datepicker__grid-header"><abbr title="Saturday">Sat</abbr></th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <button type="button" class="btn btn--primary btn--thin btn--narrow btn--small datepicker__clear js-datepicker__clear" aria-labelledby="dp1-clear-label">Clear date</button>
+    <div id="dp1-clear-label" class="visuallyhidden">Clear values from inputs</div>
+    <div id="dp1-bn_prev-label" class="visuallyhidden">Go to previous month</div>
+    <div id="dp1-bn_next-label" class="visuallyhidden">Go to next month</div>
+</div>
+</fieldset>
+
+<fieldset class="filters__fieldset">
+    <legend class="filters__title">
+        Published before
+        <span class="visuallyhidden">For example, 29 4 2016</span>
+    </legend>
+    <div class="js-auto-submit__error filters__error" id="to-date-error">
+        
+    </div>
+    <div id="inputs-end-date">
+        <div class="filters__date filters__date--day">
+            <label for="toDateDay">Day</label>
+            <input type="number" autocomplete="off" name="toDateDay" id="toDateDay"
+                   value=""
+                   class="js-auto-submit__input js-auto-submit__input--date"
+                   min="0" max="31" pattern="[0-9]*">
+        </div>
+        <div class="filters__date filters__date--month">
+            <label for="toDateMonth">Month</label>
+            <input type="number" autocomplete="off" name="toDateMonth" id="toDateMonth"
+                   value=""
+                   class="js-auto-submit__input js-auto-submit__input--date"
+                   min="1" max="12" maxlength="2" pattern="[0-9]*">
+        </div>
+        <div class="filters__date filters__date--year">
+            <label for="toDateYear">Year</label>
+            <input type="number" autocomplete="off" name="toDateYear" id="toDateYear"
+                   value=""
+                   class="js-auto-submit__input js-auto-submit__input--date"
+                   min="1900" max="2050" maxlength="4" pattern="[0-9]*">
+        </div>
+    </div>
+
+    <button class="btn btn--narrow btn--small datepicker__icon nojs--hide" aria-hidden="true" tabindex="-1" id=js-end-date type="button"><span class="icon icon-calendar--dark-small"></span></button>
+<div id=dp2 class="datepicker" aria-hidden="true">
+    <button class="datepicker__btn datepicker__btn--prev js-datepicker__prev" aria-labelledby="dp2-bn_prev-label"
+            tabindex="0"><span class="icon icon-arrow-left--light"></span></button>
+    <div class="datepicker__month js-datepicker__month" role="heading" id="dp2-month-year" aria-live="assertive"
+         aria-atomic="true">February 2011
+    </div>
+    <button class="datepicker__btn datepicker__btn--next js-datepicker__next" aria-labelledby="dp2-bn_next-label"
+            tabindex="0"><span class="icon icon-arrow-right--light"></span></button>
+    <table class="datepicker__grid js-datepicker__grid" role="grid" aria-labelledby="dp2-month-year" tabindex="0">
+        <thead>
+        <tr>
+            <th class="datepicker__grid-header"><abbr title="Sunday">Sun</abbr></th>
+            <th class="datepicker__grid-header"><abbr title="Monday">Mon</abbr></th>
+            <th class="datepicker__grid-header"><abbr title="Tuesday">Tue</abbr></th>
+            <th class="datepicker__grid-header"><abbr title="Wednesday">Wed</abbr></th>
+            <th class="datepicker__grid-header"><abbr title="Thursday">Thu</abbr></th>
+            <th class="datepicker__grid-header"><abbr title="Friday">Fri</abbr></th>
+            <th class="datepicker__grid-header"><abbr title="Saturday">Sat</abbr></th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <button type="button" class="btn btn--primary btn--thin btn--narrow btn--small datepicker__clear js-datepicker__clear" aria-labelledby="dp2-clear-label">Clear date</button>
+    <div id="dp2-clear-label" class="visuallyhidden">Clear values from inputs</div>
+    <div id="dp2-bn_prev-label" class="visuallyhidden">Go to previous month</div>
+    <div id="dp2-bn_next-label" class="visuallyhidden">Go to next month</div>
+</div>
+</fieldset>
+
+</div>
+
+							</div>
+                            
+                            
+                                <input type="hidden" name="size" value="50">
+                            
+                            
+
+							<button type="submit" class="btn btn--primary btn--thick margin-top-sm--2 margin-top-md--2 js-submit-button">Filter</button>
+						</div>
+					</div>
+					<div class="tiles__item tiles__item--nav-type flush-col hide--sm print--hide">
+	<h3 class="tiles__title-h3 tiles__title-h3--nav">Need an earlier release?</h3>
+	<div class="tiles__content tiles__content--nav">
+		<p>
+			We moved them to <a href="http://webarchive.nationalarchives.gov.uk/20160105160709/http://www.ons.gov.uk/ons/index.html">The National Archives</a> website, to keep this website as responsive as possible.
+		</p>
+		<p>
+			<strong>Please note: </strong>all historical data is still on this website.
+		</p>
+	</div>
+</div>
+
+				</div>
+			</form>
+				
+			
+			<section class="col col--md-34 col--lg-40 margin-left-md--1" aria-label="Search results">
+
+				<div id="results" class="results">
+
+                    
+
+                    
+
+                    
+                    <!-- /desktop-grid-one-third -->
+                    <div class="search-results margin-top-md--2">
+                        <ul class="list--neutral flush">
+                            
+        
+	<li id="select-all-container" class="js--show col margin-top--0 margin-bottom--0">
+		
+			<input id="select-all"  type="checkbox" name="" value="" class="timeseries__select-all js-timeseriestool-select-all">
+			<label for="select-all">Select all</label>
+		
+	</li>
+
+	
+		<li class="col-wrap  margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Retail sale of Floorcoverings (vol nsa):All Business Index" data-gtm-checkbox="RSI:Retail sale of Floorcoverings (vol nsa):All Business Index" data-cdid="EAQO" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/eaqo/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Retail sale of Floorcoverings (vol nsa):All Business Index">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/eaqo/drsi">RSI:Retail sale of Floorcoverings (vol nsa):All Business Index</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: EAQO&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Textile,clothing&amp;footwear:All Bus:VOL SA percentage on year earlier" data-gtm-checkbox="RSI:Textile,clothing&amp;footwear:All Bus:VOL SA percentage on year earlier" data-cdid="IDOG" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/idog/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Textile,clothing&amp;footwear:All Bus:VOL SA percentage on year earlier">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/idog/drsi">RSI:Textile,clothing&footwear:All Bus:VOL SA percentage on year earlier</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: IDOG | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Internet:Month on prev month % change:All Business AGG13 CP SA" data-gtm-checkbox="RSI:Internet:Month on prev month % change:All Business AGG13 CP SA" data-cdid="KP8N" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/kp8n/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Internet:Month on prev month % change:All Business AGG13 CP SA">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/kp8n/drsi">RSI:Internet:Month on prev month % change:All Business AGG13 CP SA</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: KP8N | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Retail sale of clothing (val nsa):All Business Index" data-gtm-checkbox="RSI:Retail sale of clothing (val nsa):All Business Index" data-cdid="EAGH" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/eagh/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Retail sale of clothing (val nsa):All Business Index">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/eagh/drsi">RSI:Retail sale of clothing (val nsa):All Business Index</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: EAGH&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Retail of medical goods (val sa):All Business Index" data-gtm-checkbox="RSI:Retail of medical goods (val sa):All Business Index" data-cdid="JO2R" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/jo2r/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Retail of medical goods (val sa):All Business Index">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/jo2r/drsi">RSI:Retail of medical goods (val sa):All Business Index</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: JO2R&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="Implied deflator:AGG 1:Pred food stores - month on previous month%" data-gtm-checkbox="Implied deflator:AGG 1:Pred food stores - month on previous month%" data-cdid="A4RT" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/a4rt/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="Implied deflator:AGG 1:Pred food stores - month on previous month%">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/a4rt/drsi">Implied deflator:AGG 1:Pred food stores - month on previous month%</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: A4RT | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Internet:Month on prev month % change:All Business AGG1 CP SA" data-gtm-checkbox="RSI:Internet:Month on prev month % change:All Business AGG1 CP SA" data-cdid="KP8L" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/kp8l/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Internet:Month on prev month % change:All Business AGG1 CP SA">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/kp8l/drsi">RSI:Internet:Month on prev month % change:All Business AGG1 CP SA</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: KP8L | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:All retail ex fuel:Small Business:VOL NSA:% change on same month a year ago" data-gtm-checkbox="RSI:All retail ex fuel:Small Business:VOL NSA:% change on same month a year ago" data-cdid="J3UW" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/j3uw/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:All retail ex fuel:Small Business:VOL NSA:% change on same month a year ago">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/j3uw/drsi">RSI:All retail ex fuel:Small Business:VOL NSA:% change on same month a year ago</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: J3UW | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Other non-food stores (val nsa):All Business Index" data-gtm-checkbox="RSI:Other non-food stores (val nsa):All Business Index" data-cdid="EAFW" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/eafw/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Other non-food stores (val nsa):All Business Index">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/eafw/drsi">RSI:Other non-food stores (val nsa):All Business Index</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: EAFW&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Predominantly non-food stores (val nsa) Large Business Index" data-gtm-checkbox="RSI:Predominantly non-food stores (val nsa) Large Business Index" data-cdid="EAGM" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/eagm/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Predominantly non-food stores (val nsa) Large Business Index">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/eagm/drsi">RSI:Predominantly non-food stores (val nsa) Large Business Index</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: EAGM&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Household goods stores (vol nsa) Small Business Index" data-gtm-checkbox="RSI:Household goods stores (vol nsa) Small Business Index" data-cdid="EAHV" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/eahv/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Household goods stores (vol nsa) Small Business Index">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/eahv/drsi">RSI:Household goods stores (vol nsa) Small Business Index</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: EAHV&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Automotive fuel:All Business:VOL SA:% change on same month a year ago" data-gtm-checkbox="RSI:Automotive fuel:All Business:VOL SA:% change on same month a year ago" data-cdid="JO4C" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/jo4c/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Automotive fuel:All Business:VOL SA:% change on same month a year ago">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/jo4c/drsi">RSI:Automotive fuel:All Business:VOL SA:% change on same month a year ago</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: JO4C | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Internet:Non-store retail:All Business:VAL NSA:internet ave weekly sales £m" data-gtm-checkbox="RSI:Internet:Non-store retail:All Business:VAL NSA:internet ave weekly sales £m" data-cdid="KQ7I" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/kq7i/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Internet:Non-store retail:All Business:VAL NSA:internet ave weekly sales £m">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/kq7i/drsi">RSI:Internet:Non-store retail:All Business:VAL NSA:internet ave weekly sales £m</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: KQ7I | Units: m</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Non-Specialised Non Food stores (val nsa) Large Business %" data-gtm-checkbox="RSI:Non-Specialised Non Food stores (val nsa) Large Business %" data-cdid="EAIO" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/eaio/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Non-Specialised Non Food stores (val nsa) Large Business %">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/eaio/drsi">RSI:Non-Specialised Non Food stores (val nsa) Large Business %</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: EAIO | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Internet:Pred Food stores:All Bus:VAL SA:%change month a year ago" data-gtm-checkbox="RSI:Internet:Pred Food stores:All Bus:VAL SA:%change month a year ago" data-cdid="KP8D" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/kp8d/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Internet:Pred Food stores:All Bus:VAL SA:%change month a year ago">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/kp8d/drsi">RSI:Internet:Pred Food stores:All Bus:VAL SA:%change month a year ago</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: KP8D | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Retail hardware, paints &amp; glass (val nsa):All Business Index" data-gtm-checkbox="RSI:Retail hardware, paints &amp; glass (val nsa):All Business Index" data-cdid="EAPK" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/eapk/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Retail hardware, paints &amp; glass (val nsa):All Business Index">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/eapk/drsi">RSI:Retail hardware, paints & glass (val nsa):All Business Index</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: EAPK&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Year to date % change:All retail ex fuel:Large Business" data-gtm-checkbox="RSI:Year to date % change:All retail ex fuel:Large Business" data-cdid="J45B" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/j45b/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Year to date % change:All retail ex fuel:Large Business">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/j45b/drsi">RSI:Year to date % change:All retail ex fuel:Large Business</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: J45B | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Non-store retailing:All Business:VAL NSA:Rolling 3m on same 3m a year ago %" data-gtm-checkbox="RSI:Non-store retailing:All Business:VAL NSA:Rolling 3m on same 3m a year ago %" data-cdid="J58U" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/j58u/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Non-store retailing:All Business:VAL NSA:Rolling 3m on same 3m a year ago %">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/j58u/drsi">RSI:Non-store retailing:All Business:VAL NSA:Rolling 3m on same 3m a year ago %</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: J58U | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Year to date index:Automotive fuel:All Business" data-gtm-checkbox="RSI:Year to date index:Automotive fuel:All Business" data-cdid="IZ5T" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/iz5t/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Year to date index:Automotive fuel:All Business">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/iz5t/drsi">RSI:Year to date index:Automotive fuel:All Business</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: IZ5T&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Retail of books, newspapers and stationery (vol nsa):All Business %" data-gtm-checkbox="RSI:Retail of books, newspapers and stationery (vol nsa):All Business %" data-cdid="J4HN" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/j4hn/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Retail of books, newspapers and stationery (vol nsa):All Business %">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/j4hn/drsi">RSI:Retail of books, newspapers and stationery (vol nsa):All Business %</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: J4HN | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Retail of audio visual recording and equipment (val nsa):All Business Index" data-gtm-checkbox="RSI:Retail of audio visual recording and equipment (val nsa):All Business Index" data-cdid="JOF2" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/jof2/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Retail of audio visual recording and equipment (val nsa):All Business Index">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/jof2/drsi">RSI:Retail of audio visual recording and equipment (val nsa):All Business Index</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: JOF2&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="Implied deflator:AGG 13:Other stores - year on year%" data-gtm-checkbox="Implied deflator:AGG 13:Other stores - year on year%" data-cdid="A4VO" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/a4vo/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="Implied deflator:AGG 13:Other stores - year on year%">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/a4vo/drsi">Implied deflator:AGG 13:Other stores - year on year%</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: A4VO | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Retail of electrical household appliances (vol nsa):All Business %" data-gtm-checkbox="RSI:Retail of electrical household appliances (vol nsa):All Business %" data-cdid="J3U3" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/j3u3/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Retail of electrical household appliances (vol nsa):All Business %">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/j3u3/drsi">RSI:Retail of electrical household appliances (vol nsa):All Business %</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: J3U3 | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:All retail inc fuel:All Business:VAL NSA:Rolling 3m on same 3m a year ago %" data-gtm-checkbox="RSI:All retail inc fuel:All Business:VAL NSA:Rolling 3m on same 3m a year ago %" data-cdid="J5A8" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/j5a8/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:All retail inc fuel:All Business:VAL NSA:Rolling 3m on same 3m a year ago %">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/j5a8/drsi">RSI:All retail inc fuel:All Business:VAL NSA:Rolling 3m on same 3m a year ago %</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: J5A8 | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="AGG 12: Implied Deflator Index:Total Predominantly non-food stores" data-gtm-checkbox="AGG 12: Implied Deflator Index:Total Predominantly non-food stores" data-cdid="N3DN" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/n3dn/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="AGG 12: Implied Deflator Index:Total Predominantly non-food stores">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/n3dn/drsi">AGG 12: Implied Deflator Index:Total Predominantly non-food stores</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: N3DN&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Textile,clothing&amp;footwear:All Business:VAL SA:Rolling 3m on prev 3m %change" data-gtm-checkbox="RSI:Textile,clothing&amp;footwear:All Business:VAL SA:Rolling 3m on prev 3m %change" data-cdid="IEBI" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/iebi/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Textile,clothing&amp;footwear:All Business:VAL SA:Rolling 3m on prev 3m %change">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/iebi/drsi">RSI:Textile,clothing&footwear:All Business:VAL SA:Rolling 3m on prev 3m %change</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: IEBI | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI: Implied deflator:47.3:Automotive fuel - month on previous month%" data-gtm-checkbox="RSI: Implied deflator:47.3:Automotive fuel - month on previous month%" data-cdid="J3TJ" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/j3tj/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI: Implied deflator:47.3:Automotive fuel - month on previous month%">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/j3tj/drsi">RSI: Implied deflator:47.3:Automotive fuel - month on previous month%</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: J3TJ | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Other non-food stores (val sa):All Business Index" data-gtm-checkbox="RSI:Other non-food stores (val sa):All Business Index" data-cdid="EAQZ" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/eaqz/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Other non-food stores (val sa):All Business Index">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/eaqz/drsi">RSI:Other non-food stores (val sa):All Business Index</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: EAQZ&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Textile,clothing&amp;footwear:All Bus:VOL SA:Rolling 3m on same 3m a year ago %" data-gtm-checkbox="RSI:Textile,clothing&amp;footwear:All Bus:VOL SA:Rolling 3m on same 3m a year ago %" data-cdid="IEFQ" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/iefq/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Textile,clothing&amp;footwear:All Bus:VOL SA:Rolling 3m on same 3m a year ago %">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/iefq/drsi">RSI:Textile,clothing&footwear:All Bus:VOL SA:Rolling 3m on same 3m a year ago %</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: IEFQ | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Retail sale of clothing (vol sa):All Business %" data-gtm-checkbox="RSI:Retail sale of clothing (vol sa):All Business %" data-cdid="JO4K" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/jo4k/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Retail sale of clothing (vol sa):All Business %">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/jo4k/drsi">RSI:Retail sale of clothing (vol sa):All Business %</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: JO4K | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Year to date index:non specialised stores:All Business" data-gtm-checkbox="RSI:Year to date index:non specialised stores:All Business" data-cdid="GDLI" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/gdli/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Year to date index:non specialised stores:All Business">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/gdli/drsi">RSI:Year to date index:non specialised stores:All Business</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: GDLI&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Retail of footwear &amp; leather goods (val nsa):All Business Index" data-gtm-checkbox="RSI:Retail of footwear &amp; leather goods (val nsa):All Business Index" data-cdid="EAPH" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/eaph/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Retail of footwear &amp; leather goods (val nsa):All Business Index">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/eaph/drsi">RSI:Retail of footwear & leather goods (val nsa):All Business Index</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: EAPH&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:other Specialised non-food stores (val nsa) Small Business %" data-gtm-checkbox="RSI:other Specialised non-food stores (val nsa) Small Business %" data-cdid="EAJC" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/eajc/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:other Specialised non-food stores (val nsa) Small Business %">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/eajc/drsi">RSI:other Specialised non-food stores (val nsa) Small Business %</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: EAJC | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI: Alcoholic Drinks, Beverages &amp; Tobacco (vol sa) All Business Index" data-gtm-checkbox="RSI: Alcoholic Drinks, Beverages &amp; Tobacco (vol sa) All Business Index" data-cdid="JO5V" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/jo5v/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI: Alcoholic Drinks, Beverages &amp; Tobacco (vol sa) All Business Index">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/jo5v/drsi">RSI: Alcoholic Drinks, Beverages & Tobacco (vol sa) All Business Index</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: JO5V&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Retail Furniture &amp; Lighting (val nsa):All Business Index" data-gtm-checkbox="RSI:Retail Furniture &amp; Lighting (val nsa):All Business Index" data-cdid="EAPI" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/eapi/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Retail Furniture &amp; Lighting (val nsa):All Business Index">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/eapi/drsi">RSI:Retail Furniture & Lighting (val nsa):All Business Index</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: EAPI&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="Monthly commodity inquiry:value NSA clothing &amp; footwear Index" data-gtm-checkbox="Monthly commodity inquiry:value NSA clothing &amp; footwear Index" data-cdid="EAWO" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/eawo/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="Monthly commodity inquiry:value NSA clothing &amp; footwear Index">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/eawo/drsi">Monthly commodity inquiry:value NSA clothing & footwear Index</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: EAWO&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="MCI:value NSA:food, drink &amp; tobacco:rolling 3month on same year ago % change" data-gtm-checkbox="MCI:value NSA:food, drink &amp; tobacco:rolling 3month on same year ago % change" data-cdid="HN5T" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/hn5t/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="MCI:value NSA:food, drink &amp; tobacco:rolling 3month on same year ago % change">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/hn5t/drsi">MCI:value NSA:food, drink & tobacco:rolling 3month on same year ago % change</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: HN5T | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Year to date % change:Audio video recording and equipment:All Business" data-gtm-checkbox="RSI:Year to date % change:Audio video recording and equipment:All Business" data-cdid="JOF3" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/jof3/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Year to date % change:Audio video recording and equipment:All Business">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/jof3/drsi">RSI:Year to date % change:Audio video recording and equipment:All Business</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: JOF3 | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Textile,clothing&amp;footwear:All Bus:VAL NSA:%change on same month a year ago" data-gtm-checkbox="RSI:Textile,clothing&amp;footwear:All Bus:VAL NSA:%change on same month a year ago" data-cdid="EAIC" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/eaic/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Textile,clothing&amp;footwear:All Bus:VAL NSA:%change on same month a year ago">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/eaic/drsi">RSI:Textile,clothing&footwear:All Bus:VAL NSA:%change on same month a year ago</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: EAIC | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="AGG 14: Implied Deflator Index: Non store retailing" data-gtm-checkbox="AGG 14: Implied Deflator Index: Non store retailing" data-cdid="N3DS" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/n3ds/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="AGG 14: Implied Deflator Index: Non store retailing">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/n3ds/drsi">AGG 14: Implied Deflator Index: Non store retailing</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: N3DS&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Other non-food:All Business:VOL NSA:Rolling 3m on same 3m a year ago %" data-gtm-checkbox="RSI:Other non-food:All Business:VOL NSA:Rolling 3m on same 3m a year ago %" data-cdid="IEEF" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/ieef/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Other non-food:All Business:VOL NSA:Rolling 3m on same 3m a year ago %">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/ieef/drsi">RSI:Other non-food:All Business:VOL NSA:Rolling 3m on same 3m a year ago %</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: IEEF | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="AGG 5: Implied Deflator Index: Textile, clothing and footwear stores" data-gtm-checkbox="AGG 5: Implied Deflator Index: Textile, clothing and footwear stores" data-cdid="N3DP" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/n3dp/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="AGG 5: Implied Deflator Index: Textile, clothing and footwear stores">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/n3dp/drsi">AGG 5: Implied Deflator Index: Textile, clothing and footwear stores</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: N3DP&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="Monthly commodity inquiry:value NSA other non-food Index" data-gtm-checkbox="Monthly commodity inquiry:value NSA other non-food Index" data-cdid="EAWQ" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/eawq/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="Monthly commodity inquiry:value NSA other non-food Index">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/eawq/drsi">Monthly commodity inquiry:value NSA other non-food Index</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: EAWQ&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:All retail ex fuel:All Business:VOL SA:% change on same month a year ago" data-gtm-checkbox="RSI:All retail ex fuel:All Business:VOL SA:% change on same month a year ago" data-cdid="J45U" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/j45u/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:All retail ex fuel:All Business:VOL SA:% change on same month a year ago">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/j45u/drsi">RSI:All retail ex fuel:All Business:VOL SA:% change on same month a year ago</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: J45U | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Year to date % change:All retail ex fuel:Small Business" data-gtm-checkbox="RSI:Year to date % change:All retail ex fuel:Small Business" data-cdid="J45C" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/j45c/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Year to date % change:All retail ex fuel:Small Business">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/j45c/drsi">RSI:Year to date % change:All retail ex fuel:Small Business</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: J45C | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI: Year to date % change Other Specialised Stores NES : All Business" data-gtm-checkbox="RSI: Year to date % change Other Specialised Stores NES : All Business" data-cdid="CX2Z" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/cx2z/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI: Year to date % change Other Specialised Stores NES : All Business">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/cx2z/drsi">RSI: Year to date % change Other Specialised Stores NES : All Business</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: CX2Z | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Textiles:Cloth:Foot &amp; Leather (vol nsa) Small Business Index" data-gtm-checkbox="RSI:Textiles:Cloth:Foot &amp; Leather (vol nsa) Small Business Index" data-cdid="EAHT" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/eaht/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Textiles:Cloth:Foot &amp; Leather (vol nsa) Small Business Index">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/eaht/drsi">RSI:Textiles:Cloth:Foot & Leather (vol nsa) Small Business Index</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: EAHT&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Retail hardware, paints &amp; glass (vol nsa):All Business %" data-gtm-checkbox="RSI:Retail hardware, paints &amp; glass (vol nsa):All Business %" data-cdid="EASI" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/easi/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Retail hardware, paints &amp; glass (vol nsa):All Business %">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/easi/drsi">RSI:Retail hardware, paints & glass (vol nsa):All Business %</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: EASI | Units: %</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Retail Non-Specialised Food (vol nsa) Large Business Index" data-gtm-checkbox="RSI:Retail Non-Specialised Food (vol nsa) Large Business Index" data-cdid="EAHG" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/eahg/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Retail Non-Specialised Food (vol nsa) Large Business Index">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/eahg/drsi">RSI:Retail Non-Specialised Food (vol nsa) Large Business Index</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: EAHG&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+		<li class="col-wrap border-top--iron-sm border-top--iron-md margin-top--0 margin-bottom--0">
+
+			
+			<div class="input__wrapper col col--md-3 col--lg-3 margin-left-md--1 padding-left-md--1 padding-bottom-sm" >
+				<input type="checkbox" name="" data-title="RSI:Year to date index:household goods:Small Business" data-gtm-checkbox="RSI:Year to date index:household goods:Small Business" data-cdid="GDMO" data-datasetId="DRSI" data-uri="/businessindustryandtrade/retailindustry/timeseries/gdmo/drsi" value="" class="timeseries__select js-timeseriestool-select js--show" aria-label="RSI:Year to date index:household goods:Small Business">
+			</div>
+			
+			<div class="col col--md-21 col--lg-25 padding-right-md--1">
+				<p class="margin-bottom-md--0 flush--sm"><a href="/businessindustryandtrade/retailindustry/timeseries/gdmo/drsi">RSI:Year to date index:household goods:Small Business</a></p>
+			</div>
+
+			
+			
+
+			
+			<div class="col col--md-8 col--lg-10 padding-right-md--1">
+				<p class="margin-bottom-md--0 text-right--md flush--sm">22 March 2024</p>
+			</div>
+
+            
+			<div class="col-wrap">
+				<div class="col col--md-18 col--lg-20 margin-left-md--5 margin-bottom-md--2">
+					<p class="search-results__meta flush--sm">Dataset ID: DRSI | Series ID: GDMO&nbsp;</p>
+				</div>
+			</div>
+
+		</li>
+	
+
+
+                        </ul>
+                    </div>
+                </div>
+                <form id="js-pagination-container" class="js-auto-submit__form">
+                    <div class="col col--md-22 col--lg-28">
+
+    <nav aria-label="Pagination breadcrumbs">
+        <ul class="list--neutral list--inline margin-right-sm--1 margin-right-md--1 margin-bottom-sm--7 margin-bottom-md--7">
+            
+            <li class="margin-top-sm--0 margin-top-md--0">
+                <a href="/timeseriestool?fromDateDay&#x3D;&amp;fromDateMonth&#x3D;&amp;fromDateYear&#x3D;&amp;query&#x3D;&amp;size&#x3D;50&amp;toDateDay&#x3D;&amp;toDateMonth&#x3D;&amp;toDateYear&#x3D;&amp;topic&#x3D;&amp;updated&#x3D;&amp;page=1" class="page-link btn btn--plain" rel="prev">Prev</a>
+            </li>
+            
+            
+            <li class="margin-top-sm--0 margin-top-md--0">
+                
+                <a href="/timeseriestool?fromDateDay&#x3D;&amp;fromDateMonth&#x3D;&amp;fromDateYear&#x3D;&amp;query&#x3D;&amp;size&#x3D;50&amp;toDateDay&#x3D;&amp;toDateMonth&#x3D;&amp;toDateYear&#x3D;&amp;topic&#x3D;&amp;updated&#x3D;&amp;page=1" class="page-link btn btn--plain" aria-label="Page 1 of 1119">
+                    1
+                </a>
+                
+            </li>
+            
+            <li class="margin-top-sm--0 margin-top-md--0">
+                
+                <a href="" class="page-link btn btn--plain btn--plain-active btn--block" aria-current="true" aria-label="Current page (Page 2 of 1119)">2</a>
+                
+            </li>
+            
+            <li class="margin-top-sm--0 margin-top-md--0">
+                
+                <a href="/timeseriestool?fromDateDay&#x3D;&amp;fromDateMonth&#x3D;&amp;fromDateYear&#x3D;&amp;query&#x3D;&amp;size&#x3D;50&amp;toDateDay&#x3D;&amp;toDateMonth&#x3D;&amp;toDateYear&#x3D;&amp;topic&#x3D;&amp;updated&#x3D;&amp;page=3" class="page-link btn btn--plain" aria-label="Page 3 of 1119">
+                    3
+                </a>
+                
+            </li>
+            
+            <li class="margin-top-sm--0 margin-top-md--0">
+                
+                <a href="/timeseriestool?fromDateDay&#x3D;&amp;fromDateMonth&#x3D;&amp;fromDateYear&#x3D;&amp;query&#x3D;&amp;size&#x3D;50&amp;toDateDay&#x3D;&amp;toDateMonth&#x3D;&amp;toDateYear&#x3D;&amp;topic&#x3D;&amp;updated&#x3D;&amp;page=4" class="page-link btn btn--plain" aria-label="Page 4 of 1119">
+                    4
+                </a>
+                
+            </li>
+            
+            <li class="margin-top-sm--0 margin-top-md--0">
+                
+                <a href="/timeseriestool?fromDateDay&#x3D;&amp;fromDateMonth&#x3D;&amp;fromDateYear&#x3D;&amp;query&#x3D;&amp;size&#x3D;50&amp;toDateDay&#x3D;&amp;toDateMonth&#x3D;&amp;toDateYear&#x3D;&amp;topic&#x3D;&amp;updated&#x3D;&amp;page=5" class="page-link btn btn--plain" aria-label="Page 5 of 1119">
+                    5
+                </a>
+                
+            </li>
+            
+            
+            <li class="margin-top-sm--0 margin-top-md--0">
+                <a href="/timeseriestool?fromDateDay&#x3D;&amp;fromDateMonth&#x3D;&amp;fromDateYear&#x3D;&amp;query&#x3D;&amp;size&#x3D;50&amp;toDateDay&#x3D;&amp;toDateMonth&#x3D;&amp;toDateYear&#x3D;&amp;topic&#x3D;&amp;updated&#x3D;&amp;page=3" class="page-link btn btn--plain" rel="next">Next</a>
+            </li>
+            
+        </ul>
+    </nav>
+
+</div>
+                    <div class="col col--md-12 col--lg-12 margin-top-md--2 padding-left--1">
+    
+    
+        
+    
+        
+    
+        
+    
+        
+            <input type="hidden" name="page" value="2">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    
+    
+
+    <div class="baseline">
+        <label for="page-size">Results per page:</label>
+        <select name="size" id="page-size"
+            class="input select font-size--14 width-auto js-auto-submit__input">
+            <option value="10" >10</option>
+            <option value="25" >25</option>
+            <option value="50" selected>50</option>
+        </select>
+        <button class="btn btn--primary btn--thin btn--small hide--md" type="submit">Submit</button>
+    </div>
+</div>
+                </form>
+			</section>
+		</div>
+	</div>
+
+</main>
+
+
+	<footer class="print--hide">
+	<h2 class="visuallyhidden">Footer links</h2>
+	<div class="footer">
+		<div class="wrapper">
+			<nav aria-label="Footer links">
+                <div class="footer-nav col-wrap">
+                    
+                    <div class="col col--lg-one-third col--md-one-third">
+                        <h3 class="footer-nav__heading">Help</h3>
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__item">
+                                <a href="/help/accessibility">Accessibility</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="/cookies">Cookies</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="/help/privacynotice">Privacy</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="/help/termsandconditions">Terms and conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col col--lg-one-third col--md-one-third">
+                        <h3 class="footer-nav__heading">About ONS</h3>
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__item">
+                                <a href="/aboutus/whatwedo">What we do</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="/aboutus/careers">Careers</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="/aboutus/contactus">Contact us</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="/news">News</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="/aboutus/transparencyandgovernance/freedomofinformationfoi">Freedom of Information</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col col--lg-one-third col--md-one-third">
+                        <h3 class="footer-nav__heading">Connect with us</h3>
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__item">
+                                <a href="https://twitter.com/ONS">Twitter</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="https://www.instagram.com/officefornationalstatistics">Instagram</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="https://www.facebook.com/ONS">Facebook</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="https://www.linkedin.com/company/office-for-national-statistics">LinkedIn</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="https://consultations.ons.gov.uk/">Consultations</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="https://www.statsusernet.org.uk/login">Discussion forums</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="https://public.govdelivery.com/accounts/UKONS/subscribers/new">Email alerts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+			</nav>
+		</div>
+		<div class="wrapper">
+			<div class="footer-license">
+				<img class="footer-license__img" alt="OGL" width="60" src="https://cdn.ons.gov.uk/assets/images/logo-ogl-footer.svg">
+				<p class="footer-license__text margin-left-sm--0">
+					All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except where otherwise stated
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+
+
+
+
+			
+
+		
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="//cdn.ons.gov.uk/sixteens/749a88b/js/main.js"></script>
+        <script src="/js/app.js"></script>
+
+        
+        
+
+	</body>
+</html>

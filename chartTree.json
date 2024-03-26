@@ -9,35 +9,35 @@
     "children": [
         {
             "name": "Investment",
-            "description": " In 2022, Gross Fixed Capital Formation was 18.3% of GDP, up from 17.7% a year earlier and 18.2% 5 years ago. This is lower than France (25%) and Germany (22%).",
+            "description_url": "investment_gfcf_gdp.txt",
             "chart": {
-                "spec": "investment_gfcf.json"
+                "spec": "investment_gfcf_gdp.json"
             },
             "id": "investment",
             "accent": "rgb(20, 150,  20)",
             "children": [
                 {
                     "name": "Government",
-                    "description": "In Q3 2023, central government investment was £16.5B. The UK government invests a lower proportion of GDP (17.7%) than France (24.4%) or Germany (21.3%).",
+                    "description_url": "investment_gov_gfcf_gdp.txt",
                     "id": "gov_investment",
                     "chart": {
-                        "spec": "investment_gov_gfcf.json"
+                        "spec": "investment_gov_gfcf_gdp.json"
                     }
                 },
                 {
                     "name": "Corporate",
-                    "description": "British business investment equals around 10% of GDP, lower than France (14%) and Germany (12%).",
                     "id": "corp_investment",
+                    "description_url": "investment_bus_gfcf_gdp.txt",
                     "chart": {
-                        "spec": "investment_private_gfcf.json"
+                        "spec": "investment_bus_gfcf_gdp.json"
                     }
                 },
                 {
                     "name": "Research and Development",
-                    "description": "R&D spending in the UK in 2021 was 2.9% of GDP, higher than the OECD average of 2.7%. NB: Investigate ONS-OECD difference",
                     "id": "rd",
+                    "description_url": "investment_rd_gdp.txt",
                     "chart": {
-                        "spec": "investment_r_d_gdp.json"
+                        "spec": "investment_rd_gdp.json"
                     }
                 }
             ]
@@ -46,19 +46,65 @@
             "name": "Finance",
             "accent": " #014D4E",
             "id": "finance",
-            "description": "The Bank of England base rate is 5.25, up 1.25pp in the last year and at its highest level since May 2008.",
+            "description_url": "finance_gilt_yield.txt",
             "chart": {
-                "spec": "bank_rate.json"
-            }
+                "spec": "finance_gilt_yield.json"
+            },
+            "children":[
+                {
+                    "name": "Bank Rate",
+                    "id": "bank_rate",
+                    "description_url": "finance_boe.txt",
+                    "chart": {
+                        "spec": "finance_boe.json"
+                    }
+                },
+                {
+                    "name": "Mortgage Rates",
+                    "id": "mortgage_rate",
+                    "description_url": "finance_mortgage.txt",
+                    "chart": {
+                        "spec": "finance_mortgage.json"
+                    }
+                },
+                {
+                    "name": "Credit Growth",
+                    "id": "credit_growth",
+                    "description_url": "finance_m4.txt",
+                    "chart": {
+                        "spec": "finance_m4.json"
+                    }
+                }
+            ]
         },
         {
             "name": "Human Capital",
             "accent": "#F72585",
             "id": "human_capital",
-            "description": "In Q4 2023, 21.9% of 16-64 year olds were economically innactive, up slightly on one year prior (21.7%). The UK has a higher rate of economic inactivity than Germany (20.2%) but lower than France (26.1%).",
+            "description_url": "human_capital_nvq4.txt",
             "chart": {
-                "spec": "human_capital_inactivity.json"
-            }
+                "spec": "human_capital_nvq4.json"
+            },
+            "children": [
+                {
+                    "name": "PISA Scores",
+                    "id": "pisa",
+                    "description_url": "human_capital_pisa.txt",
+                    "chart": {
+                        "spec": "human_capital_pisa.json"
+                    }
+                },
+                {
+                    "name": "A Levels",
+                    "id": "nvq3",
+                    "description_url": "human_capital_nvq3.txt",
+                    "chart": {
+                        "spec": "human_capital_nvq3.json"
+                    }
+                }
+
+            ]
+
         }
     ]
 }
