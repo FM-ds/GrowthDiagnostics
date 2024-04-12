@@ -295,6 +295,17 @@
 
             topicCell = d3.select(`#cell-${data.id}`);
 
+            // select all other expanded cells and collapse them
+            d3.selectAll(".topic-cell")
+                .filter(function (d, i) {
+                    // compare the nodes id to the data id
+                    return this.id !== `cell-${data.id}` && this.getAttribute("expanded") === "true";
+                })
+                .each(function (d, i) {
+                    collapseChildren(d, d3.select(this), depth);
+                    d3.select(this).attr("expanded", "false");
+                });
+
             if (topicCell.attr("expanded") === "true") {
                 topicCell.attr("expanded", "false");
                 collapseChildren(data, topicCell, depth);
