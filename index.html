@@ -4,76 +4,164 @@
     <title> Growth Diagnostics Frame </title>
 
     <style>
-        body {
-            background-color: #121212;
-            /* Dark mode background */
-            color: white;
-            /* White text */
-            display: flex;
-            justify-content: center;
-            padding: 20px;
+        /* Our vars for tree styling */
 
+        :root {
+            --item-padding: 20px;
+        }
+
+
+        @font-face {
+            font-family: "CircularStd";
+            src: url("CircularStd-Bold.ttf") format('truetype');
+            font-weight: 1 1000;
+        }
+
+        html {
+            background-color: rgb(16, 20, 25)
+        }
+
+        body {
+            /* White text */
+            padding: 20px;
+            max-width: 80%;
+            margin: auto;
         }
 
         h1 {
-            font-family: 'Circular Std', 'Helvetica', 'Arial', sans-serif;
+            font-family: "Circular-Std", "Helvetica", "Arial", sans-serif;
             text-align: center;
             font-size: 36px;
             display: inline-block;
-            
-            
         }
 
-        h2 {
-            font-family: 'Circular Std', 'Helvetica', 'Arial', sans-serif;
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .topic-cell { /*The container for each topic*/
+            position: relative;
+            border-top: 1px solid hsl(198, 23%, 25%);
+            min-height: 300px;
+            max-width: 300px;
+            min-width: 100px;
+            margin: 0px;
+            flex: 1 2 200px;
+            padding: 10px;
+        }
+
+        .flex-container .topic-cell:first-child {
+            border-top: 0px !important;
+        }
+
+        .flex-container .topic-cell:last-child {
+            border-top: 0px !important;
+        }
+
+        .topic-cell .contents {
+            position: relative;
+            margin: var(--item-padding);
+            border-radius: 10px;
+            background-color: hsl(198, 23%, 17%);
+            border-color: hsl(198, 23%, 25%);
+            border-width: 2px;
+            border-style: solid;
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+            padding: 10px;
+            padding-top: 10px !important;
+            
+            opacity: 0;
+        }
+
+        .topic-cell .contents h2 {
+            /* baseline the text so it starts at the top */
+            margin-top: -5px;
+            margin-left: -10px;
+            margin-right: -10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid hsl(198, 23%, 25%);
+        }
+
+        /* .topic-cell div:hover {
+            background-color: #f8f8f8;
+            transition: background-color 0.15s ease;
+            border: 2px solid rgba(149, 149, 149, 0.25);
+            transition: border 0.15s ease;
+
+        } */
+
+        .flex-container .topic-cell:first-child::before {
+            /* Our last-50% horizontal connectors */
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 50%;
+            border-top: 1px solid hsl(198, 23%, 25%);
+            border-left: 1px solid hsl(198, 23%, 25%);
+            height: var(--item-padding);
+        }
+
+        .flex-container .topic-cell::after {
+            /* Our first-50% horizontal connectors */
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 50%;
+            border-left: 1px solid hsl(198, 23%, 25%);
+            height: var(--item-padding);
+        }
+
+        .flex-container .topic-cell:last-child::before {
+            /* Our top-vertical connectors */
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            border-top: 1px solid hsl(198, 23%, 25%);
+            height: 0;
+        }
+
+
+        #row2 {
+            margin-top: 20px;
+            justify-content: center;
+
+        }
+
+
+        .vega-embed {
+            position: initial !important;
+        }
+
+        figure {
+            margin: 0 !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "CircularStd", "Helvetica", "Arial", sans-serif;
+            padding-top: 0px;
+            margin-top: 0px;
         }
 
         p {
-            font-family: 'Helvetica', 'Arial', sans-serif;
-            font-weight: lighter;
-        }
-
-        #container {
-            display: flex;
-            flex-direction: column;
-            max-width: 1000px;
-            width: 100%;
-        }
-
-        .flex-item {
-            display: flex;
-            flex-direction: column;
-            margin: 10px 0;
-            padding: 20px;
-            /* Neon border */
-            background-color: #222;
-            /* Slightly lighter dark background for contrast */
-        }
-
-        .flex-item.large {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .flex-item.small {
-            max-width: 48%;
-            /* For two-column layout of children */
-        }
-
-        .flex-item>div.chart {
-            width: 300px;
-            /* Arbitrary width for chart divs */
-            height: 200px;
-            /* Arbitrary height for chart divs */
-            background-color: #333;
-            /* Placeholder for charts */
-        }
-
-        .flex-item p,
-        .flex-item h2 {
-            color: whitesmoke;
-            /* Neon text color */
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-weight: 200;
+            font-size: 14px;
+            color: hsl(0, 0%, 80%);
         }
     </style>
 
@@ -87,140 +175,300 @@
 
 
 <body>
-    <div id="container">
-        <div class="flexbox" id="flexbox"></div>
-    </div>
+
 
     <script>
 
-        function addChart(divId, spec) {
-            console.log(`Adding chart to ${divId} with spec charts/${spec}`);
+        function createColorVariationScale(baseColor) {
+            // Convert the base color to HSL
+            const baseHSL = d3.hsl(baseColor);
+
+            // Function to adjust and generate new colors
+            const generateShades = (adjustmentFactor) => {
+                // Adjust hue, saturation, and lightness based on the factor
+                const hue = (baseHSL.h + adjustmentFactor * 20) % 360; // Adjust hue within 360 degrees
+                //const saturation = baseHSL.s;
+                const saturation = (baseHSL.s + adjustmentFactor * 0.2); // Adjust saturation within [0, 1]
+                //const saturation = Math.max(0, Math.min(1, baseHSL.s * (1 + adjustmentFactor))); // Ensure saturation stays within [0, 1]
+                //const lightness = Math.max(0, Math.min(1, baseHSL.l *  0.5 * (1 + adjustmentFactor))); // Ensure lightness stays within [0, 1]
+                const lightness = baseHSL.l;
+                return d3.hsl(hue, saturation, lightness).toString();
+            };
+
+            // Generate a range of adjustment factors to create varied shades
+            // This can be customized based on the desired diversity of colors
+            const adjustmentFactors = d3.range(-1, 1.01, 1); // Example range from -0.5 to 0.5
+
+            // Map adjustment factors to shades
+            const shades = adjustmentFactors.map(generateShades);
+
+            // Create an ordinal scale mapping nominal inputs to these shades
+            return d3.scaleOrdinal(shades);
+        }
+
+
+        function addChart(divId, spec, color = "black", textColor="hsl(0, 0%, 80%)", domainColor={"x": "hsl(0, 0%, 50%)", "y": "hsl(0, 0%, 50%)"}) {
             vegaEmbed(`#${divId}`, `charts/${spec}`, {
                 actions: false,
+                renderer: 'svg',
                 config: {
-                        "width": 600,
-                        "height": 300,
                     "background": "transparent",
                     "title": {
-                        "color": "whitesmoke",
-                        "subtitleColor": "whitesmoke",
-                        "anchor": "start"
+                        "color": textColor,
+                        "fontWeight": "lighter",
+                        "subtitleColor": textColor,
+                        "anchor": "start",
+                    },
+                    "mark": {
+                        "color": color,
+                    },
+                    "axisX": {
+                        "gridOpacity": 0,
+                        "domainColor": domainColor.x,
+                        //"domainOpacity": 0,
+                        "grid": false,
+                    },
+                    "axisY": {
+                        "gridOpacity": 0.3,
+                        "domainColor": domainColor.y,
                     },
                     "axis": {
-                        "axisX": {
-                            "gridOpacity": 0,
-                            "domainOpacity": 0
-                        },
-                        "domainColor": "whitesmoke",
-                        "gridColor": "whitesmoke",
-                        "tickColor": "whitesmoke",
-                        "labelColor": "whitesmoke",
-                        "titleColor": "whitesmoke"
+                        "ticks": false,
+                        "domainColor": textColor,
+                        "tickColor": textColor,
+                        "labelColor": textColor,
+                        "titleColor": textColor
+                    },
+                    "legend": {
+                        "labelColor": textColor,
+                        "titleColor": textColor,
+                        "orient": "none",
+                        "direction": "horizontal",
+                        "legendX": -15,
+                        "legendY": -15,
+                        "title": null
                     },
                     "view": {
-                        "stroke": "transparent"  // Removes the border around the chart
+                        "stroke": "transparent", // Removes the border around the chart
+                        "width": 200,
+                        "height": 100
                     }
-
                 },
                 theme: 'dark'
             })
                 .catch(console.error);
         }
 
-        function updateLayout(item) {
-            const container = document.getElementById('container');
 
-            d3.select('#container').transition().duration(500).style('opacity', 0).on('end', () => {
-                d3.select('#container').transition().duration(500).style('opacity', 1);
+        function drawTopicDiv(data, parentRow, depth = 0, colorScale = categoryColors) {
+
+            let topicColor = colorScale(data.id);
+
+            let topicContents = parentRow.append("div")
+                .attr("class", "topic-cell")
+                .attr("id", `cell-${data.id}`)
+                .attr("expanded", false)
+                .append("div")
+                .attr("class", "contents")
+
+
+            // get a transparent version of the color to use with the gradient
+            let transparentShade = d3.hsl(topicColor);
+            transparentShade.opacity = 0.15;
+            // Give it a transparent gradient overlay on hover
+            // make a div that is 100% width and height, with a gradient from transparent to black
+            overlay = topicContents.append("div")
+                .style("position", "absolute")
+                .style("top", "0")
+                .style("left", "0")
+                .style("width", "100%")
+                .style("height", "100%")
+                //.style("background", `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9))`)
+                .style("background", `linear-gradient(${transparentShade}, rgba(0,0,0,0))`)
+                //.style("background-color", "rgba(20,100,255,0.4)")
+                .style("pointer-events", "hover")
+                .style("opacity", 1)
+                //.style("margin", "inherit")
+                .style("border-radius", "10px")
+                .attr("class", "overlay")
+                .style("opacity", 0)
+                //.style("background-color", "rgba(255,0,0,0.9)")
+                //.style("pointer-events", "none")
+                //.style("border-radius", "10px")
+                .on("mouseover", function () {
+                    d3.select(this).transition().duration(250).style("opacity", 1)
+                })
+                .on("mouseout", function () {
+                    d3.select(this).transition().duration(250).style("opacity", 0)
+                })
+
+
+            topicContents.append("h2")
+                .text(data.name)
+                .style("color", topicColor)
+
+            topicContents.append("figure")
+                .attr("id", `chart-${data.id}`)
+                .attr("class", "chart");
+            addChart(`chart-${data.id}`, data.chart.spec, topicColor);
+
+            if (data.description) {
+                // strip " from the description
+                description = data.description.replace(/"/g, "");
+                topicContents.append("p")
+                    .text(description)
+            }
+
+            // if it has children, let's make the cursor a pointer
+            if (data.children && data.children.length > 0) {
+                // append a ⌄ to the bottom center indicate it has children
+                let expandToggle = topicContents.append("p")
+                    .text("⌄")
+                    .attr("class", "expand-toggle")
+                    .style("font-size", "24px")
+                    .style("text-align", "center")
+                    .style("font-weight", "lighter")
+                    .style("margin", "5px")
+                    .style("transform", "scaleX(3)")
+                    .style("color", "hsl(198, 23%, 25%)")
+
+                topicContents.style("cursor", "pointer")
+                    .on("click", () => {
+                        toggleChildren(data, depth, createColorVariationScale(topicColor));
+                    });
+
+            }
+
+            
+
+            return topicContents;
+        }
+
+        function toggleChildren(data, depth, colorScale = categoryColors) {
+
+            topicCell = d3.select(`#cell-${data.id}`);
+
+            // select all other expanded cells and collapse them
+            d3.selectAll(".topic-cell")
+                .filter(function (d, i) {
+                    // compare the nodes id to the data id
+                    return this.id !== `cell-${data.id}` && this.getAttribute("expanded") === "true";
+                })
+                .each(function (d, i) {
+                    collapseChildren(d, d3.select(this), depth);
+                    d3.select(this).attr("expanded", "false");
+                });
+
+            if (topicCell.attr("expanded") === "true") {
+                topicCell.attr("expanded", "false");
+                collapseChildren(data, topicCell, depth);
+            } else {
+                topicCell.attr("expanded", "true");
+                expandChildren(data, topicCell, depth, colorScale);
+            }
+
+
+        }
+
+        function collapseChildren(data, topicCell, depth) {
+            d3.select(`[depth="${depth}"]`)
+                .selectAll(".topic-cell")
+                .transition()
+                .duration(500)
+                .style("opacity", 1)
+
+            d3.selectAll(`[depth="${depth + 1}"]`).transition()
+                .duration(500)
+                .style("opacity", 0)
+                .remove();
+
+            topicCell.select(".expand-toggle")
+                .text("⌄")
+        }
+
+        function expandChildren(data, topicCell, depth, colorScale = categoryColors) {
+            d3.select(`[depth="${depth}"]`)
+                .selectAll(".topic-cell")
+                .filter(function (d, i) {
+                    // compare the nodes id to the data id
+                    return this.id !== `cell-${data.id}`;
+                })
+                .transition()
+                .duration(500)
+                .style("opacity", 0.3)
+
+            // remove everything of the same depth or deeper
+            d3.selectAll(`[depth="${depth + 1}"]`).remove();
+
+            topicCell.select(".expand-toggle")
+                .text("⌃")
+
+            drawTopicRow(data, d3.select(`body`), depth + 1, colorScale);
+        }
+
+        function drawTopicRow(data, parentRow, depth = 0, colorScale = categoryColors) {
+            let topicRow = parentRow.append("div")
+                .attr("class", "flex-container")
+                .attr("depth", depth)
+                .attr("id", `row-${data.id}`)
+
+            data.children.forEach((child, i) => {
+                topicCell = drawTopicDiv(child, topicRow, depth, colorScale);
+                topicCell.transition()
+                    .duration(500)
+                    .delay(i * 100)
+                    .style("opacity", 1);
             });
+        }
 
-            container.innerHTML = ''; // Clear existing content
 
-            // Create a large item for the top-level data
-            const largeItem = createFlexItem(item, 'large');
-            container.appendChild(largeItem);
+        // Recursive function to enrich each node with 'description' from 'description_url'
+        async function enrichWithData(node) {
+            // Base case: if there's a 'description_url', fetch and add the 'description'
+            if (node.description_url) {
+                node.description = await fetchText("https://eco-temp-cache.s3.eu-west-2.amazonaws.com/gd/descriptions/" + node.description_url);
+            }
 
-            // Handle children, if any
-            if (item.children && item.children.length > 0) {
-                const childrenContainer = document.createElement('div');
-                childrenContainer.style.display = 'flex';
-                childrenContainer.style.flexWrap = 'wrap';
-                childrenContainer.style.justifyContent = 'space-between';
-
-                item.children.forEach(child => {
-                    const childItem = createFlexItem(child, 'small');
-                    childItem.onclick = () => updateLayout(child); // Recursively update layout
-                    childrenContainer.appendChild(childItem);
-                });
-
-                container.appendChild(childrenContainer);
+            // Recursive case: if there are children, iterate and enrich them as well
+            if (node.children && node.children.length > 0) {
+                for (let child of node.children) {
+                    await enrichWithData(child);
+                }
             }
         }
 
-        function createFlexItem(item, sizeClass) {
-            accent = item.accent || "rgb(50,50,50)";
-
-            const element = document.createElement('div');
-            element.classList.add('flex-item', sizeClass);
-            element.style.borderColor = accent;
-
-            element.style.backgroundColor = accent;
-
-            const elementContent = document.createElement('div');
-            element.appendChild(elementContent);
-
-            const title = document.createElement('h2');
-            title.textContent = item.name;
-            title.style.color = "white";
-            elementContent.appendChild(title);
-
-            const description = document.createElement('p');
-            description.textContent = item.description;
-            description.style.color = "white";
-            elementContent.appendChild(description);
-
-            // Check if there are children to list as indicators
-            if (item.children && item.children.length > 0) {
-                const indicatorsList = document.createElement('p');
-                item.children.forEach(child => {
-                    indicatorsList.innerHTML += `${child.name}, `;
-                });
-                elementContent.appendChild(indicatorsList);
-            }
-
-
-
-            if (item.chart && item.chart.spec) {
-                const chartDiv = document.createElement('div');
-                chartDiv.classList.add('chart');
-                chartDiv.id = `chart-${item.name.replace(/\s/g, '')}`;
-                elementContent.appendChild(chartDiv);
-                addChart(chartDiv.id, item.chart.spec); // Placeholder function
-            }
-
-            return element;
+        // Helper function to fetch text content from a URL
+        async function fetchText(url) {
+            const response = await fetch(url);
+            return await response.text();
         }
+
+        async function fetchDataAndDraw() {
+            try {
+                // Fetch the initial JSON data
+                const response = await fetch('chartTree.json');
+                const data = await response.json();
+
+                // Enrich the data with descriptions
+                await enrichWithData(data);
+
+                //categoryColors = d3.scaleOrdinal(d3.schemeCategory10);
+                // a neon color scale
+                 categoryColors = d3.scaleOrdinal(d3.schemeSet3);
+
+                // After all descriptions have been fetched and added, draw the topic row
+                foo = data
+                drawTopicRow(data, d3.select("body"), 1);
+            } catch (error) {
+                console.error("An error occurred:", error);
+            }
+        }
+
 
 
         document.addEventListener('DOMContentLoaded', () => {
-            fetch('chartTree.json')
-                .then(response => response.json())
-                .then(data => {
-                    updateLayout(data);
-                })
-                .catch(error => console.error('Error loading chartTree.json:', error));
+            fetchDataAndDraw();
         });
-
-        const neonColorPalette = [
-            "#FF0099", // Neon Pink
-            "#39FF14", // Neon Green
-            "#00FFFF", // Aqua
-            "#FF6600", // Neon Orange
-            "#F72585", // Neon Fuchsia
-            "#FFD300", // Neon Yellow
-            "#00FF00", // Lime Green
-            "#03E9F4"  // Neon Blue
-        ];
 
 
 
