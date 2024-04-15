@@ -105,6 +105,84 @@
 
             ]
 
+        },
+        {
+            "name": "Macroeconomic Risks",
+            "accent": "#FF5733",
+            "id": "macro_risks",
+            "description_url": "macro_fiscal_bal.txt",
+            "chart": {
+                "spec": "macro_fiscal_bal.json"
+            },
+            "children": [
+                {
+                    "name": "Current Account",
+                    "id": "current_account",
+                    "description_url": "macro_curr_act.txt",
+                    "chart": {
+                        "spec": "macro_curr_act.json"
+                    }
+                },
+                {
+                    "name": "International Investment Position",
+                    "id": "iip",
+                    "description_url": "macro_iip.txt",
+                    "chart": {
+                        "spec": "macro_iip.json"
+                    }
+                },
+                {
+                    "name": "Public Debt",
+                    "id": "public_debt",
+                    "description_url": "macro_debt.txt",
+                    "chart": {
+                        "spec": "macro_debt.json"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Labour Market",
+            "accent": "#FFC300",
+            "id": "labour_market",
+            "description_url": "labour_employment.txt",
+            "chart": {
+                "spec": "labour_employment.json"
+            },
+            "children": [
+                {
+                    "name": "Unemployment",
+                    "id": "unemployment",
+                    "description_url": "labour_unemployment.txt",
+                    "chart": {
+                        "spec": "labour_unemployment.json"
+                    }
+                },
+                {
+                    "name": "Inactivity",
+                    "id": "inactivity",
+                    "description_url": "labour_inactivity.txt",
+                    "chart": {
+                        "spec": "labour_inactivity.json"
+                    }
+                },
+                {
+                    "name": "Wage Growth",
+                    "id": "wage_growth",
+                    "description_url": "labour_pay.txt",
+                    "chart": {
+                        "spec": "labour_pay.json"
+                    }
+                },
+                {
+                    "name": "Productivity",
+                    "id": "productivity",
+                    "description_url": "labour_prod.txt",
+                    "chart": {
+                        "spec": "labour_prod.json"
+                    }
+                }
+            ]
         }
     ]
 }

@@ -1,0 +1,166 @@
+Series,Code
+Trade in Goods (T): WW: Exports: BOP: CP: SA,BOKG
+Trade in Goods: Unspecified goods (9): WW: Exports: BOP: CP: NSA,BOKJ
+Trade in Goods: Oil (33): WW: Exports: BOP: CP: NSA,BOKL
+"Trade in Goods: Food, beverages & tobacco (0and1): WW: Exports: BOP: CP: SA",BOPL
+Trade in Goods: Basic materials (2and4): WW: Exports: BOP: CP: SA,BOPM
+Trade in Goods: Semi-manufactures (5and6): WW: Exports: BOP: CP: SA,BOPO
+Trade in Goods: Finished manufactures (7and8): WW: Exports: BOP: CP: SA,BOPP
+Trade in Goods: Fuels other than oil (3OF): WW: Exports: BOP: CP: SA,BOQI
+Trade in Goods: Unspecified goods (9): WW: Exports: BOP: CP: SA,BOQL
+Trade in Goods (T): WW: Exports: BOP: CVM: SA,BQKQ
+Trade in Goods: Finished manufactures (7and8): WW: Exports: BOP: CP: NSA,BQMQ
+"Trade in Goods: Food, beverages & tobacco (0and1): WW: Exports: BOP: CP: NSA",BQMV
+Trade in Goods: Semi-manufactures (5and6): WW: Exports: BOP: CP: NSA,BQMX
+Trade in Goods: Fuels other than oil (3OF): WW: Exports: BOP: CP: NSA,BQNF
+Secondary Income BPM6 : Exports/Credits : Switzerland : sa,D38E
+BoP: Current Account: Goods & Services: Exports: Switzerland: sa,D38F
+Trade in Services(replaces 1.A.B) : Exports/Credits : Switzerland : sa,D38G
+Trade in Goods: Oil (33): WW: Exports: BOP: CP: SA,ELBL
+Trade in Goods: Canada: Total: Exports: BOP: CP: SA,EOBC
+Trade in Goods: Japan: Total: Exports: BOP: CP: SA,EOBD
+Trade in Goods: Switzerland: Total: Exports: BOP: CP: SA,EPLV
+Trade in Goods: Hong Kong: Total: Exports: BOP: CP: SA,ERDG
+Trade in Goods: India: Total: Exports: BOP: CP: SA,ERDJ
+Trade in Goods: China: Total: Exports: BOP: CP: SA,ERDN
+Trade in Goods: Russia: Total: Exports: BOP: CP: SA,ERDQ
+Secondary Income: Exports/Credits: Brazil SA,EVP7
+Secondary Income: Exports/Credits: China SA,EVP8
+Secondary Income: Exports/Credits: Hong Kong SA,EVP9
+Secondary Income: Exports/Credits: India SA,EVQ2
+Secondary Income: Exports/Credits: Russia SA,EVQ3
+Trade in Goods and Services (replaces 1.A): Exports/Credits: Brazil SA,EVQ4
+Trade in Goods and Services (replaces 1.A): Exports/Credits: China SA,EVQ5
+Trade in Goods and Services (replaces 1.A): Exports/Credits: Hong Kong SA,EVQ6
+Trade in Goods and Services (replaces 1.A): Exports/Credits: India SA,EVQ7
+Trade in Goods and Services (replaces 1.A): Exports/Credits: Russia SA,EVQ8
+Trade in Services(replaces 1.A.B): Exports/Credits: Brazil SA,EVQ9
+Trade in Services(replaces 1.A.B): Exports/Credits: China SA,EVR2
+Trade in Services(replaces 1.A.B): Exports/Credits: Hong Kong SA,EVR3
+Trade in Services(replaces 1.A.B): Exports/Credits: India SA,EVR4
+Trade in Services(replaces 1.A.B): Exports/Credits: Russia SA,EVR5
+Trade in Services (TS): Travel: WW: Exports: BOP: CP: SA: £m,FAPO
+Trade in Services (TS): Construction Services: WW: Exports: BOP: CP: SA: £m,FDSG
+Trade in Services (TS): Insurance and Pension Services: WW: Exports: BOP: CP: SA: £m,FDTF
+Trade in Services (TS): Financial Services: WW: Exports: BOP: CP: SA: £m,FDYI
+"Trade in Services (TS): Telecoms, Computer and Information Services: WW: Exports: BOP: CP: SA: £m",FDYQ
+Trade in Services (TS): Intellectual Property Services: WW: Exports: BOP: CP: SA: £m,FEBA
+Trade in Services (TS): Other Business Services: WW: Exports: BOP: CP: SA: £m,FEHH
+"Trade in Services (TS): Personal, Cultural & Recreational Services: WW: Exports: BOP: CP: SA: £m",FGXJ
+"Trade in Services (TS): Government Services, n.i.e: WW: Exports: BOP: CP: SA: £m",FGZA
+Secondary Income : General Government: Exports: £M: CP: SA,FHDM
+Secondary Income: Other Sectors: Exports: £M: CP: SA,FHIB
+BoP: Trade in Services (Exports)(BoP:): Transport Total: CP NSA: £m,FJOD
+BoP: Trade in Services (Exports): Travel Total: CP NSA: £m,FJPF
+BoP: Trade in Services (Exports): Construction Services Total: CP NSA: £m,FJPI
+BoP: Trade in Services (Exports): Insurance & Pension Services Total: CP NSA:£m,FJPJ
+BoP: Trade in Services (Exports): Financial Services Total: CP NSA: £m,FJPK
+BoP: Trade in Services (Exports): Intellectual Property ServicesTotal: CP NSA:£m,FJPM
+BoP: Trade in Services (Exports): Other Business Services Total: CP NSA: £m,FJPN
+"BoP: Trade in Services(Exports): Personal,Cultural & Recreation: CP NSA",FJPR
+BoP: Trade in Services (Exports): Government Services Total: CP NSA: £m,FJPU
+Secondary Income: General Government: Exports: £M: CP: NSA,FJUM
+Secondary Income: Other Sectors: Exports: £M: CP: NSA,FJUN
+Trade in Goods: Brazil: Total: Exports: BOP: CP: SA,FKMO
+Trade in Services (TS): Transport: WW: Exports: BOP: CP: SA: £m,FKOA
+Trade in Services(replaces 1.A.B) : Exports/Credits : Switzerland : nsa,FYVU
+Trade in Services(replaces 1.A.B) : Exports/Credits : Russia : nsa,FYVY
+Trade in Services(replaces 1.A.B) : Exports/Credits : Brazil : nsa,FYWC
+Trade in Services(replaces 1.A.B) : Exports/Credits : Canada : nsa,FYWD
+Trade in Services(replaces 1.A.B) : Exports/Credits : USA : nsa,FYWF
+Trade in Services(replaces 1.A.B) : Exports/Credits : China : nsa,FYWI
+Trade in Services(replaces 1.A.B) : Exports/Credits : Hong Kong : nsa,FYWJ
+Trade in Services(replaces 1.A.B) : Exports/Credits : India : nsa,FYWK
+Trade in Services(replaces 1.A.B) : Exports/Credits : Japan : nsa,FYWN
+Secondary Income : Exports/Credits : Switzerland : nsa,GXWI
+Secondary Income : Exports/Credits : Russia : nsa,GXWM
+Secondary Income : Exports/Credits : Brazil : nsa,GXWQ
+Secondary Income : Exports/Credits : Canada : nsa,GXWR
+Secondary Income : Exports/Credits : USA : nsa,GXWT
+Secondary Income : Exports/Credits : China : nsa,GXWW
+Seconday Income : Exports/Credits : Hong Kong : nsa,GXWX
+Secondary Income : Exports/Credits : India : nsa,GXWY
+Secondary Income : Exports/Credits : Japan : nsa,GXXB
+Exports of goods & services as % of GFE: CP SA,IHXL
+Income: Primary Income: Exports: £M: CP: SA,IJAH
+Trade in Services (TS): WW: Exports: BOP: CP: SA,IKBB
+Trade in Services (TS): WW: Exports: BOP: CVM: SA,IKBE
+Total Trade (TT): WW: Exports: BOP: CP: SA,IKBH
+Total Trade (TT): WW: Exports: BOP: CVM: SA,IKBK
+Secondary Income: Total exports: £M: CP: SA,IKBN
+BOP: USA with Puerto Rico: Exports: NSA: Trade in goods,J8V9
+Trade in Goods: United States inc Puerto Rico: Total: Exports: BOP: CP: SA,J9C5
+Exports goods annual growth rate CP SA %,KG9K
+Exports goods one quarter growth rate CP SA %,KG9O
+Exports goods four quarter growth rate CP SA %,KG9S
+Exports goods annual growth rate CVM SA %,KG9X
+Exports goods one quarter growth rate CVM SA %,KGA2
+Exports goods four quarter growth rate CVM SA %,KGA5
+Total exports annual growth rate CP NSA %,KH2L
+Total exports one quarter growth rate CP SA %,KH2P
+Total exports four quarter growth rate CP SA %,KH2Q
+Total exports annual growth rate CVM NSA %,KH2R
+Total exports one quarter growth rate CVM SA %,KH2V
+Total exports four quarter growth rate CVM SA %,KH2W
+Exports services annual growth rate CP SA %,KH35
+Exports services one quarter growth rate CP SA %,KH36
+Exports services four quarter growth rate CP SA %,KH37
+Exports services annual growth rate CVM SA %,KH3B
+Exports services one quarter growth rate CVM SA %,KH3C
+Exports services four quarter growth rate CVM SA %,KH3D
+Income: Primary Income: Exports: £M: CP: NSA,KTMN
+Balance of Payments: Total Trade in Services: Exports: £M: CP: NSA,KTMQ
+Balance of Payments: Trade in Services: Total exports: CVM NSA,KTMT
+Balance of Payments: Exports: Total Trade in Goods & Services: CP NSA £m,KTMW
+Balance of Payments: Trade in Goods & Services: Total exports: CVM NSA £m,KTMZ
+Secondary Income: Total: Exports: £M: CP: NSA,KTND
+Exports/Credits C V3 NSA,L7BR
+Exports/Credits C V4 NSA,L7BS
+BoP: Goods and Services: Exports: European Union: CP NSA £m,L7D7
+Exports/Credits Gooods and services NSA,L7D8
+BoP: Services: Exports: European Union: CP NSA £m,L7DB
+Exports/Credits services NSA,L7DC
+Exports trade goods & services EU SA,L84Y
+Exports trade goods & services Non. EU 28 SA,L84Z
+Exports trade in services EU SA,L854
+Exports trade in services Non. EU SA,L855
+Trade in Goods (T): Non-EU: Exports: BOP: CP: SA,L87M
+Trade in Goods (T): EU: Exports: BOP: CP: SA,L87S
+BoP: Current Account: Goods & Services: Exports: Switzerland: nsa,LGIL
+BoP: Current Account: Goods & Services: Exports: Russia,LGIP
+BoP: Current Account: Goods & Services: Exports: Brazil,LGIT
+BoP: Current Account: Goods & Services: Exports: Canada: nsa,LGIU
+BoP: Current Account: Goods & Services: Exports: United States of America: nsa,LGIW
+BoP: Current Account: Goods & Services: Exports: China,LGIZ
+BoP: Current Account: Goods & Services: Exports: Hong Kong,LGJA
+BoP: Current Account: Goods & Services: Exports: India,LGJB
+BoP: Current Account: Goods & Services: Exports: Japan: nsa,LGJE
+Trade in Services(replaces 1.A.B) : Exports/Credits : Canada : sa,LJNZ
+Secondary Income : Exports/Credits : Japan : sa,LJPC
+Trade in Services(replaces 1.A.B) : Exports/Credits : USA : sa,LJPL
+BoP: Current Account: Goods & Services: Exports: Japan: sa,LJQH
+Trade in Goods (T): WW: Exports: BOP: CP: NSA,LQAD
+Manufacturing and Maintenance Services - Exports - NSA,MTN4
+Trade in Services (TS): Manufacturing and Maintenance Services: WW: Exports: BOP: CP: SA: £m,MTN7
+BOP: Exports: NSA: EMU-Euro Area 19 members : £m,N3BZ
+Trade in Goods: EMU(19): Exports: BOP: CP: SA,N3C5
+Trade in Services Exports with Euro Area 19 SA,N3S4
+Trade in Goods and Services Exports with Euro Area 19 SA,N3S7
+Secondary Income Exports with Euro Area 19 SA,N3SG
+Trade in Services Exports with Euro Area 19 NSA,N3SJ
+Trade in Goods and Services Exports with Euro Area 19 NSA,N3SM
+Secondary Income Exports with Euro Area 19 NSA,N3SP
+BOP: Exports: Japan: NSA: Trade in goods,QAMJ
+BOP: Exports: Canada: NSA: Trade in goods,QATH
+BOP: Exports: NSA: Switzerland: Trade in goods,QDLC
+BOP: Exports: NSA: Russia: Trade in goods,QDLO
+BOP: Exports: NSA: Brazil: Trade in goods,QDLU
+BOP: Exports: NSA: China: Trade in goods,QDMA
+BOP: Exports: NSA: Hong Kong: Trade in goods,QDMD
+BOP: Exports: NSA: India: Trade in goods,QDMG
+Secondary Income : Exports/Credits : Canada : sa,XERW
+Trade in Services(replaces 1.A.B) : Exports/Credits : Japan : sa,XEST
+BoP: Current Account: Goods & Services: Exports: Canada: sa,XESZ
+Secondary Income : Exports/Credits : USA : sa,XETA
+BoP: Current Account: Goods & Services: Exports: United States of America: sa,XEUL
+Exports of goods and services deflator: SA,YBFW
