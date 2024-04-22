@@ -208,56 +208,65 @@
 
 
         function addChart(divId, spec, color = "black", textColor="hsl(0, 0%, 80%)", domainColor={"x": "hsl(0, 0%, 50%)", "y": "hsl(0, 0%, 50%)"}) {
-            vegaEmbed(`#${divId}`, `charts/${spec}`, {
-                actions: false,
-                renderer: 'svg',
-                config: {
-                    "background": "transparent",
-                    "title": {
-                        "color": textColor,
-                        "fontWeight": "lighter",
-                        "subtitleColor": textColor,
-                        "anchor": "start",
-                    },
-                    "mark": {
-                        "color": color,
-                    },
-                    "axisX": {
-                        "gridOpacity": 0,
-                        "domainColor": domainColor.x,
-                        //"domainOpacity": 0,
-                        "grid": false,
-                    },
-                    "axisY": {
-                        "gridOpacity": 0.3,
-                        "domainColor": domainColor.y,
-                    },
-                    "axis": {
-                        "ticks": false,
-                        "domainColor": textColor,
-                        "tickColor": textColor,
-                        "labelColor": textColor,
-                        "titleColor": textColor
-                    },
-                    "legend": {
-                        "labelColor": textColor,
-                        "titleColor": textColor,
-                        "orient": "none",
-                        "direction": "horizontal",
-                        "legendX": -15,
-                        "legendY": -15,
-                        "title": null
-                    },
-                    "view": {
-                        "stroke": "transparent", // Removes the border around the chart
-                        "width": 200,
-                        "height": 100
+            d3.json(`charts/${spec}`)
+                .then((data) => {
+                    // if width is defined in the spec, remove it
+                    // get the width of the div parent
+                    let parentwidth = document.getElementById(divId).parentElement.clientWidth;
+                    let graphWidth = parentwidth - 60;
+                    console.log(`parent width: ${parentwidth}, graph width: ${graphWidth}`);
+                    vegaEmbed(`#${divId}`, data, {
+                        actions: false,
+                        renderer: 'svg',
+                        config: {
+                            "background": "transparent",
+                            "title": {
+                                "color": textColor,
+                                "fontWeight": "lighter",
+                                "subtitleColor": textColor,
+                                "fontSize": 10,
+                                "anchor": "start",
+                            },
+                            "mark": {
+                                "color": color,
+                            },
+                            "axisX": {
+                                "gridOpacity": 0,
+                                "domainColor": domainColor.x,
+                                //"domainOpacity": 0,
+                                "grid": false,
+                            },
+                            "axisY": {
+                                "gridOpacity": 0.3,
+                                "domainColor": domainColor.y,
+                            },
+                            "axis": {
+                                "ticks": false,
+                                "domainColor": textColor,
+                                "tickColor": textColor,
+                                "labelColor": textColor,
+                                "titleColor": textColor
+                            },
+                            "legend": {
+                                "labelColor": textColor,
+                                "titleColor": textColor,
+                                "orient": "none",
+                                "direction": "horizontal",
+                                "legendX": -15,
+                                "legendY": -15,
+                                "title": null
+                            },
+                            "view": {
+                                "stroke": "transparent", // Removes the border around the chart
+                                "width": graphWidth,
+                                "height": 100
+                            }
+                        },
+                        theme: 'dark'
+                    })
+                        .catch(console.error);
+                })
                     }
-                },
-                theme: 'dark'
-            })
-                .catch(console.error);
-        }
 
 
         function drawTopicDiv(data, parentRow, depth = 0, colorScale = categoryColors) {
