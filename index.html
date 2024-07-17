@@ -42,7 +42,8 @@
             justify-content: center;
         }
 
-        .topic-cell { /*The container for each topic*/
+        .topic-cell {
+            /*The container for each topic*/
             position: relative;
             border-top: 1px solid hsl(198, 23%, 25%);
             min-height: 300px;
@@ -73,7 +74,7 @@
             height: calc(100% - 20px);
             padding: 10px;
             padding-top: 10px !important;
-            
+
             opacity: 0;
         }
 
@@ -163,6 +164,88 @@
             font-size: 14px;
             color: hsl(0, 0%, 80%);
         }
+
+        .geo-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            stroke: black;
+            width: 80%;
+            height: 80%;
+            max-width: 700px;
+            max-height: 1000px;
+            background-color: hsl(198, 23%, 17%);
+            border-radius: 10px;
+            background-color: hsl(198, 23%, 17%);
+            border-color: hsl(198, 23%, 25%);
+            border-width: 2px;
+            border-style: solid;
+            top: 50%;
+            /* Center vertically */
+            left: 50%;
+            /* Center horizontally */
+            transform: translate(-50%, -50%);
+            /* Shift the modal back by half its width and height */
+            padding: 25px;
+        }
+
+        .modal button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            cursor: pointer;
+            background-color: hsl(198, 23%, 17%);
+            color: whitesmoke;
+            border: 1px solid hsl(198, 23%, 25%);
+            font-size: 14px;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        form {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: whitesmoke;
+        }
+
+        .modal-blur {
+            filter: blur(5px);
+            position: fixed;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        .blur {
+            filter: blur(5px);
+        }
+
+        .row-container {
+            filter: blur(0px);
+        }
+
+        .backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent black background */
+            z-index: 1;
+            /* Ensure it's below the modal but above other content */
+        }
     </style>
 
 </head>
@@ -175,8 +258,8 @@
 
 
 <body>
-
-
+    <div class="modal"></div>
+    <div class="backdrop" id="modalBackdrop" onclick="closeModal()"></div>
     <script>
 
         function createColorVariationScale(baseColor) {
@@ -207,7 +290,7 @@
         }
 
 
-        function addChart(divId, spec, color = "black", textColor="hsl(0, 0%, 80%)", domainColor={"x": "hsl(0, 0%, 50%)", "y": "hsl(0, 0%, 50%)"}) {
+        function addChart(divId, spec, color = "black", textColor = "hsl(0, 0%, 80%)", domainColor = { "x": "hsl(0, 0%, 50%)", "y": "hsl(0, 0%, 50%)" }) {
             d3.json(`charts/${spec}`)
                 .then((data) => {
                     // if width is defined in the spec, remove it
@@ -215,6 +298,10 @@
                     let parentwidth = document.getElementById(divId).parentElement.clientWidth;
                     let graphWidth = parentwidth - 60;
                     console.log(`parent width: ${parentwidth}, graph width: ${graphWidth}`);
+
+                    // truncate the title to a multiple of the width
+                    data.title.text = data.title.text.substring(0, Math.floor(graphWidth / 30) * 10) + (data.title.text.length > Math.floor(graphWidth / 30) * 10 ? "..." : "");
+
                     vegaEmbed(`#${divId}`, data, {
                         actions: false,
                         renderer: 'svg',
@@ -266,7 +353,7 @@
                     })
                         .catch(console.error);
                 })
-                    }
+        }
 
 
         function drawTopicDiv(data, parentRow, depth = 0, colorScale = categoryColors) {
@@ -345,12 +432,96 @@
                     .on("click", () => {
                         toggleChildren(data, depth, createColorVariationScale(topicColor));
                     });
-
             }
 
-            
+            // if it has a geo and a geo.spec, add a button to the top right to open the modal with the geo spec
+            if (data.geo && data.geo.spec) {
+                let geoButton = topicContents.append("img")
+                    .attr("src", "resources/map.png")
+                    .attr("class", "geo-button")
+                    .on("click", () => {
+                        openModal(data.geo.spec);
+                    });
+            }
+
 
             return topicContents;
+        }
+
+        function openModal(spec) {
+            console.log(spec);
+
+            // get the modal
+            let modal = d3.select(".modal");
+
+            // clear its existing contents
+            modal.selectAll("*").remove();
+
+            // make the modal visible
+            modal.style("display", "block")
+                .style("opacity", 0)
+                .transition()
+                .duration(500)
+                .style("opacity", 1);
+
+            // add a div container for the map
+            mapContainer = modal.append("div")
+                .attr("id", "geo-map")
+                .style("width", "80%")
+                .style("height", "80%")
+                .style("margin", "auto")
+
+            // add the spec to the modal
+            figure = mapContainer.append("figure")
+                .attr("id", "geoChart")
+                .style("width", "80%")
+                .style("height", "80%")
+
+            // add the close button
+            closeButton = modal.append("button")
+                .text("Close")
+                .on("click", () => {
+                    closeModal();
+                });
+
+            // blur all the row-container elements
+            d3.selectAll(".row-container")
+                .transition()
+                .duration(500)
+                .style("filter", "blur(5px)")
+
+            // download the spec
+            d3.json(`charts/${spec}`).then(spec => {
+                vegaEmbed("#geoChart", spec)
+            })
+
+            // make the backdrop visible
+            d3.select("#modalBackdrop").style("display", "block");
+
+
+
+        }
+
+        function closeModal() {
+            // get the modal
+            let modal = d3.select(".modal");
+
+            // unblur the row-container elements
+            d3.selectAll(".row-container")
+                .transition()
+                .duration(500)
+                .style("filter", "blur(0px)")
+
+
+            // make the modal invisible
+            modal.transition()
+                .duration(500)
+                .style("opacity", 0)
+                .on("end", () => {
+                    modal.style("display", "none");
+                });
+
+            d3.select("#modalBackdrop").style("display", "none");
         }
 
         function toggleChildren(data, depth, colorScale = categoryColors) {
@@ -417,7 +588,7 @@
 
         function drawTopicRow(data, parentRow, depth = 0, colorScale = categoryColors) {
             let topicRow = parentRow.append("div")
-                .attr("class", "flex-container")
+                .attr("class", "flex-container row-container")
                 .attr("depth", depth)
                 .attr("id", `row-${data.id}`)
 
@@ -463,7 +634,7 @@
 
                 //categoryColors = d3.scaleOrdinal(d3.schemeCategory10);
                 // a neon color scale
-                 categoryColors = d3.scaleOrdinal(d3.schemeSet3);
+                categoryColors = d3.scaleOrdinal(d3.schemeSet3);
 
                 // After all descriptions have been fetched and added, draw the topic row
                 foo = data

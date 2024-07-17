@@ -156,6 +156,9 @@
                     "description_url": "labour_unemployment.txt",
                     "chart": {
                         "spec": "labour_unemployment.json"
+                    },
+                    "geo" : {
+                        "spec": "maps/labour_unemployment.json"
                     }
                 },
                 {

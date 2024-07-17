@@ -1,0 +1,70 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "format": {"type": "csv"},
+      "values": "date,geo_name,geo_id,value,measure\n2005-12-01,North East,E12000001,26.9,Variable\n2005-12-01,North West,E12000002,25.5,Variable\n2005-12-01,Yorkshire and The Humber,E12000003,24.1,Variable\n2005-12-01,East Midlands,E12000004,22.5,Variable\n2005-12-01,West Midlands,E12000005,24.5,Variable\n2005-12-01,East,E12000006,20.5,Variable\n2005-12-01,London,E12000007,26.6,Variable\n2005-12-01,South East,E12000008,19.6,Variable\n2005-12-01,South West,E12000009,21.6,Variable\n2005-12-01,Wales,W92000004,27.0,Variable\n2005-12-01,Scotland,S92000003,22.9,Variable\n2005-12-01,Northern Ireland,N92000002,29.8,Variable\n2006-12-01,North East,E12000001,26.0,Variable\n2006-12-01,North West,E12000002,25.4,Variable\n2006-12-01,Yorkshire and The Humber,E12000003,23.9,Variable\n2006-12-01,East Midlands,E12000004,21.6,Variable\n2006-12-01,West Midlands,E12000005,24.5,Variable\n2006-12-01,East,E12000006,21.1,Variable\n2006-12-01,London,E12000007,26.2,Variable\n2006-12-01,South East,E12000008,19.6,Variable\n2006-12-01,South West,E12000009,21.2,Variable\n2006-12-01,Wales,W92000004,26.9,Variable\n2006-12-01,Scotland,S92000003,22.2,Variable\n2006-12-01,Northern Ireland,N92000002,29.6,Variable\n2007-12-01,North East,E12000001,25.9,Variable\n2007-12-01,North West,E12000002,25.3,Variable\n2007-12-01,Yorkshire and The Humber,E12000003,24.5,Variable\n2007-12-01,East Midlands,E12000004,22.3,Variable\n2007-12-01,West Midlands,E12000005,24.8,Variable\n2007-12-01,East,E12000006,21.3,Variable\n2007-12-01,London,E12000007,26.3,Variable\n2007-12-01,South East,E12000008,19.9,Variable\n2007-12-01,South West,E12000009,20.8,Variable\n2007-12-01,Wales,W92000004,26.7,Variable\n2007-12-01,Scotland,S92000003,22.4,Variable\n2007-12-01,Northern Ireland,N92000002,28.5,Variable\n2008-12-01,North East,E12000001,25.8,Variable\n2008-12-01,North West,E12000002,25.9,Variable\n2008-12-01,Yorkshire and The Humber,E12000003,24.3,Variable\n2008-12-01,East Midlands,E12000004,21.7,Variable\n2008-12-01,West Midlands,E12000005,24.7,Variable\n2008-12-01,East,E12000006,21.1,Variable\n2008-12-01,London,E12000007,25.6,Variable\n2008-12-01,South East,E12000008,19.8,Variable\n2008-12-01,South West,E12000009,20.5,Variable\n2008-12-01,Wales,W92000004,26.6,Variable\n2008-12-01,Scotland,S92000003,22.6,Variable\n2008-12-01,Northern Ireland,N92000002,29.2,Variable\n2009-12-01,North East,E12000001,26.7,Variable\n2009-12-01,North West,E12000002,25.4,Variable\n2009-12-01,Yorkshire and The Humber,E12000003,24.7,Variable\n2009-12-01,East Midlands,E12000004,22.1,Variable\n2009-12-01,West Midlands,E12000005,24.6,Variable\n2009-12-01,East,E12000006,20.7,Variable\n2009-12-01,London,E12000007,25.1,Variable\n2009-12-01,South East,E12000008,20.1,Variable\n2009-12-01,South West,E12000009,20.7,Variable\n2009-12-01,Wales,W92000004,27.1,Variable\n2009-12-01,Scotland,S92000003,22.6,Variable\n2009-12-01,Northern Ireland,N92000002,30.1,Variable\n2010-12-01,North East,E12000001,26.6,Variable\n2010-12-01,North West,E12000002,25.1,Variable\n2010-12-01,Yorkshire and The Humber,E12000003,24.9,Variable\n2010-12-01,East Midlands,E12000004,23.4,Variable\n2010-12-01,West Midlands,E12000005,25.7,Variable\n2010-12-01,East,E12000006,21.4,Variable\n2010-12-01,London,E12000007,26.0,Variable\n2010-12-01,South East,E12000008,20.6,Variable\n2010-12-01,South West,E12000009,21.5,Variable\n2010-12-01,Wales,W92000004,27.3,Variable\n2010-12-01,Scotland,S92000003,23.0,Variable\n2010-12-01,Northern Ireland,N92000002,29.1,Variable\n2011-12-01,North East,E12000001,27.4,Variable\n2011-12-01,North West,E12000002,25.3,Variable\n2011-12-01,Yorkshire and The Humber,E12000003,25.2,Variable\n2011-12-01,East Midlands,E12000004,22.8,Variable\n2011-12-01,West Midlands,E12000005,25.8,Variable\n2011-12-01,East,E12000006,20.9,Variable\n2011-12-01,London,E12000007,25.6,Variable\n2011-12-01,South East,E12000008,20.9,Variable\n2011-12-01,South West,E12000009,21.6,Variable\n2011-12-01,Wales,W92000004,27.0,Variable\n2011-12-01,Scotland,S92000003,23.1,Variable\n2011-12-01,Northern Ireland,N92000002,27.6,Variable\n2012-12-01,North East,E12000001,26.0,Variable\n2012-12-01,North West,E12000002,24.7,Variable\n2012-12-01,Yorkshire and The Humber,E12000003,23.9,Variable\n2012-12-01,East Midlands,E12000004,22.4,Variable\n2012-12-01,West Midlands,E12000005,25.1,Variable\n2012-12-01,East,E12000006,20.2,Variable\n2012-12-01,London,E12000007,24.7,Variable\n2012-12-01,South East,E12000008,20.4,Variable\n2012-12-01,South West,E12000009,21.6,Variable\n2012-12-01,Wales,W92000004,26.4,Variable\n2012-12-01,Scotland,S92000003,23.2,Variable\n2012-12-01,Northern Ireland,N92000002,27.6,Variable\n2013-12-01,North East,E12000001,26.2,Variable\n2013-12-01,North West,E12000002,25.1,Variable\n2013-12-01,Yorkshire and The Humber,E12000003,23.3,Variable\n2013-12-01,East Midlands,E12000004,22.6,Variable\n2013-12-01,West Midlands,E12000005,24.3,Variable\n2013-12-01,East,E12000006,19.7,Variable\n2013-12-01,London,E12000007,23.7,Variable\n2013-12-01,South East,E12000008,20.0,Variable\n2013-12-01,South West,E12000009,20.6,Variable\n2013-12-01,Wales,W92000004,25.0,Variable\n2013-12-01,Scotland,S92000003,23.1,Variable\n2013-12-01,Northern Ireland,N92000002,27.5,Variable\n2014-12-01,North East,E12000001,25.1,Variable\n2014-12-01,North West,E12000002,25.3,Variable\n2014-12-01,Yorkshire and The Humber,E12000003,23.7,Variable\n2014-12-01,East Midlands,E12000004,22.0,Variable\n2014-12-01,West Midlands,E12000005,24.8,Variable\n2014-12-01,East,E12000006,20.0,Variable\n2014-12-01,London,E12000007,23.2,Variable\n2014-12-01,South East,E12000008,20.3,Variable\n2014-12-01,South West,E12000009,19.8,Variable\n2014-12-01,Wales,W92000004,25.3,Variable\n2014-12-01,Scotland,S92000003,22.5,Variable\n2014-12-01,Northern Ireland,N92000002,27.6,Variable\n2015-12-01,North East,E12000001,24.8,Variable\n2015-12-01,North West,E12000002,24.7,Variable\n2015-12-01,Yorkshire and The Humber,E12000003,22.8,Variable\n2015-12-01,East Midlands,E12000004,22.5,Variable\n2015-12-01,West Midlands,E12000005,24.9,Variable\n2015-12-01,East,E12000006,19.4,Variable\n2015-12-01,London,E12000007,22.3,Variable\n2015-12-01,South East,E12000008,19.7,Variable\n2015-12-01,South West,E12000009,19.4,Variable\n2015-12-01,Wales,W92000004,25.1,Variable\n2015-12-01,Scotland,S92000003,22.3,Variable\n2015-12-01,Northern Ireland,N92000002,27.1,Variable\n2016-12-01,North East,E12000001,24.5,Variable\n2016-12-01,North West,E12000002,24.5,Variable\n2016-12-01,Yorkshire and The Humber,E12000003,23.5,Variable\n2016-12-01,East Midlands,E12000004,21.9,Variable\n2016-12-01,West Midlands,E12000005,24.6,Variable\n2016-12-01,East,E12000006,20.1,Variable\n2016-12-01,London,E12000007,21.8,Variable\n2016-12-01,South East,E12000008,19.0,Variable\n2016-12-01,South West,E12000009,19.7,Variable\n2016-12-01,Wales,W92000004,25.2,Variable\n2016-12-01,Scotland,S92000003,23.3,Variable\n2016-12-01,Northern Ireland,N92000002,26.0,Variable\n2017-12-01,North East,E12000001,24.6,Variable\n2017-12-01,North West,E12000002,23.5,Variable\n2017-12-01,Yorkshire and The Humber,E12000003,22.6,Variable\n2017-12-01,East Midlands,E12000004,22.4,Variable\n2017-12-01,West Midlands,E12000005,23.6,Variable\n2017-12-01,East,E12000006,19.2,Variable\n2017-12-01,London,E12000007,21.9,Variable\n2017-12-01,South East,E12000008,18.6,Variable\n2017-12-01,South West,E12000009,18.6,Variable\n2017-12-01,Wales,W92000004,23.9,Variable\n2017-12-01,Scotland,S92000003,22.6,Variable\n2017-12-01,Northern Ireland,N92000002,27.6,Variable\n2018-12-01,North East,E12000001,24.7,Variable\n2018-12-01,North West,E12000002,23.1,Variable\n2018-12-01,Yorkshire and The Humber,E12000003,22.9,Variable\n2018-12-01,East Midlands,E12000004,21.7,Variable\n2018-12-01,West Midlands,E12000005,23.0,Variable\n2018-12-01,East,E12000006,19.2,Variable\n2018-12-01,London,E12000007,21.8,Variable\n2018-12-01,South East,E12000008,19.2,Variable\n2018-12-01,South West,E12000009,18.7,Variable\n2018-12-01,Wales,W92000004,23.3,Variable\n2018-12-01,Scotland,S92000003,22.6,Variable\n2018-12-01,Northern Ireland,N92000002,27.2,Variable\n2019-12-01,North East,E12000001,25.0,Variable\n2019-12-01,North West,E12000002,22.3,Variable\n2019-12-01,Yorkshire and The Humber,E12000003,22.8,Variable\n2019-12-01,East Midlands,E12000004,20.0,Variable\n2019-12-01,West Midlands,E12000005,22.3,Variable\n2019-12-01,East,E12000006,19.4,Variable\n2019-12-01,London,E12000007,21.9,Variable\n2019-12-01,South East,E12000008,18.0,Variable\n2019-12-01,South West,E12000009,18.2,Variable\n2019-12-01,Wales,W92000004,23.6,Variable\n2019-12-01,Scotland,S92000003,22.5,Variable\n2019-12-01,Northern Ireland,N92000002,26.2,Variable\n2020-12-01,North East,E12000001,23.6,Variable\n2020-12-01,North West,E12000002,22.6,Variable\n2020-12-01,Yorkshire and The Humber,E12000003,22.2,Variable\n2020-12-01,East Midlands,E12000004,20.5,Variable\n2020-12-01,West Midlands,E12000005,22.2,Variable\n2020-12-01,East,E12000006,19.6,Variable\n2020-12-01,London,E12000007,20.0,Variable\n2020-12-01,South East,E12000008,18.4,Variable\n2020-12-01,South West,E12000009,18.7,Variable\n2020-12-01,Wales,W92000004,24.4,Variable\n2020-12-01,Scotland,S92000003,23.2,Variable\n2020-12-01,Northern Ireland,N92000002,28.0,Variable\n2021-12-01,North East,E12000001,25.3,Variable\n2021-12-01,North West,E12000002,23.5,Variable\n2021-12-01,Yorkshire and The Humber,E12000003,22.7,Variable\n2021-12-01,East Midlands,E12000004,22.3,Variable\n2021-12-01,West Midlands,E12000005,22.4,Variable\n2021-12-01,East,E12000006,18.9,Variable\n2021-12-01,London,E12000007,20.6,Variable\n2021-12-01,South East,E12000008,19.2,Variable\n2021-12-01,South West,E12000009,19.9,Variable\n2021-12-01,Wales,W92000004,23.7,Variable\n2021-12-01,Scotland,S92000003,23.8,Variable\n2021-12-01,Northern Ireland,N92000002,27.0,Variable\n2022-12-01,North East,E12000001,26.0,Variable\n2022-12-01,North West,E12000002,23.3,Variable\n2022-12-01,Yorkshire and The Humber,E12000003,22.6,Variable\n2022-12-01,East Midlands,E12000004,22.6,Variable\n2022-12-01,West Midlands,E12000005,22.5,Variable\n2022-12-01,East,E12000006,19.4,Variable\n2022-12-01,London,E12000007,20.2,Variable\n2022-12-01,South East,E12000008,19.3,Variable\n2022-12-01,South West,E12000009,19.5,Variable\n2022-12-01,Wales,W92000004,24.4,Variable\n2022-12-01,Scotland,S92000003,22.9,Variable\n2022-12-01,Northern Ireland,N92000002,26.3,Variable\n2023-12-01,North East,E12000001,24.2,Variable\n2023-12-01,North West,E12000002,23.3,Variable\n2023-12-01,Yorkshire and The Humber,E12000003,23.2,Variable\n2023-12-01,East Midlands,E12000004,21.6,Variable\n2023-12-01,West Midlands,E12000005,21.2,Variable\n2023-12-01,East,E12000006,19.4,Variable\n2023-12-01,London,E12000007,21.4,Variable\n2023-12-01,South East,E12000008,18.3,Variable\n2023-12-01,South West,E12000009,19.1,Variable\n2023-12-01,Wales,W92000004,23.0,Variable\n2023-12-01,Scotland,S92000003,22.5,Variable\n2023-12-01,Northern Ireland,N92000002,24.7,Variable"
+    },
+    "params": [
+      {
+        "name": "selectedYear",
+        "value": 2019,
+        "bind": {
+          "input": "range",
+          "min": 2013,
+          "name": "Year",
+          "max": 2023,
+          "step": 1
+        }
+      }
+    ],
+    "config": {
+      "title": {"color": "rgb(165,165,165)", "subtitleColor": "rgb(165,165,165)"},
+      "legend": {"labelColor": "rgb(165,165,165)"}
+    },
+    "title": {
+      "text": "Inactivity (16+)",
+      "subtitle": ["Source: Nomis"],
+      "anchor": "start",
+      "fontSize": 20,
+      "subtitleFontSize": 14,
+      "subtitleFontWeight": "lighter"
+    },
+    "transform": [
+      {"filter": "year(datum.date) == selectedYear"},
+      {
+        "lookup": "geo_id",
+        "from": {
+          "key": "properties.geo_id",
+          "fields": ["properties", "type", "geometry"],
+          "data": {
+            "url": "https://raw.githubusercontent.com/FM-ds/NomisMaps/main/geoData/cleaned/uk_regions.topoJson",
+            "format": {"type": "json", "property": "features"}
+          }
+        }
+      }
+    ],
+    "width": 500,
+    "height": 800,
+    "background": "rgba(0,0,0,0)",
+    "projection": {"type": "identity", "reflectY": true},
+    "layer": [
+      {
+        "mark": {"type": "geoshape"},
+        "encoding": {"color": {"value": "rgb(166,166,166)"}}
+      },
+      {
+        "transform": [{"filter": "datum.value != ''"}],
+        "mark": {"type": "geoshape"},
+        "encoding": {
+          "order": {"field": "value"},
+          "color": {
+            "scale": {"scheme": "darkblue"},
+            "field": "value",
+            "type": "quantitative",
+            "legend": {"title": null}
+          },
+          "tooltip": [{"field": "geo_name", "title": "name"}, {"field": "value"}]
+        }
+      }
+    ]
+  }
