@@ -1,0 +1,208 @@
+Country,TIME_PERIOD,OBS_VALUE,Country Code,Indicator Name,Indicator Code,GDP_per_capita
+United States,2022,51.255699,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,72165.4834696586
+Italy,2022,29.203739,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,52060.332886954
+Germany,2022,37.280796,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,62605.4730386799
+United States,1998,36.195801,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,51639.1871337683
+Italy,1998,8.9524889,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,47889.15773677
+United States,1999,37.368931,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,53494.0566028874
+Italy,1999,9.9974318,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,48659.5193607039
+United Kingdom,1997,24.681225,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,40702.7552189838
+Japan,1997,45.744064,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,39027.3655750384
+Spain,2000,33.978283,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,39565.1933957311
+Germany,2003,21.799734,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,49984.3544223018
+United Kingdom,2004,34.897144,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,48534.6528644697
+Japan,2004,52.640175,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,40573.3302644675
+France,2002,36.053307,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,48372.4580024461
+Canada,2002,51.629013,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,48943.5412414992
+Germany,2002,21.739561,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,50364.6463670596
+United States,2006,39.239269,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,60699.2720850035
+Italy,2006,17.283623,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,52665.1179585542
+Spain,2001,35.42757,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,40836.8719530901
+France,2001,34.232525,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,48179.1684165148
+Canada,2001,50.856735,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,48036.6266178082
+United Kingdom,2005,35.345379,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,49522.7417594758
+Japan,2005,53.185596,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,41301.3536778333
+Spain,2021,48.726418,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,43620.6040614123
+Japan,2021,64.814812,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,44549.3383411434
+United States,2007,40.386425,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,61329.5392265213
+Italy,2007,18.863468,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,53179.088501063
+Spain,2009,39.458729,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,42608.0181311321
+France,2009,43.149895,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,49765.0781336229
+Canada,2009,55.780476,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,50772.8699217538
+France,2010,42.87175,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,50485.7985199715
+Canada,2010,56.169838,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,51763.6758102969
+Germany,2010,26.133959,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,54519.7344046442
+United Kingdom,2012,47.860847,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,49290.6921193107
+Japan,2012,58.554874,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,41825.3142519696
+Spain,2008,40.047447,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,44667.9933884536
+Spain,2020,47.379524,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,41038.9814959965
+Japan,2020,63.54916,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,43238.2966198129
+Germany,2011,27.67141,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,57719.844219245
+France,2018,46.937691,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,54199.5848398699
+Canada,2018,61.754246,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,56470.4592673931
+Germany,2018,32.281734,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,61981.1160711922
+Germany,2019,33.260235,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,62506.5815586262
+United Kingdom,2013,48.31358,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,49839.2263681782
+Japan,2013,58.368496,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,42725.5502140447
+United Kingdom,2017,51.624851,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,53398.9895977911
+Canada,2017,60.916767,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,55756.2624817832
+France,2017,44.34428,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,53398.3221252092
+United States,2014,45.663815,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,63214.8953462352
+Italy,2014,24.158854,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,46779.7460564373
+United Kingdom,2016,51.775383,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,52372.4780334819
+United States,2015,46.517712,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,64599.5737360527
+Italy,2015,25.149963,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,47189.2921617744
+Germany,1998,21.545525,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,47586.7706723412
+Spain,1998,31.182714,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,36285.4976301382
+Spain,1999,32.381985,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,37761.5504056123
+France,1999,30.937677,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,46106.7498246449
+Canada,1999,46.988796,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,45761.9298921855
+France,1997,27.807184,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,43420.56321652
+Canada,1997,44.168514,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,42587.366207601
+United States,1997,35.704861,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,50002.9748720618
+United Kingdom,2022,57.699051,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,54515.750238256
+United Kingdom,2000,28.901674,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,44814.386849721
+Japan,2000,47.844826,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,39220.0779791191
+Canada,2000,48.400093,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,47667.4330856329
+France,2000,31.375711,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,47587.8760697138
+Germany,2000,22.250971,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,49797.2530278023
+Spain,2004,38.99802,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,42402.0436363945
+United States,2004,39.042027,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,58153.3878283911
+Italy,2004,14.792785,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,51726.9867697862
+United States,2002,39.336624,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,55456.8624028822
+Italy,2002,12.461238,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,51489.3846069081
+United Kingdom,2002,31.410488,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,46417.0943307165
+Japan,2002,50.993023,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,39201.9757708351
+United Kingdom,2003,33.321693,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,47655.2221253637
+Japan,2003,51.645981,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,39718.6938625784
+Germany,2001,21.779524,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,50549.4695470052
+France,2005,39.776222,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,49877.6905759025
+Canada,2005,53.694931,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,51564.8455651212
+United States,2005,39.363441,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,59627.0590559421
+Italy,2005,16.105026,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,51894.4043925102
+Germany,2006,21.983997,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,52987.1737476882
+Spain,2006,40.32674,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,44233.2555241466
+Spain,2007,40.025246,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,44987.2430302492
+France,2007,41.444328,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,51657.1162017295
+Canada,2007,55.674667,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,52948.8994271698
+United Kingdom,2008,43.337868,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,50734.851127071
+Japan,2008,55.060974,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,41874.2297629698
+Canada,2008,55.619267,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,52899.4754504882
+France,2008,40.825264,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,51500.8617800091
+Germany,2008,23.916872,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,55266.7628544411
+France,2021,50.256466,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,53834.7992971017
+Canada,2021,66.357666,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,55781.6990272912
+United States,2021,51.1675,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,71055.87619383
+Italy,2021,28.267422,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,49901.6121367429
+Germany,2021,35.882999,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,61939.6515850137
+United States,2010,42.310982,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,59821.6650811366
+Italy,2010,20.719744,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,50022.591868765
+United Kingdom,2010,46.046906,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,48720.5957094612
+Japan,2010,56.70573,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,41106.2612443372
+Germany,2009,25.655298,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,52252.1946255111
+United Kingdom,2011,46.910782,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,48894.882257416
+Japan,2011,58.721333,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,41192.2768370627
+Spain,2012,40.386406,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,40717.1994237145
+United States,2012,44.042595,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,61247.3170720931
+Italy,2012,22.250719,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,48659.4289187836
+Spain,2016,40.980919,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,43823.4508776186
+Japan,2016,60.120392,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,43976.2664006851
+Canada,2016,60.582603,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,54765.3037720868
+France,2016,44.036968,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,52353.8633639783
+Germany,2016,30.527618,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,60181.1002169237
+Germany,2014,28.422802,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,58981.4777678521
+United Kingdom,2014,49.185982,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,51054.5929860184
+Spain,2014,41.477402,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,40962.0167898
+United Kingdom,2015,49.943413,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,51776.2489852598
+Spain,2015,40.959778,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,42567.3662619036
+France,2015,44.687599,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,51923.3890466441
+Canada,2015,59.182831,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,54819.1890353874
+France,2013,44.055721,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,51286.2889509085
+Canada,2013,57.603394,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,53884.8455875649
+United States,2013,44.779469,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,62112.583447369
+Italy,2013,22.744907,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,47213.0742045449
+United States,2018,49.373737,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,68095.6868059923
+Italy,2018,27.863623,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,49297.498015943
+Spain,2018,44.259609,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,45849.0498869727
+Japan,2018,60.730949,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,45094.7333124842
+United Kingdom,2020,55.833538,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,48583.7606864189
+United States,2020,51.856071,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,67266.187874108
+Italy,2020,28.628069,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,45835.907693984
+Germany,2017,31.308737,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,61563.5840905045
+Spain,2019,46.508266,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,46424.2866260789
+Japan,2019,61.514194,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,44976.5080765088
+Germany,1997,21.040304,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,46654.3895456355
+Spain,1997,29.557011,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,34902.6661256338
+Spain,2003,37.90205,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,41833.6710457448
+Canada,2003,53.179329,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,49381.5950355437
+France,2003,37.855179,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,48425.3789123088
+United States,2003,38.652836,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,56519.3507123652
+Italy,2003,12.695857,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,51332.0800112934
+United Kingdom,1998,25.98814,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,41969.9756924858
+Japan,1998,46.062992,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,38427.0294361961
+France,1998,29.644657,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,44812.2587250686
+Canada,1998,45.555809,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,43879.5681195652
+United Kingdom,1999,27.681889,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,43112.8683410754
+Japan,1999,45.76923,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,38228.8456478412
+Germany,1999,21.528263,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,48453.5294522155
+United States,2001,38.717625,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,55037.8936729664
+Italy,2001,11.754972,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,51435.5010262359
+United Kingdom,2001,30.066694,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,45793.4004706286
+Japan,2001,48.525471,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,39276.7555766593
+Spain,2022,50.514442,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,45787.6980240078
+Japan,2022,65.682365,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,45174.7319207138
+France,2022,50.389492,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,54988.3345799934
+Canada,2022,66.970039,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,56872.6053482353
+Spain,2002,37.484509,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,41363.6582828152
+United States,2000,38.083973,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,55059.2191687802
+Italy,2000,10.429003,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,50479.3593680185
+United Kingdom,2007,43.08427,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,51251.414664495
+Japan,2007,53.696037,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,42413.7796738934
+Germany,2007,22.62182,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,54637.3246244388
+United Kingdom,2006,41.8297,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,50333.1544815525
+Japan,2006,54.074074,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,41841.6279122437
+France,2006,41.416058,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,50746.1036933234
+Canada,2006,54.622643,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,52391.3792619498
+Germany,2005,22.494616,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,50981.750349177
+Spain,2005,40.703537,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,43214.3592577387
+United States,2008,41.564896,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,60821.1859611643
+Italy,2008,19.90484,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,52319.7460046777
+France,2004,38.220337,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,49430.9923926884
+Canada,2004,53.197052,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,50436.294842704
+Germany,2004,22.942751,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,50582.6948121358
+Spain,2010,40.312317,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,42481.396089892
+United Kingdom,2021,57.473328,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,52841.6345850474
+United States,2009,41.056328,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,58736.9461328153
+Italy,2009,20.160688,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,49331.4993257784
+United Kingdom,2009,45.283749,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,48028.796532892
+Japan,2009,55.667507,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,39495.165356114
+France,2012,42.909988,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,51256.4835594146
+Canada,2012,57.056797,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,53217.7135831819
+Germany,2012,28.956329,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,57852.6927856918
+Japan,2015,59.646538,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,43624.9274527151
+Germany,2015,29.588667,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,59345.4556245657
+Spain,2011,40.311493,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,41985.9763889869
+Canada,2011,56.40131,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,52869.3878559359
+France,2011,42.988277,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,51344.3652610133
+United States,2011,43.132984,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,60317.5425206572
+Italy,2011,20.983423,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,50289.8562940746
+United Kingdom,2019,51.809521,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,54397.2905235188
+Canada,2019,62.965115,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,56713.0888767094
+France,2019,48.052528,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,55010.3558807515
+United States,2019,50.380188,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,69458.6101827166
+Italy,2019,27.931559,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,50110.1689436357
+United States,2017,47.757,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,66482.8934392041
+Italy,2017,26.816479,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,48752.5340873447
+Spain,2017,42.644691,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,45021.7922539543
+Japan,2017,60.426178,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,44749.6382115169
+United Kingdom,2018,50.752552,GBR,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,53821.4902718369
+Germany,2013,29.995255,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,57947.4963190577
+Spain,2013,41.089592,ESP,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,40277.5590195081
+France,2020,49.449242,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,50724.4943733889
+Canada,2020,64.386749,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,53274.9109302286
+Germany,2020,34.876732,DEU,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,60065.5097891379
+United States,2016,47.521809,USA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,65299.9993837591
+Italy,2016,25.584146,ITA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,47880.9411077416
+Japan,2014,58.585857,JPN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,42909.0056611568
+France,2014,44.726288,FRA,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,51534.8040740019
+Canada,2014,57.725277,CAN,"GDP per capita, PPP (constant 2021 international $)",NY.GDP.PCAP.PP.KD,54880.8582018562

@@ -1,0 +1,119 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 400,
+    "height": 300,
+    "data": {
+      "values": [
+        {"Country": "US", "Education Level": "Secondary", "OBS_VALUE": 4.242055},
+        {"Country": "UK", "Education Level": "Secondary", "OBS_VALUE": 2.682256},
+        {"Country": "UK", "Education Level": "Primary", "OBS_VALUE": 4.944453},
+        {
+          "Country": "Canada",
+          "Education Level": "Secondary",
+          "OBS_VALUE": 5.192698
+        },
+        {
+          "Country": "Canada",
+          "Education Level": "Primary",
+          "OBS_VALUE": 8.656036
+        },
+        {
+          "Country": "Italy",
+          "Education Level": "Tertiary",
+          "OBS_VALUE": 3.888012
+        },
+        {"Country": "UK", "Education Level": "Tertiary", "OBS_VALUE": 1.993081},
+        {
+          "Country": "Spain",
+          "Education Level": "Secondary",
+          "OBS_VALUE": 12.508285
+        },
+        {
+          "Country": "Spain",
+          "Education Level": "Tertiary",
+          "OBS_VALUE": 7.106752
+        },
+        {
+          "Country": "Spain",
+          "Education Level": "Primary",
+          "OBS_VALUE": 17.737541
+        },
+        {"Country": "US", "Education Level": "Tertiary", "OBS_VALUE": 2.025948},
+        {
+          "Country": "Germany",
+          "Education Level": "Primary",
+          "OBS_VALUE": 6.017232
+        },
+        {
+          "Country": "Italy",
+          "Education Level": "Primary",
+          "OBS_VALUE": 10.904493
+        },
+        {
+          "Country": "Germany",
+          "Education Level": "Tertiary",
+          "OBS_VALUE": 2.020189
+        },
+        {
+          "Country": "Canada",
+          "Education Level": "Tertiary",
+          "OBS_VALUE": 3.823156
+        },
+        {
+          "Country": "France",
+          "Education Level": "Tertiary",
+          "OBS_VALUE": 4.262682
+        },
+        {
+          "Country": "France",
+          "Education Level": "Primary",
+          "OBS_VALUE": 11.219353
+        },
+        {
+          "Country": "Italy",
+          "Education Level": "Secondary",
+          "OBS_VALUE": 6.515531
+        },
+        {"Country": "US", "Education Level": "Primary", "OBS_VALUE": 6.462753},
+        {
+          "Country": "Germany",
+          "Education Level": "Secondary",
+          "OBS_VALUE": 2.558228
+        },
+        {
+          "Country": "France",
+          "Education Level": "Secondary",
+          "OBS_VALUE": 6.693174
+        }
+      ]
+    },
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "Country",
+        "type": "nominal",
+        "axis": {"labelAngle": 0},
+        "sort": "-y",
+        "title": ""
+      },
+      "xOffset": {
+        "field": "Education Level",
+        "type": "nominal",
+        "title": "Education Level"
+      },
+      "y": {
+        "field": "OBS_VALUE",
+        "type": "quantitative",
+        "title": "",
+        "axis": {"labelExpr": "datum.value + '%'"}
+      },
+      "color": {
+        "legend": {"orient": "top", "titleOrient": "left"},
+        "scale": {"scheme": "observable10"},
+        "field": "Education Level",
+        "type": "nominal",
+        "title": "Education Level"
+      }
+    },
+    "title":{"text": "16-25 Unemployment rate, by education"}
+  }

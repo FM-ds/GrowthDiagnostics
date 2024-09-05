@@ -1,0 +1,1307 @@
+{
+    "data": {"name": "data-4f001f808970e407b6bcbd37544facd9"},
+    "mark": {
+      "type": "circle",
+      "opacity": 0.8,
+      "stroke": "black",
+      "strokeOpacity": 0.4,
+      "strokeWidth": 1
+    },
+    "width": 400,
+    "height":300,
+    "encoding": {
+      "color": {"field": "country", "legend": null, "type": "nominal"},
+      "size": {
+        "field": "population",
+        "scale": {"range": [0, 2500]},
+        "legend":{
+          "orient": "bottom",
+          "titleOrient":"left",
+          "titleFontWeight": "normal"
+        },
+        "title": "Population",
+        "type": "quantitative"
+      },
+      "tooltip": [
+        {"field": "country", "type": "nominal"},
+        {"field": "region", "type": "nominal"},
+        {"field": "unemployment", "type": "quantitative"},
+        {"field": "population", "type": "quantitative"}
+      ],
+      "x": {
+        "field": "unemployment",
+        "title": "Unemployment Rate (%)",
+        "type": "quantitative"
+      },
+      "y": {"field": "country", "title": "", "type": "nominal"}
+    },
+    "title": {
+      "text": "Unemployment Rates by Region",
+      "anchor": "start"
+    },
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+    "datasets": {
+      "data-4f001f808970e407b6bcbd37544facd9": [
+        {
+          "country": "Germany",
+          "geo_code": "DE1",
+          "region": "Baden-Württemberg",
+          "unemployment": 2.6,
+          "population": 11280257,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Germany",
+          "geo_code": "DE2",
+          "region": "Bayern",
+          "unemployment": 2.2,
+          "population": 13369393,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Germany",
+          "geo_code": "DE3",
+          "region": "Berlin",
+          "unemployment": 5.1,
+          "population": 3755251,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Germany",
+          "geo_code": "DE4",
+          "region": "Brandenburg",
+          "unemployment": 3.3,
+          "population": 2573135,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Germany",
+          "geo_code": "DE5",
+          "region": "Bremen",
+          "unemployment": 4.5,
+          "population": 684864,
+          "note": "u",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Germany",
+          "geo_code": "DE6",
+          "region": "Hamburg",
+          "unemployment": 4,
+          "population": 1892122,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Germany",
+          "geo_code": "DE7",
+          "region": "Hessen",
+          "unemployment": 2.9,
+          "population": 6391360,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Germany",
+          "geo_code": "DE8",
+          "region": "Mecklenburg-Vorpommern",
+          "unemployment": 4.3,
+          "population": 1628378,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Germany",
+          "geo_code": "DE9",
+          "region": "Niedersachsen",
+          "unemployment": 2.8,
+          "population": 8140242,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Germany",
+          "geo_code": "DEA",
+          "region": "Nordrhein-Westfalen",
+          "unemployment": 3.4,
+          "population": 18139116,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Germany",
+          "geo_code": "DEB",
+          "region": "Rheinland-Pfalz",
+          "unemployment": 3,
+          "population": 4159150,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Germany",
+          "geo_code": "DEC",
+          "region": "Saarland",
+          "unemployment": 3.3,
+          "population": 992666,
+          "note": "u",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Germany",
+          "geo_code": "DED",
+          "region": "Sachsen",
+          "unemployment": 3.3,
+          "population": 4086152,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Germany",
+          "geo_code": "DEE",
+          "region": "Sachsen-Anhalt",
+          "unemployment": 3.8,
+          "population": 2186643,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Germany",
+          "geo_code": "DEF",
+          "region": "Schleswig-Holstein",
+          "unemployment": 3.1,
+          "population": 2953270,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Germany",
+          "geo_code": "DEG",
+          "region": "Thüringen",
+          "unemployment": 3,
+          "population": 2126846,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Spain",
+          "geo_code": "ES1",
+          "region": "Noroeste",
+          "unemployment": 10,
+          "population": 4293871,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Spain",
+          "geo_code": "ES2",
+          "region": "Noreste",
+          "unemployment": 8.4,
+          "population": 4552028,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Spain",
+          "geo_code": "ES3",
+          "region": "Comunidad de Madrid",
+          "unemployment": 10,
+          "population": 6871903,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Spain",
+          "geo_code": "ES4",
+          "region": "Centro (ES)",
+          "unemployment": 12.5,
+          "population": 5522095,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Spain",
+          "geo_code": "ES5",
+          "region": "Este",
+          "unemployment": 10.7,
+          "population": 14328064,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Spain",
+          "geo_code": "ES6",
+          "region": "Sur",
+          "unemployment": 17.6,
+          "population": 10304384,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Spain",
+          "geo_code": "ES7",
+          "region": "Canarias",
+          "unemployment": 16.1,
+          "population": 2213016,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "France",
+          "geo_code": "FR1",
+          "region": "Ile de France",
+          "unemployment": 7.6,
+          "population": 12388388,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "France",
+          "geo_code": "FRB",
+          "region": "Centre — Val de Loire",
+          "unemployment": 5.7,
+          "population": 2572735,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "France",
+          "geo_code": "FRC",
+          "region": "Bourgogne-Franche-Comté",
+          "unemployment": 6.6,
+          "population": 2793968,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "France",
+          "geo_code": "FRD",
+          "region": "Normandie",
+          "unemployment": 6.5,
+          "population": 3326575,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "France",
+          "geo_code": "FRE",
+          "region": "Hauts-de-France",
+          "unemployment": 9.6,
+          "population": 5986464,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "France",
+          "geo_code": "FRF",
+          "region": "Grand Est",
+          "unemployment": 6.8,
+          "population": 5565282,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "France",
+          "geo_code": "FRG",
+          "region": "Pays de la Loire",
+          "unemployment": 6.1,
+          "population": 3902115,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "France",
+          "geo_code": "FRH",
+          "region": "Bretagne",
+          "unemployment": 5.4,
+          "population": 3432901,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "France",
+          "geo_code": "FRI",
+          "region": "Nouvelle-Aquitaine",
+          "unemployment": 7.1,
+          "population": 6125089,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "France",
+          "geo_code": "FRJ",
+          "region": "Occitanie",
+          "unemployment": 7.5,
+          "population": 6110099,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "France",
+          "geo_code": "FRK",
+          "region": "Auvergne-Rhône-Alpes",
+          "unemployment": 6.6,
+          "population": 8195542,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "France",
+          "geo_code": "FRL",
+          "region": "Provence-Alpes-Côte d’Azur",
+          "unemployment": 7.1,
+          "population": 5173952,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "France",
+          "geo_code": "FRM",
+          "region": "Corse",
+          "unemployment": 6.9,
+          "population": 352851,
+          "note": "du",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "France",
+          "geo_code": "FRY",
+          "region": "RUP FR — Régions Ultrapériphériques Françaises",
+          "unemployment": 16.7,
+          "population": 2247016,
+          "note": "d",
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Italy",
+          "geo_code": "ITC",
+          "region": "Nord-Ovest",
+          "unemployment": 4.8,
+          "population": 15858626,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Italy",
+          "geo_code": "ITF",
+          "region": "Sud",
+          "unemployment": 13.9,
+          "population": 13464669,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Italy",
+          "geo_code": "ITG",
+          "region": "Isole",
+          "unemployment": 14.2,
+          "population": 6392162,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Italy",
+          "geo_code": "ITH",
+          "region": "Nord-Est",
+          "unemployment": 4.4,
+          "population": 11558522,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Italy",
+          "geo_code": "ITI",
+          "region": "Centro (IT)",
+          "unemployment": 6.2,
+          "population": 11723222,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": null
+        },
+        {
+          "country": "Canada",
+          "geo_code": null,
+          "region": "Newfoundland and Labrador",
+          "unemployment": 10.5,
+          "population": 540418,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Seasonally adjusted"
+        },
+        {
+          "country": "Canada",
+          "geo_code": null,
+          "region": "Prince Edward Island",
+          "unemployment": 8.1,
+          "population": 175853,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Seasonally adjusted"
+        },
+        {
+          "country": "Canada",
+          "geo_code": null,
+          "region": "Nova Scotia",
+          "unemployment": 5.9,
+          "population": 1066416,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Seasonally adjusted"
+        },
+        {
+          "country": "Canada",
+          "geo_code": null,
+          "region": "New Brunswick",
+          "unemployment": 6.3,
+          "population": 842725,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Seasonally adjusted"
+        },
+        {
+          "country": "Canada",
+          "geo_code": null,
+          "region": "Quebec",
+          "unemployment": 4.7,
+          "population": 8948540,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Seasonally adjusted"
+        },
+        {
+          "country": "Canada",
+          "geo_code": null,
+          "region": "Ontario",
+          "unemployment": 6.3,
+          "population": 15801768,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Seasonally adjusted"
+        },
+        {
+          "country": "Canada",
+          "geo_code": null,
+          "region": "Manitoba",
+          "unemployment": 4.2,
+          "population": 1465440,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Seasonally adjusted"
+        },
+        {
+          "country": "Canada",
+          "geo_code": null,
+          "region": "Saskatchewan",
+          "unemployment": 5,
+          "population": 1218976,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Seasonally adjusted"
+        },
+        {
+          "country": "Canada",
+          "geo_code": null,
+          "region": "Alberta",
+          "unemployment": 6.3,
+          "population": 4756408,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Seasonally adjusted"
+        },
+        {
+          "country": "Canada",
+          "geo_code": null,
+          "region": "British Columbia",
+          "unemployment": 5.5,
+          "population": 5581127,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Seasonally adjusted"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Alabama",
+          "unemployment": 2.4,
+          "population": 5108468,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Alaska",
+          "unemployment": 4.7,
+          "population": 733406,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Arizona",
+          "unemployment": 3.9,
+          "population": 7431344,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Arkansas",
+          "unemployment": 3.5,
+          "population": 3067732,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "California",
+          "unemployment": 4.7,
+          "population": 38965193,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Colorado",
+          "unemployment": 3.2,
+          "population": 5877610,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Connecticut",
+          "unemployment": 3.7,
+          "population": 3617176,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Delaware",
+          "unemployment": 3.6,
+          "population": 1031890,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "District of Columbia",
+          "unemployment": 4.8,
+          "population": 678972,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Florida",
+          "unemployment": 2.7,
+          "population": 22610726,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Georgia",
+          "unemployment": 3.4,
+          "population": 11029227,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Hawaii",
+          "unemployment": 3,
+          "population": 1435138,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Idaho",
+          "unemployment": 3.3,
+          "population": 1964726,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Illinois",
+          "unemployment": 4.4,
+          "population": 12549689,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Indiana",
+          "unemployment": 3.5,
+          "population": 6862199,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Iowa",
+          "unemployment": 2.9,
+          "population": 3207004,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Kansas",
+          "unemployment": 2.8,
+          "population": 2940546,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Kentucky",
+          "unemployment": 4.3,
+          "population": 4526154,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Louisiana",
+          "unemployment": 3.7,
+          "population": 4573749,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Maine",
+          "unemployment": 3,
+          "population": 1395722,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Maryland",
+          "unemployment": 2.7,
+          "population": 6180253,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Massachusetts",
+          "unemployment": 3.4,
+          "population": 7001399,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Michigan",
+          "unemployment": 3.9,
+          "population": 10037261,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Minnesota",
+          "unemployment": 2.9,
+          "population": 5737915,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Mississippi",
+          "unemployment": 3.1,
+          "population": 2939690,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Missouri",
+          "unemployment": 3,
+          "population": 6196156,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Montana",
+          "unemployment": 2.9,
+          "population": 1132812,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Nebraska",
+          "unemployment": 2.2,
+          "population": 1978379,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Nevada",
+          "unemployment": 5,
+          "population": 3194176,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "New Hampshire",
+          "unemployment": 2.4,
+          "population": 1402054,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "New Jersey",
+          "unemployment": 4.7,
+          "population": 9290841,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "New Mexico",
+          "unemployment": 3.9,
+          "population": 2114371,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "New York",
+          "unemployment": 4.3,
+          "population": 19571216,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "North Carolina",
+          "unemployment": 3.2,
+          "population": 10835491,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "North Dakota",
+          "unemployment": 2,
+          "population": 783926,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Ohio",
+          "unemployment": 3.4,
+          "population": 11785935,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Oklahoma",
+          "unemployment": 3.5,
+          "population": 4053824,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Oregon",
+          "unemployment": 3.7,
+          "population": 4233358,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Pennsylvania",
+          "unemployment": 3.1,
+          "population": 12961683,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Rhode Island",
+          "unemployment": 3.3,
+          "population": 1095962,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "South Carolina",
+          "unemployment": 3.1,
+          "population": 5373555,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "South Dakota",
+          "unemployment": 1.9,
+          "population": 919318,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Tennessee",
+          "unemployment": 3.4,
+          "population": 7126489,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Texas",
+          "unemployment": 4,
+          "population": 30503301,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Utah",
+          "unemployment": 2.7,
+          "population": 3417734,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Vermont",
+          "unemployment": 1.8,
+          "population": 647464,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Virginia",
+          "unemployment": 2.8,
+          "population": 8715698,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Washington",
+          "unemployment": 4.1,
+          "population": 7812880,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "West Virginia",
+          "unemployment": 3.7,
+          "population": 1770071,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Wisconsin",
+          "unemployment": 3.2,
+          "population": 5910955,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United States",
+          "geo_code": null,
+          "region": "Wyoming",
+          "unemployment": 3,
+          "population": 584057,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "Annual average"
+        },
+        {
+          "country": "United Kingdom",
+          "geo_code": null,
+          "region": "North East",
+          "unemployment": 4.288035603078244,
+          "population": 2683040,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "October - December 2023"
+        },
+        {
+          "country": "United Kingdom",
+          "geo_code": null,
+          "region": "North West ",
+          "unemployment": 4.28695093030529,
+          "population": 7516113,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "October - December 2023"
+        },
+        {
+          "country": "United Kingdom",
+          "geo_code": null,
+          "region": "Yorkshire and The Humber",
+          "unemployment": 3.3689502223539467,
+          "population": 5541262,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "October - December 2023"
+        },
+        {
+          "country": "United Kingdom",
+          "geo_code": null,
+          "region": "East Midlands",
+          "unemployment": 5.115612996384961,
+          "population": 4934939,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "October - December 2023"
+        },
+        {
+          "country": "United Kingdom",
+          "geo_code": null,
+          "region": "West Midlands",
+          "unemployment": 3.8270668992109256,
+          "population": 6021653,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "October - December 2023"
+        },
+        {
+          "country": "United Kingdom",
+          "geo_code": null,
+          "region": "East",
+          "unemployment": 3.4041229530381085,
+          "population": 6398497,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "October - December 2023"
+        },
+        {
+          "country": "United Kingdom",
+          "geo_code": null,
+          "region": "London",
+          "unemployment": 3.8076534864726344,
+          "population": 8866180,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "October - December 2023"
+        },
+        {
+          "country": "United Kingdom",
+          "geo_code": null,
+          "region": "South East",
+          "unemployment": 3.809050071095426,
+          "population": 9379833,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "October - December 2023"
+        },
+        {
+          "country": "United Kingdom",
+          "geo_code": null,
+          "region": "South West",
+          "unemployment": 2.8025398227669265,
+          "population": 5764881,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "October - December 2023"
+        },
+        {
+          "country": "United Kingdom",
+          "geo_code": null,
+          "region": "Wales",
+          "unemployment": 3.4543528183443657,
+          "population": 3131640,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "October - December 2023"
+        },
+        {
+          "country": "United Kingdom",
+          "geo_code": null,
+          "region": "Scotland",
+          "unemployment": 4.522511832831347,
+          "population": 5447700,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "October - December 2023"
+        },
+        {
+          "country": "United Kingdom",
+          "geo_code": null,
+          "region": "Northern Ireland ",
+          "unemployment": 2.5644124056164337,
+          "population": 1910543,
+          "note": null,
+          "age group": "16 and over",
+          "Notes": "October - December 2023"
+        },
+        {
+          "country": "Japan",
+          "geo_code": null,
+          "region": "Hokkaido",
+          "unemployment": 2.8,
+          "population": 5092000,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Population are estimates, adjusted to the division of areas by the LFS"
+        },
+        {
+          "country": "Japan",
+          "geo_code": null,
+          "region": "Tohoku",
+          "unemployment": 2.7,
+          "population": 8331000,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Population are estimates, adjusted to the division of areas by the LFS"
+        },
+        {
+          "country": "Japan",
+          "geo_code": null,
+          "region": "Hokuriku",
+          "unemployment": 2.2,
+          "population": 5186388,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Population are estimates, adjusted to the division of areas by the LFS"
+        },
+        {
+          "country": "Japan",
+          "geo_code": null,
+          "region": "Tokai",
+          "unemployment": 2.1,
+          "population": 17000000,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Population are estimates, adjusted to the division of areas by the LFS"
+        },
+        {
+          "country": "Japan",
+          "geo_code": null,
+          "region": "Kinki",
+          "unemployment": 2.9,
+          "population": 22400000,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Population are estimates, adjusted to the division of areas by the LFS"
+        },
+        {
+          "country": "Japan",
+          "geo_code": null,
+          "region": "Chugoku",
+          "unemployment": 2.1,
+          "population": 7300000,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Population are estimates, adjusted to the division of areas by the LFS"
+        },
+        {
+          "country": "Japan",
+          "geo_code": null,
+          "region": "Shikoku",
+          "unemployment": 2.3,
+          "population": "3,630,320 ",
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Population are estimates, adjusted to the division of areas by the LFS"
+        },
+        {
+          "country": "Japan",
+          "geo_code": null,
+          "region": "Kyushu",
+          "unemployment": 2.6,
+          "population": 12800000,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Population are estimates, adjusted to the division of areas by the LFS"
+        },
+        {
+          "country": "Japan",
+          "geo_code": null,
+          "region": "Okinawa",
+          "unemployment": 3.3,
+          "population": 1384762,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Population are estimates, adjusted to the division of areas by the LFS"
+        },
+        {
+          "country": "Japan",
+          "geo_code": null,
+          "region": "Southern-Kanto",
+          "unemployment": 2.7,
+          "population": 37026005,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Population are estimates, adjusted to the division of areas by the LFS"
+        },
+        {
+          "country": "Japan",
+          "geo_code": null,
+          "region": "Northern-Kanto, Koshin",
+          "unemployment": 2.5,
+          "population": 6591090,
+          "note": null,
+          "age group": "15 and over",
+          "Notes": "Population are estimates, adjusted to the division of areas by the LFS"
+        }
+      ]
+    }
+  }

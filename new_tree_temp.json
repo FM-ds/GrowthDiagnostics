@@ -1,0 +1,131 @@
+{
+    "name": "New Growth Tree",
+    "id": "new_growth_tree",
+    "children": [
+        {
+            "name": "Low return to economic activity",
+            "id": "low_return_to_economic_activity",
+            "children": [
+                {
+                    "name": "Low social returns",
+                    "id": "low_social_returns",
+                    "children": [
+                        {
+                            "name": "Low human capital",
+                            "id": "low_human_capital",
+                            "children": [
+                                {
+                                    "name": "Unemployment by education",
+                                    "id": "unemployment_by_education",
+                                    "chart": {
+                                        "spec": "new_unemp_educ.json"
+                                    }                        
+                                },
+                                {
+                                    "name": "Regional unemployment",
+                                    "id": "regional_unemployment",
+                                    "chart": {
+                                        "spec": "new_unemp_regional.json"
+                                    }                        
+                                },
+                                {
+                                    "name": "Tertiary education and economic activity",
+                                    "id": "workers_tertiary_education",
+                                    "chart": {
+                                        "spec": "new_educ_gdp_path.json"
+                                    }                        
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Bad infrastructure",
+                            "id": "bad_infrastructure",
+                            "children": [
+                                {
+                                    "name": "Logistics performance Index (LPI), aggregated or the infrastructure score"
+                                },
+                                {
+                                    "name": "Quality of overall infrastructure (Global Competitiveness index)"
+                                },
+                                {
+                                    "name": "Any measure of rural accessibility to main markets/cities, by region."
+                                },
+                                {
+                                    "name": "Mean speed between cities (roads)"
+                                },
+                                {
+                                    "name": "Firms indicating transportation is the main obstacle for growth"
+                                },
+                                {
+                                    "name": "Transport costs to a large city, or to a port, by area/region."
+                                },
+                                {
+                                    "name": "Distribution of firms by region (map)"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Low appropriability",
+                    "id": "low_appropriability",
+                    "children": [
+                        {
+                            "name": "Government failures",
+                            "children": [
+                                {
+                                    "name": "Macroeconomic risks"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Microeconomic risks",
+                            "children": [
+                                {
+                                    "name": "Poor regulatory quality"
+                                },
+                                {
+                                    "name": "Land access"
+                                },
+                                {
+                                    "name": "Weak government coordination"
+                                },
+                                {
+                                    "name": "Labour regulations"
+                                },
+                                {
+                                    "name": "Tax system"
+                                },
+                                {
+                                    "name": "Trade Policy"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Government failures",
+                    "children": [
+                        {
+                            "name": "Coordination externalities"
+                        },
+                        {
+                            "name": "Self discovery"
+                        }
+                    ]
+                }        
+            ]
+        },
+        {
+            "name": "High cost of finance",
+            "children": [
+                {
+                    "name": "Low domestic savings"
+                },
+                {
+                    "name": "Poor financial intermediation"
+                }
+            ]
+        }
+    ]
+}
